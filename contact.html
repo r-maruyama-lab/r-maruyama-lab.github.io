@@ -1,84 +1,173 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-  <meta charset="utf-8">
-  <title>REO MARUYAMA LABORATORY</title>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
-  <link rel="stylesheet" href="footer.css">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>REO MARUYAMA LAB</title>
+  <meta name="description"
+    content="公益財団法人がん研究会 丸山玲緒研究室 公式HPです。「がん」とは何か？その本質は？を追求するため、細胞生物学、分子生物学、生化学、情報科学、臨床医学など多様な専門性を持つ人間がタッグを組み、WETとDRYの両面からアプローチしています。" />
+  <meta name="keywords" content="がん, エピゲノム, 乳がん" />
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="images/favicon.ico">
+
+  <!--Bootstrap Css-->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+
+  <!-- Materialdesign icons Css -->
+  <link href="css/materialdesignicons.min.css" rel="stylesheet">
+
+  <!-- Mobirise icons Css -->
+  <link href="css/mobiriseicons.css" rel="stylesheet">
+
+  <!-- Magnific-popup -->
+  <link rel="stylesheet" href="css/magnific-popup.css">
+
+  <!-- Animate Css -->
+  <link rel="stylesheet" href="css/animate.min.css">
+  <link rel="stylesheet" href="css/animation.css">
+
+  <!-- OWL SLIDER -->
+  <link rel="stylesheet" href="css/owl.carousel.css" />
+  <link rel="stylesheet" href="css/owl.theme.css" />
+  <link rel="stylesheet" href="css/owl.transitions.css" />
+
+  <!-- Custom style Css -->
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/responsive.css" rel="stylesheet">
+  <link href="css/color/blue.css" rel="stylesheet" id="option-color">
 </head>
 
+
 <body>
-  <!-- NAVIGATION BAR-->
-  <nav class="navbar navbar-expand-lg navbar-light bg-white">
-    <!-- toggle -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navsup" aria-controls="navsup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <!-- navbar menu -->
-    <div class="collapse navbar-collapse" id="navsup">
-        <a class="navbar-brand" href="#">REO MARUYAMA LAB – JFCR</a>
-        <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="index.html">TOP</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="team.html">TEAM</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="works.html">WORKS</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="publications.html">PUBLICATIONS</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="contact.html">CONTACT</a>
-        </li>
-		<li class="nav-item">
-          <a class="nav-link" href="recruitment.html">JOIN US!</a>
-        </li>
-      </ul>
+
+  <!-- Loader -->
+  <div id="preloader">
+    <div id="status">
+      <div class="spinner">Loading...</div>
     </div>
-    </nav>
-  <!-- NAVIGATION BAR END-->
+  </div>
+
+  <!-- Start Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top custom-nav sticky">
+    <div class="container">
+
+      <a class="navbar-brand pt-0 logo" href="index.html">
+        <img src="images/logo2.png" alt="REO MARUYAMA LAB LOGO" class="img-fluid logo-light">
+        <img src="images/logo2-dark.png" alt="REO MARUYAMA LAB LOGO" class="img-fluid logo-dark">
+      </a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="mdi mdi-menu"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">TOP</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#about">ABOUT</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="team.html#team">TEAM</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="works.html#works">WORKS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="public.html#public">PUBLICATIONS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">CONTACT</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="joinus.html#joinus">JOIN</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- End Navbar -->
+
+  <!-- START HOME -->
+  <section class="section" id="top">
+    <div class="bg-overlay"></div>
+  </section>
+  <!-- END HOME -->
 
   <!-- CONTACT -->
-<section id="MEMBERS" class="bg-white">
-    <div class="container text-center" style="padding:10px;">
-      <p class="lead">Contact</p>
-      <br><br><br>
-        <p style="text-align: left">丸山研究室では，ポスドク・大学院生・研究生を募集しています。見学も随時可能ですので，ぜひお気軽にご連絡ください。
-          <br><br><br>丸山 玲緒　reo.maruyama [at] jfcr.or.jp
-      <br><strong>研究所</strong> : 〒135-8550 東京都江東区有明3-8-31
-      <br><strong>サテライトラボ</strong> : 〒135-0063 東京都江東区有明3-7-18 有明セントラルタワー6階</p>
+  <section id="contact" class="bg-white section contact-wrapper">
+    <div class="container">
+      <h2 class="text-custom">Contact</h2>
+      <p>丸山研究室では，ポスドク・大学院生・研究生を募集しています。<br class="br-disp">見学も随時可能ですので，ぜひお気軽にご連絡ください。</p>
+      <p>丸山 玲緒 reo.maruyama [at] jfcr.or.jp</p>
       <div class="row mt-5">
         <div class="col-lg-6 mb-5 mb-lg-0">
-          <div class="ggmap">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3242.7339794234986!2d139.79375505235092!3d35.63428406183491!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x48d06f4f700d708!2z44GM44KT56CU56m25Lya!5e0!3m2!1sja!2sjp!4v1497577508141" width="400" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+          <p class="mb-2">
+            <strong>研究所</strong>：<br>〒135-8550<br>東京都江東区有明3-8-31
+          </p>
+          <div class="ggmap contact-map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3242.7339794234986!2d139.79375505235092!3d35.63428406183491!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x48d06f4f700d708!2z44GM44KT56CU56m25Lya!5e0!3m2!1sja!2sjp!4v1497577508141"
+              width="400" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
           </div>
         </div>
-      
         <div class="col-lg-6 mb-5 mb-lg-0">
-          <div class="ggmap">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12971.618057687936!2d139.7902125!3d35.6300804!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601889dd5a1f3379%3A0xbae77631fb0e1ac!2z44CSMTM1LTAwNjMg5p2x5Lqs6YO95rGf5p2x5Yy65pyJ5piO77yT5LiB55uu77yX4oiS77yR77yYIOacieaYjuOCu-ODs-ODiOODqeODq-OCv-ODr-ODvA!5e0!3m2!1sja!2sjp!4v1587392926625!5m2!1sja!2sjp" width="400" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          <p class="mb-2">
+            <strong>サテライトラボ</strong>：<br>〒135-0063<br>東京都江東区有明3-7-18 有明セントラルタワー6階
+          </p>
+          <div class="ggmap contact-map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12971.618057687936!2d139.7902125!3d35.6300804!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601889dd5a1f3379%3A0xbae77631fb0e1ac!2z44CSMTM1LTAwNjMg5p2x5Lqs6YO95rGf5p2x5Yy65pyJ5piO77yT5LiB55uu77yX4oiS77yR77yYIOacieaYjuOCu-ODs-ODiOODqeODq-OCv-ODr-ODvA!5e0!3m2!1sja!2sjp!4v1587392926625!5m2!1sja!2sjp"
+              width="400" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+              tabindex="0"></iframe>
           </div>
         </div>
+      </div>
     </div>
-</section>
-<!-- CONTACT END -->
+  </section>
+  <!-- CONTACT END -->
 
-<!-- FOOTER -->
-<footer class="footer">
-   <div class="container-fluid">
-     <p class="text-white mt-2">Copyright © 2020 Japanese Foundation For Cancer Research. All Rights Reserved.</p>
-   </div>
-</footer>
+  <!-- SPACE -->
+  <div class="contact-adjust"></div>
 
-<!-- jQuery, Popper.js, bootstrap.min.js -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <!--START FOOTER-->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-alt">
+        <p class="text-muted mb-0">Copyright &copy; 2020 Japanese Foundation For Cancer Research. All Rights
+          Reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+  <!--END FOOTER-->
+
+  <!-- Back To Top -->
+  <a href="#" class="back_top"> <i class="mdi mdi-chevron-up"> </i> </a>
+
+  <!-- JAVASCRIPTS -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <!--EASING JS-->
+  <script src="js/jquery.easing.min.js"></script>
+  <script src="js/scrollspy.min.js"></script>
+  <!--PORTFOLIO FILTER JS-->
+  <script src="js/isotope.js"></script>
+  <!-- Magnific Popup Js -->
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <!-- TYPED -->
+  <script src="js/typed.js"></script>
+  <!-- OWL CAROUSEL -->
+  <script src="js/owl.carousel.min.js"></script>
+  <!-- CONTACT JS -->
+  <script src="js/contact.js"></script>
+  <!--CUSTOM JS-->
+  <script src="js/custom.js"></script>
+  <script src="js/fadeIn.js"></script>
 </body>
+
 </html>

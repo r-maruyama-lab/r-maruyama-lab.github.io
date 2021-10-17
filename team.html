@@ -1,477 +1,884 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-  <meta charset="utf-8">
-  <title>REO MARUYAMA LABORATORY</title>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
-  <link rel="stylesheet" href="footer.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>REO MARUYAMA LAB</title>
+    <meta name="description"
+        content="公益財団法人がん研究会 丸山玲緒研究室 公式HPです。「がん」とは何か？その本質は？を追求するため、細胞生物学、分子生物学、生化学、情報科学、臨床医学など多様な専門性を持つ人間がタッグを組み、WETとDRYの両面からアプローチしています。" />
+    <meta name="keywords" content="がん, エピゲノム, 乳がん" />
+
+    <!--Favicon-->
+    <link rel="shortcut icon" href="images/favicon.ico">
+
+    <!--Bootstrap Css-->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+
+    <!-- Materialdesign icons Css -->
+    <link href="css/materialdesignicons.min.css" rel="stylesheet">
+
+    <!-- Mobirise icons Css -->
+    <link href="css/mobiriseicons.css" rel="stylesheet">
+
+    <!-- Magnific-popup -->
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <!-- Animate Css -->
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/animation.css">
+
+    <!-- OWL SLIDER -->
+    <link rel="stylesheet" href="css/owl.carousel.css" />
+    <link rel="stylesheet" href="css/owl.theme.css" />
+    <link rel="stylesheet" href="css/owl.transitions.css" />
+
+    <!-- Custom style Css -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <link href="css/color/blue.css" rel="stylesheet" id="option-color">
 </head>
 
+
 <body>
-  <!-- NAVIGATION BAR-->
-  <nav class="navbar navbar-expand-lg navbar-light bg-white">
-    <!-- toggle -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navsup" aria-controls="navsup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <!-- navbar menu -->
-    <div class="collapse navbar-collapse" id="navsup">
-        <a class="navbar-brand" href="#">REO MARUYAMA LAB – JFCR</a>
-        <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="index.html">TOP</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="team.html">TEAM</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="works.html">WORKS</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="publications.html">PUBLICATIONS</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="contact.html">CONTACT</a>
-        </li>
-		<li class="nav-item">
-          <a class="nav-link" href="recruitment.html">JOIN US!</a>
-        </li>
-      </ul>
+
+    <!-- Loader -->
+    <div id="preloader">
+        <div id="status">
+            <div class="spinner">Loading...</div>
+        </div>
     </div>
+
+    <!-- Start Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top custom-nav sticky">
+        <div class="container">
+            <a class="navbar-brand pt-0 logo" href="index.html">
+                <img src="images/logo2.png" alt="REO MARUYAMA LAB LOGO" class="img-fluid logo-light">
+                <img src="images/logo2-dark.png" alt="REO MARUYAMA LAB LOGO" class="img-fluid logo-dark">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="mdi mdi-menu"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html#top">TOP</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#about">ABOUT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#team">TEAM</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="works.html#works">WORKS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="public.html#public">PUBLICATIONS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html#contact">CONTACT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="joinus.html#joinus">JOIN</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
-  <!-- NAVIGATION BAR END-->
+    <!-- End Navbar -->
 
-<!-- TEAM -->
-<section id="MEMBERS" class="bg-white">
-  <div class="container text-center" style="padding:10px;">
-    <p class="lead">Team</p>
-    <img src="images/team.JPG" alt="" class="img-fluid" alt="Responsive image">
-        
-  <div class="container text-left" style="padding:10px;">
-  <p> プロジェクトリーダー<br>　> <a href="#maruyama">丸山 玲緒</a>
-   <br>研究員<br>　> <a href="#nakadai">中太 智義</a>　> <a href="#suzuka">鈴鹿　淳</a>　> <a href="#mahmut">馬合木特 亜森</a>
-   <br>客員研究員(学振PD)<br>　> <a href="#maezawa">前澤 誠希</a>
-   <br>クリニカルリサーチフェロー<br>　> <a href="#otusji">尾辻 和尊</a>　> <a href="#kumegawa">粂川 昂平</a>
-   <br>研究生・大学院生・研修生<br>　> <a href="#saeki">佐伯 澄人</a> 　> <a href="#matsuno">松野 達哉</a> 　> <a href="#inoue">井上 双葉</a> 　> <a href="#sakimoto">﨑本 優里</a>　> <a href="#toyohara">豊原 佑典</a>　> <a href="#takahashi">高橋 洋子</a>　> <a href="#hori">堀 千紗</a>
-   <br>研究助手<br>　> <a href="#yang">楊 麗英</a>　> <a href="#yamakawa">山川 薫</a>　> <a href="#miyaki">宮木 理帆</a>
-   <br>研究補助員<br>　> <a href="#ueda">上田 美祐</a>　> <a href="#otsuka">大塚 裕美</a>
+    <!-- START HOME -->
+    <section class="section">
+        <div class="bg-overlay"></div>
+    </section>
+    <!-- END HOME -->
 
-  </p>
-  </div>
-
-  <!-- person -->
-  <div class="row mt-5" id="maruyama">
-  <div class="col-lg-3 col-sm-4 col-xs-12">
-      <figure>
-        <img class="w-100 rounded-top" src="images/maruyama.jpg" alt=""　class="img-fluid" alt="Responsive image">
-          <div class="u-box-shadow-sm bg-white text-center rounded p-1">
-            <div class="mb-3">
-              <p class="lead">丸山 玲緒<br>Reo MARUYAMA</p>
+    <!-- TEAM -->
+    <section class="team-pic-wrapper" id="team">
+        <div class="container">
+            <div class="team-top-wrapper">
+                <div class="team-top mb-3 zoom-box">
+                    <h2 class="text-custom"><span class="font-weight-bold">Team</span> - REO MARUYAMA LAB. -</h2>
+                    <img src="images/people/team.JPG" class="img-fluid" alt="group-photo">
+                </div>
             </div>
-          </div>
-      </figure>
-  </div>
+        </div><!-- container -->
+    </section><!-- section -->
 
-  <div class="col-lg-9 col-sm-8 col-xs-12">
-      <p style="text-align: left">プロジェクトリーダー | がん研究所/がんエピゲノムプロジェクト<br>副プログラムディレクター | NEXT-Gankenプログラム<br>プロジェクトリーダー | NEXT-Gankenプログラム/がん細胞多様性解明プロジェクト<br>プロジェクトリーダー | NEXT-Gankenプログラム/コア解析基盤プロジェクト</p>
-      <p style="text-align: left">分子生物学・腫瘍生物学・バイオインフォマティクス</p>
-						<p style="text-align: left">札幌医科大学医学部卒（2002年）、同大学院医学研究科修了（2007年）。米国 Dana-Farber Cancer Institute - Kornelia Polyak研究室にて乳がんのエピジェネティクス解析に従事。2011年より札幌医科大学医学部・分子生物学講座・助教。2012年からJSTさきがけ研究者兼任。2014年より同准教授。2016年より1年間総合病院で血液内科・総合診療科医師として勤務後、2017年4月がん研究所がんエピゲノムプロジェクトのプロジェクトリーダーに着任。<br>
-					<a href="https://researchmap.jp/reo/"> (researchmap)</a> <a href="pdf/aisatsu_ganken.pdf"> (就任時挨拶)</a>
-</p>
-  </div>
-  </div>
-  <!-- person end -->
-  
-  <!-- person -->
-  <div class="row" id="nakadai">
-  <div class="col-lg-3 col-sm-4 col-xs-12">
-      <figure>
-        <img class="w-100 rounded-top" src="images/nakadai.jpg" alt=""　class="img-fluid" alt="Responsive image">
-          <div class="u-box-shadow-sm bg-white text-center rounded p-1">
-            <div class="mb-3">
-              <p class="lead">中太 智義<br>Tomoyoshi NAKADAI</p>
+    <!--START OUR MEMBERS -->
+    <div class="ourMembers-wrapper-wrap container text-center">
+        <div class="row justify-content-center">
+            <div class="col-lg-12">
+                <h2 class="text-custom ourMembers-top">Our <span class="font-weight-bold">Members</span></h2>
             </div>
-          </div>
-      </figure>
-  </div>
+        </div>
+        <div class="ourMembers-wrapper">
+            <section class="magnificPopup-wrapper" id="members">
+                <div class="container text-center">
+                    <div class="row mt-5">
+                        <ul class="col list-unstyled list-inline mb-0 text-uppercase work_menu" id="menu-filter">
+                            <li class="list-inline-item"><a class="active" data-filter="*">All</a></li>
+                            <li class="list-inline-item"><a class="" data-filter=".epi">がんエピゲノムプロジェクト</a></li>
+                            <li class="list-inline-item"><a class="" data-filter=".diver">がん細胞多様性解明プロジェクト</a></li>
+                            <li class="list-inline-item"><a class="" data-filter=".core">コア解析基盤プロジェクト</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="container text-center">
+                    <div class="row mt-4 work-filter">
+                        <!-- 丸山 玲緒 -->
+                        <div class="col-lg-4 work_item epi diver core animate slide-from-bottom">
+                            <a href="images/works/1.jpg" class="img-zoom">
+                                <div class="work_box">
+                                    <div class="work_img">
+                                        <img src="images/people/maruyama.jpg"
+                                            class="img-fluid mx-auto d-block rounded person-pic-size" alt="work-img">
+                                    </div>
+                                    <div class="work_detail">
+                                        <a href="#maruyama">
+                                            <p class="mb-2">プロジェクトリーダー</p>
+                                            <h4 class="mb-0">丸山 玲緒</h4>
+                                        </a>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- 中太 智義 -->
+                        <div class="col-lg-4 work_item epi animate slide-from-bottom">
+                            <a href="images/people/nakadai2.jpg" class="img-zoom">
+                                <div class="work_box">
+                                    <div class="work_img">
+                                        <img src="images/people/nakadai.jpg"
+                                            class="img-fluid mx-auto d-block rounded person-pic-size" alt="work-img">
+                                    </div>
+                                    <div class="work_detail">
+                                        <a href="#nakadai">
+                                            <p class="mb-2">特任研究員</p>
+                                            <h4 class="mb-0">中太 智義</h4>
+                                        </a>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- 鈴鹿 淳 -->
+                        <div class="col-lg-4 work_item diver animate slide-from-bottom">
+                            <a href="images/people/suzuka.jpg" class="img-zoom">
+                                <div class="work_box">
+                                    <div class="work_img">
+                                        <img src="images/people/suzuka.jpg"
+                                            class="img-fluid mx-auto d-block rounded person-pic-size" alt="work-img">
+                                    </div>
+                                    <div class="work_detail">
+                                        <a href="#suzuka">
+                                            <p class="mb-2">特任研究員</p>
+                                            <h4 class="mb-0">鈴鹿 淳</h4>
+                                        </a>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- 馬合木特亜森 -->
+                        <div class="col-lg-4 work_item core animate slide-from-bottom">
+                            <a href="images/people/mahmut.jpg" class="img-zoom">
+                                <div class="work_box">
+                                    <div class="work_img">
+                                        <img src="images/people/mahmut.jpg"
+                                            class="img-fluid mx-auto d-block rounded person-pic-size" alt="work-img">
+                                    </div>
+                                    <div class="work_detail">
+                                        <a href="#mahmut">
+                                            <p class="mb-2">特任研究員</p>
+                                            <h4 class="mb-0">馬合木特亜森</h4>
+                                        </a>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- 尾辻 和尊 -->
+                        <div class="col-lg-4 work_item diver animate slide-from-bottom">
+                            <a href="images/people/otsuji.jpg" class="img-zoom">
+                                <div class="work_box">
+                                    <div class="work_img">
+                                        <img src="images/people/otsuji.jpg"
+                                            class="img-fluid mx-auto d-block rounded person-pic-size" alt="work-img">
+                                    </div>
+                                    <div class="work_detail">
+                                        <a href="#otsuji">
+                                            <p class="mb-2">クリニカルリサーチフェロー</p>
+                                            <h4 class="mb-0">尾辻 和尊</h4>
+                                        </a>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- 粂川 昂平 -->
+                        <div class="col-lg-4 work_item diver animate slide-from-bottom">
+                            <a href="images/people/kume.jpeg" class="img-zoom">
+                                <div class="work_box">
+                                    <div class="work_img">
+                                        <img src="images/people/kume.jpeg"
+                                            class="img-fluid mx-auto d-block rounded person-pic-size" alt="work-img">
+                                    </div>
+                                    <div class="work_detail">
+                                        <a href="#kumegawa">
+                                            <p class="mb-2">クリニカルリサーチフェロー</p>
+                                            <h4 class="mb-0">粂川 昂平</h4>
+                                        </a>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- 佐伯 澄人 -->
+                        <div class="col-lg-4 work_item epi animate slide-from-bottom">
+                            <a href="images/people/saeki.jpg" class="img-zoom">
+                                <div class="work_box">
+                                    <div class="work_img">
+                                        <img src="images/people/saeki.jpg"
+                                            class="img-fluid mx-auto d-block rounded person-pic-size" alt="work-img">
+                                    </div>
+                                    <div class="work_detail">
+                                        <a href="#saeki">
+                                            <p class="mb-2">研究生</p>
+                                            <h4 class="mb-0">佐伯 澄人</h4>
+                                        </a>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- 楊 麗英 -->
+                        <div class="col-lg-4 work_item epi animate slide-from-bottom">
+                            <a href="images/people/yang.jpg" class="img-zoom">
+                                <div class="work_box">
+                                    <div class="work_img">
+                                        <img src="images/people/yang.jpg"
+                                            class="img-fluid mx-auto d-block rounded person-pic-size" alt="work-img">
+                                    </div>
+                                    <div class="work_detail">
+                                        <a href="#yang">
+                                            <p class="mb-2">特任研究助手</p>
+                                            <h4 class="mb-0">楊 麗英</h4>
+                                        </a>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- 高橋 洋子-->
+                        <div class="col-lg-4 work_item core animate slide-from-bottom">
+                            <a href="images/people/yokotakahashi.jpg" class="img-zoom">
+                                <div class="work_box">
+                                    <div class="work_img">
+                                        <img src="images/people/yokotakahashi.jpg"
+                                            class="img-fluid mx-auto d-block rounded person-pic-size" alt="work-img">
+                                    </div>
+                                    <div class="work_detail">
+                                        <a href="#takahashi">
+                                            <p class="mb-2">研究生</p>
+                                            <h4 class="mb-0">高橋 洋子</h4>
+                                        </a>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- 山川 薫 -->
+                        <div class="col-lg-4 work_item core animate slide-from-bottom">
+                            <a href="images/people/yamakawa.jpg" class="img-zoom">
+                                <div class="work_box">
+                                    <div class="work_img">
+                                        <img src="images/people/yamakawa.jpg"
+                                            class="img-fluid mx-auto d-block rounded person-pic-size" alt="work-img">
+                                    </div>
+                                    <div class="work_detail">
+                                        <a href="#yamakawa">
+                                            <p class="mb-2">特任研究助手</p>
+                                            <h4 class="mb-0">山川 薫</h4>
+                                        </a>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- 宮木 理帆 -->
+                        <div class="col-lg-4 work_item core animate slide-from-bottom">
+                            <a href="images/people/miyaki.jpg" class="img-zoom">
+                                <div class="work_box">
+                                    <div class="work_img">
+                                        <img src="images/people/miyaki.jpg"
+                                            class="img-fluid mx-auto d-block rounded person-pic-size" alt="work-img">
+                                    </div>
+                                    <div class="work_detail">
+                                        <a href="#miyaki">
+                                            <p class="mb-2">特任研究助手</p>
+                                            <h4 class="mb-0">宮木 理帆</h4>
+                                        </a>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- 上田 美祐 -->
+                        <div class="col-lg-4 work_item epi animate slide-from-bottom">
+                            <a href="images/people/ueda.jpg" class="img-zoom">
+                                <div class="work_box">
+                                    <div class="work_img">
+                                        <img src="images/people/ueda.jpg"
+                                            class="img-fluid mx-auto d-block rounded person-pic-size" alt="work-img">
+                                    </div>
+                                    <div class="work_detail">
+                                        <a href="#ueda">
+                                            <p class="mb-2">特任研究補助員</p>
+                                            <h4 class="mb-0">上田 美祐</h4>
+                                        </a>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- 大塚 裕美 -->
+                        <div class="col-lg-4 work_item epi animate slide-from-bottom">
+                            <a href="images/people/otsuka.jpg" class="img-zoom">
+                                <div class="work_box">
+                                    <div class="work_img">
+                                        <img src="images/people/otsuka.jpg"
+                                            class="img-fluid mx-auto d-block rounded person-pic-size" alt="work-img">
+                                    </div>
+                                    <div class="work_detail">
+                                        <a href="#otsuka">
+                                            <p class="mb-2">特任研究補助員</p>
+                                            <h4 class="mb-0">大塚 裕美</h4>
+                                        </a>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- 前澤 誠希 -->
+                        <div class="col-lg-4 work_item epi animate slide-from-bottom">
+                            <a href="images/people/unknown.jpg" class="img-zoom">
+                                <div class="work_box">
+                                    <div class="work_img">
+                                        <img src="images/people/unknown.jpg"
+                                            class="img-fluid mx-auto d-block rounded person-pic-size" alt="work-img">
+                                    </div>
+                                    <div class="work_detail">
+                                        <a href="#maezawa">
+                                            <p class="mb-2">客員研究員</p>
+                                            <h4 class="mb-0">前澤 誠希</h4>
+                                        </a>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- 松野 達哉 -->
+                        <div class="col-lg-4 work_item epi animate slide-from-bottom">
+                            <a href="images/people/unknown.jpg" class="img-zoom">
+                                <div class="work_box">
+                                    <div class="work_img">
+                                        <img src="images/people/unknown.jpg"
+                                            class="img-fluid mx-auto d-block rounded person-pic-size" alt="work-img">
+                                    </div>
+                                    <div class="work_detail">
+                                        <a href="#matsuno">
+                                            <p class="mb-2">研究生</p>
+                                            <h4 class="mb-0">松野 達哉</h4>
+                                        </a>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- 井上 双葉 -->
+                        <div class="col-lg-4 work_item epi animate slide-from-bottom">
+                            <a href="images/people/unknown.jpg" class="img-zoom">
+                                <div class="work_box">
+                                    <div class="work_img">
+                                        <img src="images/people/unknown.jpg"
+                                            class="img-fluid mx-auto d-block rounded person-pic-size" alt="work-img">
+                                    </div>
+                                    <div class="work_detail">
+                                        <a href="#inoue">
+                                            <p class="mb-2">研究生</p>
+                                            <h4 class="mb-0">井上 双葉</h4>
+                                        </a>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- 﨑本 優里 -->
+                        <div class="col-lg-4 work_item epi animate slide-from-bottom">
+                            <a href="images/people/unknown.jpg" class="img-zoom">
+                                <div class="work_box">
+                                    <div class="work_img">
+                                        <img src="images/people/unknown.jpg"
+                                            class="img-fluid mx-auto d-block rounded person-pic-size" alt="work-img">
+                                    </div>
+                                    <div class="work_detail">
+                                        <a href="#sakimoto">
+                                            <p class="mb-2">研究生</p>
+                                            <h4 class="mb-0">﨑本 優里</h4>
+                                        </a>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- 豊原 佑典 -->
+                        <div class="col-lg-4 work_item epi animate slide-from-bottom">
+                            <a href="images/people/unknown.jpg" class="img-zoom">
+                                <div class="work_box">
+                                    <div class="work_img">
+                                        <img src="images/people/unknown.jpg"
+                                            class="img-fluid mx-auto d-block rounded person-pic-size" alt="work-img">
+                                    </div>
+                                    <div class="work_detail">
+                                        <a href="#toyohara">
+                                            <p class="mb-2">研究生</p>
+                                            <h4 class="mb-0">豊原 佑典</h4>
+                                        </a>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- 堀  千紗 -->
+                        <div class="col-lg-4 work_item epi animate slide-from-bottom">
+                            <a href="images/people/unknown.jpg" class="img-zoom">
+                                <div class="work_box">
+                                    <div class="work_img">
+                                        <img src="images/people/unknown.jpg"
+                                            class="img-fluid mx-auto d-block rounded person-pic-size" alt="work-img">
+                                    </div>
+                                    <div class="work_detail">
+                                        <a href="#hori">
+                                            <p class="mb-2">研究生</p>
+                                            <h4 class="mb-0">堀 千紗</h4>
+                                        </a>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <!--END OUR MEMBERS -->
 
-  <div class="col-lg-9 col-sm-8 col-xs-12">
-      <p style="text-align: left">特任研究員 ｜ がんエピゲノムプロジェクト</p>
-      <p style="text-align: left">生化学・分子生物学</p>
-      <p style="text-align: left">千葉大学大学院博士課程卒（2003年）。埼玉医科大学生化学教室助手（2003年-2008年）。米国ロックフェラー大学Robert G Roeder研究室ポストドクター及びリサーチアソシエイト（2008年-2018年）。継続して転写制御の分子メカニズムを生化学的及び分子生物学的手法を用いて研究。2018年2月より、がん研究所がんエピゲノムプロジェクトの研究員に赴任。転写制御の側面からがん化の分子機構を明らかにしたいと日々奮闘中。</p>
-  </div>
-  </div>
-  <!-- person end -->
-  
-  <!-- person -->
-  <div class="row" id="yang">
-  <div class="col-lg-3 col-sm-4 col-xs-12">
-      <figure>
-        <img class="w-100 rounded-top" src="images/yang.jpg" alt=""　class="img-fluid" alt="Responsive image">
-          <div class="u-box-shadow-sm bg-white text-center rounded p-1">
-            <div class="mb-3">
-              <p class="lead">楊 麗英<br>Liying YANG</p>
+    <!-- TEAM SUMMARY START -->
+    <section class="team-info container">
+        <div class="team-info-summary">
+            <div>プロジェクトリーダー<br>
+                <span class="team-person"></span><a href="#maruyama" class="team-member">丸山 玲緒</a>
             </div>
-          </div>
-      </figure>
-  </div>
-
-  <div class="col-lg-9 col-sm-8 col-xs-12">
-      <p style="text-align: left">特任研究助手 | がんエピゲノムプロジェクト</p>
-      <p style="text-align: left">分子生物学（各種シングルセル・NGS実験）</p>
-      <p style="text-align: left">復旦大学看護学部卒。2006年来日、2014年京都大学大学院医学研究科修了。2017年8月より現職。新しい知識を勉強しながら、今まで身につけた技術、知識、経験を生かして研究をサポートし、努力していきたいと思っております。</p>
-  </div>
-  </div>
-  <!-- person end -->
-
-  <!-- person -->
-  <div class="row" id="maezawa">
-  <div class="col-lg-3 col-sm-4 col-xs-12">
-      <figure>
-        <img class="w-100 rounded-top" src="images/unknown.jpg" alt=""　class="img-fluid" alt="Responsive image">
-          <div class="u-box-shadow-sm bg-white text-center rounded p-1">
-            <div class="mb-3">
-              <p class="lead">前澤 誠希<br>Masaki MAEZAWA</p>
+            <div class="mt-2">研究員<br>
+                <span class="team-person"></span><a href="#nakadai" class="team-member">中太 智義</a>
+                <span class="team-person"></span><a href="#suzuka" class="team-member">鈴鹿 淳</a>
+                <span class="team-person"></span><a href="#mahmut" class="team-member">馬合木特亜森</a>
             </div>
-          </div>
-      </figure>
-  </div>
-
-  <div class="col-lg-9 col-sm-8 col-xs-12">
-      <p style="text-align: left">客員研究員（東京大学・PD） | がんエピゲノムプロジェクト</p>
-      <p style="text-align: left">産業動物臨床学・分子生物学（①シングルセルChIP-seq法の確立、②牛リンパ腫の各種エピゲノム解析）</p>
-  </div>
-  </div>
-  <!-- person end -->
-
-  <!-- person -->
-  <div class="row" id="saeki">
-  <div class="col-lg-3 col-sm-4 col-xs-12">
-      <figure>
-        <img class="w-100 rounded-top" src="images/saeki.jpg" alt=""　class="img-fluid" alt="Responsive image">
-          <div class="u-box-shadow-sm bg-white text-center rounded p-1">
-            <div class="mb-3">
-              <p class="lead">佐伯 澄人<br>Sumito SAEKI</p>
+            <div class="mt-2">客員研究員<br>
+                <span class="team-person"></span><a href="#maezawa" class="team-member">前澤 誠希</a>
             </div>
-          </div>
-      </figure>
-  </div>
-
-  <div class="col-lg-9 col-sm-8 col-xs-12">
-      <p style="text-align: left">研究生（東北大学連携大学院・大学院生） | がんエピゲノムプロジェクト</p>
-      <p style="text-align: left">乳腺外科（①臨床検体や患者由来オルガノイドを用いた研究、②多種臨床情報に基づく転移・再発乳がん症例の層別化、③医療経済学）</p>
-  </div>
-  </div>
-  <!-- person end -->
-  
-  <!-- person -->
-  <div class="row" id="matsuno">
-  <div class="col-lg-3 col-sm-4 col-xs-12">
-      <figure>
-        <img class="w-100 rounded-top" src="images/unknown.jpg" alt=""　class="img-fluid" alt="Responsive image">
-          <div class="u-box-shadow-sm bg-white text-center rounded p-1">
-            <div class="mb-3">
-              <p class="lead">松野 達哉<br>Tatsuya MATSUNO</p>
+            <div class="mt-2">クリニカルリサーチフェロー<br>
+                <span class="team-person"></span><a href="#otsuji" class="team-member">尾辻 和尊</a>
+                <span class="team-person"></span><a href="#kumegawa" class="team-member">粂川 昂平</a>
             </div>
-          </div>
-      </figure>
-  </div>
-
-  <div class="col-lg-9 col-sm-8 col-xs-12">
-      <p style="text-align: left">研究生（東京大学・大学院生） | がんエピゲノムプロジェクト</p>
-      <p style="text-align: left">消化器内科・分子生物学（①HBVウイルスのゲノム組込み部位の検出法開発、②肝がんのゲノム解析、③Lineage Tracing手法の開発。WET&DRYを実践）</p>
-  </div>
-  </div>
-  <!-- person end -->
-  
-  <!-- person -->
-  <div class="row" id="inoue">
-  <div class="col-lg-3 col-sm-4 col-xs-12">
-      <figure>
-        <img class="w-100 rounded-top" src="images/unknown.jpg" alt=""　class="img-fluid" alt="Responsive image">
-          <div class="u-box-shadow-sm bg-white text-center rounded p-1">
-            <div class="mb-3">
-              <p class="lead">井上 双葉<br>Futaba INOUE</p>
+            <div class="mt-2">研究生・大学院生・研修生<br>
+                <span class="team-person"></span><a href="#saeki" class="team-member">佐伯 澄人</a>
+                <span class="team-person"></span><a href="#matsuno" class="team-member">松野 達哉</a>
+                <span class="team-person"></span><a href="#inoue" class="team-member">井上 双葉</a>
+                <span class="team-person"></span><a href="#sakimoto" class="team-member">﨑本 優里</a>
+                <span class="team-person"></span><a href="#toyohara" class="team-member">豊原 佑典</a>
+                <span class="team-person"></span><a href="#takahashi" class="team-member">高橋 洋子</a>
+                <span class="team-person"></span><a href="#hori" class="team-member">堀 千紗</a>
             </div>
-          </div>
-      </figure>
-  </div>
-
-  <div class="col-lg-9 col-sm-8 col-xs-12">
-      <p style="text-align: left">研究生（東京大学・大学院生） | がんエピゲノムプロジェクト</p>
-      <p style="text-align: left">産婦人科（ヒストン修飾酵素の機能解析、各種エピゲノム解析）</p>
-  </div>
-  </div>
-  <!-- person end -->
-  
-  <!-- person -->
-  <div class="row" id="sakimoto">
-  <div class="col-lg-3 col-sm-4 col-xs-12">
-      <figure>
-        <img class="w-100 rounded-top" src="images/unknown.jpg" alt=""　class="img-fluid" alt="Responsive image">
-          <div class="u-box-shadow-sm bg-white text-center rounded p-1">
-            <div class="mb-3">
-              <p class="lead">﨑本 優里<br>Yuuri SAKIMOTO</p>
+            <div class="mt-2">研究助手<br>
+                <span class="team-person"></span><a href="#yang" class="team-member">楊 麗英</a>
+                <span class="team-person"></span><a href="#yamakawa" class="team-member">山川 薫</a>
+                <span class="team-person"></span><a href="#miyaki" class="team-member">宮木 理帆</a>
             </div>
-          </div>
-      </figure>
-  </div>
-
-  <div class="col-lg-9 col-sm-8 col-xs-12">
-      <p style="text-align: left">研究生（慶應義塾大学） | がんエピゲノムプロジェクト</p>
-      <p style="text-align: left">消化器外科（直腸がんのシングルセル解析）</p>
-  </div>
-  </div>
-  <!-- person end -->
-
-    <!-- person -->
-  <div class="row" id="toyohara">
-  <div class="col-lg-3 col-sm-4 col-xs-12">
-      <figure>
-        <img class="w-100 rounded-top" src="images/unknown.jpg" alt=""　class="img-fluid" alt="Responsive image">
-          <div class="u-box-shadow-sm bg-white text-center rounded p-1">
-            <div class="mb-3">
-              <p class="lead">豊原 佑典<br>Yusuke TOYOHARA</p>
+            <div class="mt-2">研究補助員<br>
+                <span class="team-person"></span><a href="#ueda" class="team-member">上田 美祐</a>
+                <span class="team-person"></span><a href="#otsuka" class="team-member">大塚 裕美</a>
             </div>
-          </div>
-      </figure>
-  </div>
+        </div><!-- team-info-summary -->
+    </section>
+    <!-- TEAM SUMMARY END -->
 
-  <div class="col-lg-9 col-sm-8 col-xs-12">
-      <p style="text-align: left">研究生（東京大学・大学院生） | がんエピゲノムプロジェクト</p>
-      <p style="text-align: left">産婦人科（ヒストン修飾酵素阻害剤の機能解析）</p>
-  </div>
-  </div>
-  <!-- person end -->
-  
-  <!-- person -->
-  <div class="row" id="hori">
-  <div class="col-lg-3 col-sm-4 col-xs-12">
-      <figure>
-        <img class="w-100 rounded-top" src="images/unknown.jpg" alt=""　class="img-fluid" alt="Responsive image">
-          <div class="u-box-shadow-sm bg-white text-center rounded p-1">
-            <div class="mb-3">
-              <p class="lead">堀　千紗<br>Chisa HORI</p>
+    <!-- TEAM DETAIL START -->
+    <div class="container mt-3 mb-5">
+        <!-- 丸山 玲緒 -->
+        <div class="row person-detail" id="maruyama">
+            <div class="col-lg-3 col-sm-4 col-xs-12">
+                <figure>
+                    <img class="w-100 rounded-top" src="images/people/maruyama.jpg" alt="" class="img-fluid">
+                    <div class="u-box-shadow-sm bg-white text-center rounded">
+                        <div class="mt-1">
+                            <p class="lead">丸山 玲緒<br>Reo MARUYAMA</p>
+                        </div>
+                    </div>
+                </figure>
             </div>
-          </div>
-      </figure>
-  </div>
-
-  <div class="col-lg-9 col-sm-8 col-xs-12">
-      <p style="text-align: left">研修生 | がんエピゲノムプロジェクト</p>
-      <p style="text-align: left">病理医（乳がんのゲノム解析）</p>
-  </div>
-  </div>
-  <!-- person end -->
-
- <!-- person -->
-  <div class="row" id="ueda">
-  <div class="col-lg-3 col-sm-4 col-xs-12">
-      <figure>
-        <img class="w-100 rounded-top" src="images/ueda.jpg" alt=""　class="img-fluid" alt="Responsive image">
-          <div class="u-box-shadow-sm bg-white text-center rounded p-1">
-            <div class="mb-3">
-              <p class="lead">上田 美祐<br>Miyu UEDA</p>
+            <div class="col-lg-9 col-sm-8 col-xs-12">
+                <p>
+                    プロジェクトリーダー | がん研究所/がんエピゲノムプロジェクト<br>
+                    副プログラムディレクター | NEXT-Gankenプログラム<br>
+                    プロジェクトリーダー | NEXT-Gankenプログラム/がん細胞多様性解明プロジェクト<br>
+                    プロジェクトリーダー | NEXT-Gankenプログラム/コア解析基盤プロジェクト
+                </p>
+                <p>分子生物学・腫瘍生物学・バイオインフォマティクス</p>
+                <p>札幌医科大学医学部卒（2002年）、同大学院医学研究科修了（2007年）。米国 Dana-Farber Cancer Institute - Kornelia
+                    Polyak研究室にて乳がんのエピジェネティクス解析に従事。2011年より札幌医科大学医学部・分子生物学講座・助教。2012年からJSTさきがけ研究者兼任。2014年より同准教授。2016年より1年間総合病院で血液内科・総合診療科医師として勤務後、2017年4月がん研究所がんエピゲノムプロジェクトのプロジェクトリーダーに着任。<br>
+                    <a href="https://researchmap.jp/reo/">(researchmap)</a>
+                    <a href="pdf/aisatsu_ganken.pdf">(就任時挨拶)</a>
+                </p>
             </div>
-          </div>
-      </figure>
-  </div>
-
-  <div class="col-lg-9 col-sm-8 col-xs-12">
-      <p style="text-align: left">特任研究補助員 | がんエピゲノムプロジェクト</p>
-      <p style="text-align: left">各種実験の補助、ラボマネージメント</p>
-      <p style="text-align: left">東京大学大学院生。がんの研究は初心者ですが，一生懸命頑張ります。</p>
-  </div>
-  </div>
-  <!-- person end -->
-				
-  <!-- person -->
-  <div class="row"  id="otsuka">
-  <div class="col-lg-3 col-sm-4 col-xs-12">
-      <figure>
-        <img class="w-100 rounded-top" src="images/otsuka.jpg" alt=""　class="img-fluid" alt="Responsive image">
-          <div class="u-box-shadow-sm bg-white text-center rounded p-1">
-            <div class="mb-3">
-              <p class="lead">大塚 裕美<br>Hiromi OTSUKA</p>
+        </div>
+        <!-- 中太 智義 -->
+        <div class="row person-detail" id="nakadai">
+            <div class="col-lg-3 col-sm-4 col-xs-12">
+                <figure>
+                    <img class="w-100 rounded-top" src="images/people/nakadai.jpg" alt="" class="img-fluid">
+                    <div class="u-box-shadow-sm bg-white text-center rounded">
+                        <div class="mt-1">
+                            <p class="lead">中太 智義<br>Tomoyoshi NAKADAI</p>
+                        </div>
+                    </div>
+                </figure>
             </div>
-          </div>
-      </figure>
-  </div>
-
-  <div class="col-lg-9 col-sm-8 col-xs-12">
-      <p style="text-align: left">特任研究補助員 | がんエピゲノムプロジェクト</p>
-      <p style="text-align: left">各種実験の補助、ラボマネージメント</p>
-      <p style="text-align: left">研究が少しでもスムーズに進むよう，サポートしたします！</p>
-  </div>
-  </div>
-  <!-- person end -->
-  
-
-  
-  <!-- person -->
-  <div class="row" id="suzuka">
-  <div class="col-lg-3 col-sm-4 col-xs-12">
-      <figure>
-        <img class="w-100 rounded-top" src="images/suzuka.jpg" alt=""　class="img-fluid" alt="Responsive image">
-          <div class="u-box-shadow-sm bg-white text-center rounded p-1">
-            <div class="mb-3">
-              <p class="lead">鈴鹿 淳<br>Jun SUZUKA</p>
+            <div class="col-lg-9 col-sm-8 col-xs-12">
+                <p>特任研究員 ｜ がんエピゲノムプロジェクト</p>
+                <p>生化学・分子生物学</p>
+                <p>千葉大学大学院博士課程卒（2003年）。埼玉医科大学生化学教室助手（2003年-2008年）。米国ロックフェラー大学Robert G
+                    Roeder研究室ポストドクター及びリサーチアソシエイト（2008年-2018年）。継続して転写制御の分子メカニズムを生化学的及び分子生物学的手法を用いて研究。2018年2月より、がん研究所がんエピゲノムプロジェクトの研究員に赴任。転写制御の側面からがん化の分子機構を明らかにしたいと日々奮闘中。
+                </p>
             </div>
-          </div>
-      </figure>
-  </div>
-
-  <div class="col-lg-9 col-sm-8 col-xs-12">
-      <p style="text-align: left">特任研究員 | がん細胞多様性解明プロジェクト</p>
-      <p style="text-align: left">腫瘍生物学（ハイドロゲルを用いた幹細胞性・細胞可塑性の研究）</p>
-      <p style="text-align: left"></p>
-  </div>
-  </div>
-  <!-- person end -->
-        
-  <!-- person -->
-  <div class="row" id="otusji">
-  <div class="col-lg-3 col-sm-4 col-xs-12">
-      <figure>
-        <img class="w-100 rounded-top" src="images/otsuji.jpg" alt=""　class="img-fluid" alt="Responsive image">
-          <div class="u-box-shadow-sm bg-white text-center rounded p-1">
-            <div class="mb-3">
-              <p class="lead">尾辻 和尊<br>kazutaka OTSUJI</p>
+        </div>
+        <!-- 楊 麗英 -->
+        <div class="row person-detail" id="yang">
+            <div class="col-lg-3 col-sm-4 col-xs-12">
+                <figure>
+                    <img class="w-100 rounded-top" src="images/people/yang.jpg" alt="" class="img-fluid">
+                    <div class="u-box-shadow-sm bg-white text-center rounded">
+                        <div class="mt-1">
+                            <p class="lead">楊 麗英<br>Tomoyoshi NAKADAI</p>
+                        </div>
+                    </div>
+                </figure>
             </div>
-          </div>
-      </figure>
-  </div>
-
-  <div class="col-lg-9 col-sm-8 col-xs-12">
-      <p style="text-align: left">クリニカルリサーチフェロー | がん細胞多様性解明プロジェクト</p>
-      <p style="text-align: left">乳腺外科（シングルセルマルチオミックス解析手法の開発・解析）</p>
-      <p style="text-align: left"></p>
-  </div>
-  </div>
-  <!-- person end -->
-
-  
-  <!-- person -->
-  <div class="row" id="kumegawa">
-  <div class="col-lg-3 col-sm-4 col-xs-12">
-      <figure>
-        <img class="w-100 rounded-top" src="images/kume.jpeg" alt=""　class="img-fluid" alt="Responsive image">
-          <div class="u-box-shadow-sm bg-white text-center rounded p-1">
-            <div class="mb-3">
-              <p class="lead">粂川 昂平<br>Kohei KUMEGAWA</p>
+            <div class="col-lg-9 col-sm-8 col-xs-12">
+                <p>特任研究助手 | がんエピゲノムプロジェクト</p>
+                <p>分子生物学（各種シングルセル・NGS実験）</p>
+                <p>復旦大学看護学部卒。2006年来日、2014年京都大学大学院医学研究科修了。2017年8月より現職。新しい知識を勉強しながら、今まで身につけた技術、知識、経験を生かして研究をサポートし、努力していきたいと思っております。
+                </p>
             </div>
-          </div>
-      </figure>
-  </div>
-
-  <div class="col-lg-9 col-sm-8 col-xs-12">
-      <p style="text-align: left">クリニカルリサーチフェロー | がん細胞多様性解明プロジェクト</p>
-      <p style="text-align: left">バイオインフォマティクス</p>
-      <p style="text-align: left">2016年札幌医科大学卒業。初期研修，内科研修を経て2020年より丸山研究室へ参加。東北大学大学院医学系研究科在籍中。scATACseq解析を中心に，scRNAseq, scChIPseq解析，公共データベースとの統合解析等に従事。医師としての視点を持ったバイオインフォマティシャン，データサイエンティストを志向して日々勉強中です。</p>
-  </div>
-  </div>
-  <!-- person end -->
-  
-  <!-- person -->
-  <div class="row" id="mahmut">
-  <div class="col-lg-3 col-sm-4 col-xs-12">
-      <figure>
-        <img class="w-100 rounded-top" src="images/mahmut.jpg" alt=""　class="img-fluid" alt="Responsive image">
-          <div class="u-box-shadow-sm bg-white text-center rounded p-1">
-            <div class="mb-3">
-              <p class="lead">馬合木特 亜森<br>Mahmut YASEN</p>
+        </div>
+        <!-- 前澤 誠希 -->
+        <div class="row person-detail" id="maezawa">
+            <div class="col-lg-3 col-sm-4 col-xs-12">
+                <figure>
+                    <img class="w-100 rounded-top" src="images/people/unknown.jpg" alt="" class="img-fluid">
+                    <div class="u-box-shadow-sm bg-white text-center rounded">
+                        <div class="mt-1">
+                            <p class="lead">前澤 誠希<br>Masaki MAEZAWA</p>
+                        </div>
+                    </div>
+                </figure>
             </div>
-          </div>
-      </figure>
-  </div>
-
-  <div class="col-lg-9 col-sm-8 col-xs-12">
-      <p style="text-align: left">特任研究員 | コア解析基盤プロジェクト</p>
-      <p style="text-align: left">乳がん患者由来オルガノイドの解析（イメージング）</p>
-      <p style="text-align: left"></p>
-  </div>
-  </div>
-  <!-- person end -->
-
-  <!-- person -->
-  <div class="row"  id="yamakawa">
-  <div class="col-lg-3 col-sm-4 col-xs-12">
-      <figure>
-        <img class="w-100 rounded-top" src="images/yamakawa.jpg" alt=""　class="img-fluid" alt="Responsive image">
-          <div class="u-box-shadow-sm bg-white text-center rounded p-1">
-            <div class="mb-3">
-              <p class="lead">山川 薫<br>kaoru YAMAKAWA</p>
+            <div class="col-lg-9 col-sm-8 col-xs-12">
+                <p>客員研究員（東京大学・PD） | がんエピゲノムプロジェクト</p>
+                <p>産業動物臨床学・分子生物学（①シングルセルChIP-seq法の確立、②牛リンパ腫の各種エピゲノム解析）</p>
             </div>
-          </div>
-      </figure>
-  </div>
-
-  <div class="col-lg-9 col-sm-8 col-xs-12">
-      <p style="text-align: left">特任研究助手 | コア解析基盤プロジェクト</p>
-      <p style="text-align: left">分子生物学（乳がん臨床検体・患者由来オルガノイド）</p>
-      <p style="text-align: left"></p>
-  </div>
-  </div>
-  <!-- person end -->
-  
-  <!-- person -->
-  <div class="row" id="miyaki">
-  <div class="col-lg-3 col-sm-4 col-xs-12">
-      <figure>
-        <img class="w-100 rounded-top" src="images/miyaki.jpg" alt=""　class="img-fluid" alt="Responsive image">
-          <div class="u-box-shadow-sm bg-white text-center rounded p-1">
-            <div class="mb-3">
-              <p class="lead">宮木 理帆<br>Riho MIYAKI</p>
+        </div>
+        <!-- 佐伯 澄人 -->
+        <div class="row person-detail" id="saeki">
+            <div class="col-lg-3 col-sm-4 col-xs-12">
+                <figure>
+                    <img class="w-100 rounded-top" src="images/people/saeki.jpg" alt="" class="img-fluid">
+                    <div class="u-box-shadow-sm bg-white text-center rounded">
+                        <div class="mt-1">
+                            <p class="lead">佐伯 澄人<br>Sumito SAEKI</p>
+                        </div>
+                    </div>
+                </figure>
             </div>
-          </div>
-      </figure>
-  </div>
-
-  <div class="col-lg-9 col-sm-8 col-xs-12">
-      <p style="text-align: left">特任研究助手 | コア解析基盤プロジェクト</p>
-      <p style="text-align: left">バイオインフォマティクス（各種一次解析）</p>
-      <p style="text-align: left"></p>
-  </div>
-  </div>
-  <!-- person end -->
-  
-  <!-- person -->
-  <div class="row"  id="takahashi">
-  <div class="col-lg-3 col-sm-4 col-xs-12">
-      <figure>
-        <img class="w-100 rounded-top" src="images/yokotakahashi.jpg" alt=""　class="img-fluid" alt="Responsive image">
-          <div class="u-box-shadow-sm bg-white text-center rounded p-1">
-            <div class="mb-3">
-              <p class="lead">高橋 洋子<br>Yoko TAKAHASHI</p>
+            <div class="col-lg-9 col-sm-8 col-xs-12">
+                <p>研究生（東北大学連携大学院・大学院生） | がんエピゲノムプロジェクト</p>
+                <p>乳腺外科（①臨床検体や患者由来オルガノイドを用いた研究、②多種臨床情報に基づく転移・再発乳がん症例の層別化、③医療経済学）</p>
             </div>
-          </div>
-      </figure>
-  </div>
+        </div>
+        <!-- 松野 達哉 -->
+        <div class="row person-detail" id="matsuno">
+            <div class="col-lg-3 col-sm-4 col-xs-12">
+                <figure>
+                    <img class="w-100 rounded-top" src="images/people/unknown.jpg" alt="" class="img-fluid">
+                    <div class="u-box-shadow-sm bg-white text-center rounded">
+                        <div class="mt-1">
+                            <p class="lead">松野 達哉<br>Tatsuya MATSUNO</p>
+                        </div>
+                    </div>
+                </figure>
+            </div>
+            <div class="col-lg-9 col-sm-8 col-xs-12">
+                <p>研究生（東京大学・大学院生） | がんエピゲノムプロジェクト</p>
+                <p>消化器内科・分子生物学（①HBVウイルスのゲノム組込み部位の検出法開発、②肝がんのゲノム解析、③Lineage Tracing手法の開発。WET&DRYを実践）</p>
+            </div>
+        </div>
+        <!-- 井上 双葉 -->
+        <div class="row person-detail" id="inoue">
+            <div class="col-lg-3 col-sm-4 col-xs-12">
+                <figure>
+                    <img class="w-100 rounded-top" src="images/people/unknown.jpg" alt="" class="img-fluid">
+                    <div class="u-box-shadow-sm bg-white text-center rounded">
+                        <div class="mt-1">
+                            <p class="lead">井上 双葉<br>Futaba INOUE</p>
+                        </div>
+                    </div>
+                </figure>
+            </div>
+            <div class="col-lg-9 col-sm-8 col-xs-12">
+                <p>研究生（東京大学・大学院生） | がんエピゲノムプロジェクト</p>
+                <p>産婦人科（ヒストン修飾酵素の機能解析、各種エピゲノム解析）</p>
+            </div>
+        </div>
+        <!-- 﨑本 優里 -->
+        <div class="row person-detail" id="sakimoto">
+            <div class="col-lg-3 col-sm-4 col-xs-12">
+                <figure>
+                    <img class="w-100 rounded-top" src="images/people/unknown.jpg" alt="" class="img-fluid">
+                    <div class="u-box-shadow-sm bg-white text-center rounded">
+                        <div class="mt-1">
+                            <p class="lead">﨑本 優里<br>Yuuri SAKIMOTO</p>
+                        </div>
+                    </div>
+                </figure>
+            </div>
+            <div class="col-lg-9 col-sm-8 col-xs-12">
+                <p>研究生（慶應義塾大学） | がんエピゲノムプロジェクト</p>
+                <p>消化器外科（直腸がんのシングルセル解析）</p>
+            </div>
+        </div>
+        <!-- 豊原 佑典 -->
+        <div class="row person-detail" id="toyohara">
+            <div class="col-lg-3 col-sm-4 col-xs-12">
+                <figure>
+                    <img class="w-100 rounded-top" src="images/people/unknown.jpg" alt="" class="img-fluid">
+                    <div class="u-box-shadow-sm bg-white text-center rounded">
+                        <div class="mt-1">
+                            <p class="lead">豊原 佑典<br>Yusuke TOYOHARA</p>
+                        </div>
+                    </div>
+                </figure>
+            </div>
+            <div class="col-lg-9 col-sm-8 col-xs-12">
+                <p>研究生（東京大学・大学院生） | がんエピゲノムプロジェクト</p>
+                <p>産婦人科（ヒストン修飾酵素阻害剤の機能解析）</p>
+            </div>
+        </div>
+        <!-- 堀  千紗 -->
+        <div class="row person-detail" id="hori">
+            <div class="col-lg-3 col-sm-4 col-xs-12">
+                <figure>
+                    <img class="w-100 rounded-top" src="images/people/unknown.jpg" alt="" class="img-fluid">
+                    <div class="u-box-shadow-sm bg-white text-center rounded">
+                        <div class="mt-1">
+                            <p class="lead">堀 千紗<br>Chisa HORI</p>
+                        </div>
+                    </div>
+                </figure>
+            </div>
+            <div class="col-lg-9 col-sm-8 col-xs-12">
+                <p>研修生 | がんエピゲノムプロジェクト</p>
+                <p>病理医（乳がんのゲノム解析）</p>
+            </div>
+        </div>
+        <!-- 上田 美祐 -->
+        <div class="row person-detail" id="ueda">
+            <div class="col-lg-3 col-sm-4 col-xs-12">
+                <figure>
+                    <img class="w-100 rounded-top" src="images/people/ueda.jpg" alt="" class="img-fluid">
+                    <div class="u-box-shadow-sm bg-white text-center rounded">
+                        <div class="mt-1">
+                            <p class="lead">上田 美祐<br>Miyu UEDA</p>
+                        </div>
+                    </div>
+                </figure>
+            </div>
+            <div class="col-lg-9 col-sm-8 col-xs-12">
+                <p>特任研究補助員 | がんエピゲノムプロジェクト</p>
+                <p>各種実験の補助、ラボマネージメント</p>
+                <p>東京大学大学院生。がんの研究は初心者ですが，一生懸命頑張ります。</p>
+            </div>
+        </div>
+        <!-- 大塚 裕美 -->
+        <div class="row person-detail" id="otsuka">
+            <div class="col-lg-3 col-sm-4 col-xs-12">
+                <figure>
+                    <img class="w-100 rounded-top" src="images/people/otsuka.jpg" alt="" class="img-fluid">
+                    <div class="u-box-shadow-sm bg-white text-center rounded">
+                        <div class="mt-1">
+                            <p class="lead">大塚 裕美<br>Hiromi OTSUKA</p>
+                        </div>
+                    </div>
+                </figure>
+            </div>
+            <div class="col-lg-9 col-sm-8 col-xs-12">
+                <p>特任研究補助員 | がんエピゲノムプロジェクト</p>
+                <p>各種実験の補助、ラボマネージメント</p>
+                <p>研究が少しでもスムーズに進むよう，サポートしたします！</p>
+            </div>
+        </div>
+        <!-- 鈴鹿 淳 -->
+        <div class="row person-detail" id="suzuka">
+            <div class="col-lg-3 col-sm-4 col-xs-12">
+                <figure>
+                    <img class="w-100 rounded-top" src="images/people/suzuka.jpg" alt="" class="img-fluid">
+                    <div class="u-box-shadow-sm bg-white text-center rounded">
+                        <div class="mt-1">
+                            <p class="lead">鈴鹿 淳<br>Jun SUZUKA</p>
+                        </div>
+                    </div>
+                </figure>
+            </div>
+            <div class="col-lg-9 col-sm-8 col-xs-12">
+                <p>特任研究員 | がん細胞多様性解明プロジェクト</p>
+                <p>腫瘍生物学（ハイドロゲルを用いた幹細胞性・細胞可塑性の研究）</p>
+            </div>
+        </div>
+        <!-- 尾辻 和尊 -->
+        <div class="row person-detail" id="otsuji">
+            <div class="col-lg-3 col-sm-4 col-xs-12">
+                <figure>
+                    <img class="w-100 rounded-top" src="images/people/otsuji.jpg" alt="" class="img-fluid">
+                    <div class="u-box-shadow-sm bg-white text-center rounded">
+                        <div class="mt-1">
+                            <p class="lead">尾辻 和尊<br>kazutaka OTSUJI</p>
+                        </div>
+                    </div>
+                </figure>
+            </div>
+            <div class="col-lg-9 col-sm-8 col-xs-12">
+                <p>クリニカルリサーチフェロー | がん細胞多様性解明プロジェクト</p>
+                <p>乳腺外科（シングルセルマルチオミックス解析手法の開発・解析）</p>
+            </div>
+        </div>
+        <!-- 粂川 昂平 -->
+        <div class="row person-detail" id="kumegawa">
+            <div class="col-lg-3 col-sm-4 col-xs-12">
+                <figure>
+                    <img class="w-100 rounded-top" src="images/people/kume.jpeg" alt="" class="img-fluid">
+                    <div class="u-box-shadow-sm bg-white text-center rounded">
+                        <div class="mt-1">
+                            <p class="lead">粂川 昂平<br>Kohei KUMEGAWA</p>
+                        </div>
+                    </div>
+                </figure>
+            </div>
+            <div class="col-lg-9 col-sm-8 col-xs-12">
+                <p>クリニカルリサーチフェロー | がん細胞多様性解明プロジェクト</p>
+                <p>バイオインフォマティクス</p>
+                <p>2016年札幌医科大学卒業。初期研修，内科研修を経て2020年より丸山研究室へ参加。東北大学大学院医学系研究科在籍中。scATACseq解析を中心に，scRNAseq,
+                    scChIPseq解析，公共データベースとの統合解析等に従事。医師としての視点を持ったバイオインフォマティシャン，データサイエンティストを志向して日々勉強中です。</p>
+            </div>
+        </div>
+        <!-- 馬合木特 亜森 -->
+        <div class="row person-detail" id="mahmut">
+            <div class="col-lg-3 col-sm-4 col-xs-12">
+                <figure>
+                    <img class="w-100 rounded-top" src="images/people/mahmut.jpg" alt="" class="img-fluid">
+                    <div class="u-box-shadow-sm bg-white text-center rounded">
+                        <div class="mt-1">
+                            <p class="lead">馬合木特 亜森<br>Mahmut YASEN</p>
+                        </div>
+                    </div>
+                </figure>
+            </div>
+            <div class="col-lg-9 col-sm-8 col-xs-12">
+                <p>特任研究員 | コア解析基盤プロジェクト</p>
+                <p>乳がん患者由来オルガノイドの解析（イメージング）</p>
+            </div>
+        </div>
+        <!-- 山川 薫 -->
+        <div class="row person-detail" id="yamakawa">
+            <div class="col-lg-3 col-sm-4 col-xs-12">
+                <figure>
+                    <img class="w-100 rounded-top" src="images/people/yamakawa.jpg" alt="" class="img-fluid">
+                    <div class="u-box-shadow-sm bg-white text-center rounded">
+                        <div class="mt-1">
+                            <p class="lead">山川 薫<br>kaoru YAMAKAWA</p>
+                        </div>
+                    </div>
+                </figure>
+            </div>
+            <div class="col-lg-9 col-sm-8 col-xs-12">
+                <p>特任研究助手 | コア解析基盤プロジェクト</p>
+                <p>分子生物学（乳がん臨床検体・患者由来オルガノイド）</p>
+            </div>
+        </div>
+        <!-- 宮木 理帆 -->
+        <div class="row person-detail" id="miyaki">
+            <div class="col-lg-3 col-sm-4 col-xs-12">
+                <figure>
+                    <img class="w-100 rounded-top" src="images/people/miyaki.jpg" alt="" class="img-fluid">
+                    <div class="u-box-shadow-sm bg-white text-center rounded">
+                        <div class="mt-1">
+                            <p class="lead">宮木 理帆<br>Riho MIYAKI</p>
+                        </div>
+                    </div>
+                </figure>
+            </div>
+            <div class="col-lg-9 col-sm-8 col-xs-12">
+                <p>特任研究助手 | コア解析基盤プロジェクト</p>
+                <p>バイオインフォマティクス（各種一次解析）</p>
+            </div>
+        </div>
+        <!-- 高橋 洋子 -->
+        <div class="row person-detail" id="takahashi">
+            <div class="col-lg-3 col-sm-4 col-xs-12">
+                <figure>
+                    <img class="w-100 rounded-top" src="images/people/yokotakahashi.jpg" alt="" class="img-fluid">
+                    <div class="u-box-shadow-sm bg-white text-center rounded">
+                        <div class="mt-1">
+                            <p class="lead">高橋 洋子<br>Yoko TAKAHASHI</p>
+                        </div>
+                    </div>
+                </figure>
+            </div>
+            <div class="col-lg-9 col-sm-8 col-xs-12">
+                <p>研究生（がん研究会有明病院・乳腺外科・副医長） | コア解析基盤プロジェクト</p>
+                <p>乳腺外科（臨床検体、臨床情報の解析）</p>
+            </div>
+        </div>
+    </div><!-- container -->
+    <!-- TEAM DETAIL END -->
 
-  <div class="col-lg-9 col-sm-8 col-xs-12">
-      <p style="text-align: left">研究生（がん研究会有明病院・乳腺外科・副医長） | コア解析基盤プロジェクト</p>
-      <p style="text-align: left">乳腺外科（臨床検体、臨床情報の解析）</p>
-  </div>
-  </div>
-  <!-- person end -->
+    <!--START FOOTER-->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-alt">
+                <p class="text-muted mb-0">Copyright &copy; 2020 Japanese Foundation For Cancer Research. All Rights
+                    Reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!--END FOOTER-->
 
-  </div>
-</section>
-<!-- PROJECT MEMBER END -->
+    <!-- Back To Top -->
+    <a href="#" class="back_top"> <i class="mdi mdi-chevron-up"> </i> </a>
 
-<!-- FOOTER -->
-<footer class="footer">
-   <div class="container-fluid">
-     <p class="text-white mt-2">Copyright © 2020 Japanese Foundation For Cancer Research. All Rights Reserved.</p>
-   </div>
-</footer>
-
-<!-- jQuery, Popper.js, bootstrap.min.js -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <!-- JAVASCRIPTS -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!--EASING JS-->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/scrollspy.min.js"></script>
+    <!--PORTFOLIO FILTER JS-->
+    <script src="js/isotope.js"></script>
+    <!-- Magnific Popup Js -->
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <!-- TYPED -->
+    <script src="js/typed.js"></script>
+    <!-- OWL CAROUSEL -->
+    <script src="js/owl.carousel.min.js"></script>
+    <!-- CONTACT JS -->
+    <script src="js/contact.js"></script>
+    <!--CUSTOM JS-->
+    <script src="js/custom.js"></script>
+    <script src="js/fadeIn.js"></script>
 </body>
+
 </html>
