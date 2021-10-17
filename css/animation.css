@@ -1,0 +1,37 @@
+/* animation */
+.animate {
+  opacity: 0;
+  /* transform: translateY(20px); */
+  transition: opacity 1s, transform 1s;
+}
+
+.animate.slide-from-left {
+  transform: translateX(-100px);
+}
+.animate.slide-from-right {
+  transform: translateX(100px);
+}
+.animate.slide-from-bottom {
+  transform: translateY(100px);
+}
+
+.animate.appear {
+  opacity: 1;
+  transform: none;
+}
+
+
+@media screen and (max-width: 543px) {
+
+  .animate.slide-from-left {
+    transform: none;
+  }
+
+  .animate.slide-from-right {
+    transform: none;
+  }
+
+  .animate.slide-from-bottom {
+    transform: none;
+  }
+}
