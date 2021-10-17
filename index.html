@@ -1,112 +1,269 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-  <meta charset="utf-8">
-  <title>REO MARUYAMA LABORATORY</title>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
-  <link rel="stylesheet" href="footer.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>REO MARUYAMA LAB</title>
+    <meta name="description"
+        content="公益財団法人がん研究会 丸山玲緒研究室 公式HPです。「がん」とは何か？その本質は？を追求するため、細胞生物学、分子生物学、生化学、情報科学、臨床医学など多様な専門性を持つ人間がタッグを組み、WETとDRYの両面からアプローチしています。" />
+    <meta name="keywords" content="がん, エピゲノム, 乳がん" />
+
+    <!--Favicon-->
+    <link rel="shortcut icon" href="images/favicon.ico">
+
+    <!-- Font Awesome -->
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+
+    <!--Bootstrap Css-->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+
+    <!-- Materialdesign icons Css -->
+    <link href="css/materialdesignicons.min.css" rel="stylesheet">
+
+    <!-- Mobirise icons Css -->
+    <link href="css/mobiriseicons.css" rel="stylesheet">
+
+    <!-- Magnific-popup -->
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <!-- Animate Css -->
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/animation.css">
+
+    <!-- OWL SLIDER -->
+    <link rel="stylesheet" href="css/owl.carousel.css" />
+    <link rel="stylesheet" href="css/owl.theme.css" />
+    <link rel="stylesheet" href="css/owl.transitions.css" />
+
+    <!-- Custom style Css -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <link href="css/color/blue.css" rel="stylesheet" id="option-color">
 </head>
 
 <body>
-  <!-- NAVIGATION BAR-->
-  <nav class="navbar navbar-expand-lg navbar-light bg-white">
-    <!-- toggle -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navsup" aria-controls="navsup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <!-- navbar menu -->
-    <div class="collapse navbar-collapse" id="navsup">
-        <a class="navbar-brand" href="#">REO MARUYAMA LAB – JFCR</a>
-        <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="index.html">TOP</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="team.html">TEAM</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="works.html">WORKS</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="publications.html">PUBLICATIONS</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="contact.html">CONTACT</a>
-        </li>
-		<li class="nav-item">
-          <a class="nav-link" href="recruitment.html">JOIN US!</a>
-        </li>
-      </ul>
+
+    <!-- Loader -->
+    <div id="preloader">
+        <div id="status">
+            <div class="spinner">Loading...</div>
+        </div>
     </div>
+
+    <!-- Start Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top custom-nav sticky">
+        <div class="container">
+            <a class="navbar-brand pt-0 logo" href="index.html">
+                <img src="images/logo2.png" alt="REO MARUYAMA LAB LOGO" class="img-fluid logo-light">
+                <img src="images/logo2-dark.png" alt="REO MARUYAMA LAB LOGO" class="img-fluid logo-dark">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="mdi mdi-menu"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#top">TOP</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">ABOUT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="team.html#team">TEAM</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="works.html#works">WORKS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="public.html#public">PUBLICATIONS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html#contact">CONTACT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="joinus.html#joinus">JOIN</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
-  <!-- NAVIGATION BAR END-->
+    <!-- End Navbar -->
 
-<!-- MISSION -->
-<div class="container text-center">
-<div class="row text-center">
-  <div class="col-lg-6 mb-6 mb-lg-0">
-    <br><br><br><br><br><br><br><br>
-    <p class="lead">Decoding Human Regulome for Cancer Patients</p>
-    <img src="images/maruyamalab.png" alt="">
-  </div>
+    <!-- START TOP scroll -->
+    <section class="section header-bg-img h-100vh" id="top">
+        <div class="bg-overlay-top"></div>
+        <div class="header-table">
+            <div class="header-table-center">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-12">
+                            <div class="text-center header-content mx-auto">
+                                <h2 class="header-name text-white text-capitalize mb-0"><span
+                                        class="element font-weight-bold"
+                                        data-elements="Decoding Human Regulome for Cancer Patients"></span></h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll_down">
+            <a href="#about" class="scroll">
+                <i class="text-white"></i>
+            </a>
+        </div>
+    </section>
+    <!-- END TOP scroll -->
 
-  <div class="col-lg-6 mb-6 mb-lg-0">
-    <br><br><br><br><br><br><br><br>
-    <p class="lead">公益財団法人がん研究会<br>丸山玲緒 研究室</p>
-    <p><a href="https://www.jfcr.or.jp/laboratory/department/epigenome/index.html">がん研究所・がんエピゲノムプロジェクト</a><br>
-		<a href="https://www.jfcr.or.jp/next-ganken/index.html">NEXT-Gankenプログラム・がん細胞多様性解明プロジェクト</a><br>
-		<a href="https://www.jfcr.or.jp/next-ganken/index.html">NEXT-Gankenプログラム・コア解析基盤プロジェクト</a></p>
-    <br><br><br><br><br><br><br><br>
-  </div>
-</div>
-</div>
+    <!-- START ABOUT -->
+    <section class="section" id="about">
+        <div class="container about-wrapper">
+            <h2 class="text-custom mb-3"><span class="font-weight-bold">About</span> Lab</h2>
+            <div class="row align-items-center">
+                <div class="col-lg-6 about-section">
+                    <div class="about-section__left animate slide-from-left">
+                        <h2 class="text-muted">公益財団法人がん研究会<br>丸山玲緒 研究室</h2>
+                        <p class="text-muted"><a
+                                href="https://www.jfcr.or.jp/laboratory/department/epigenome/index.html">がん研究所・がんエピゲノムプロジェクト</a>
+                        </p>
+                        <p class="text-muted"><a
+                                href="https://www.jfcr.or.jp/next-ganken/index.html">NEXT-Gankenプログラム・がん細胞多様性解明プロジェクト</a>
+                        </p>
+                        <p class="text-muted"><a
+                                href="https://www.jfcr.or.jp/next-ganken/index.html">NEXT-Gankenプログラム・コア解析基盤プロジェクト</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-6 about-section">
+                    <div class="about-section__right animate slide-from-right">
+                        <h3 class="text-muted">Decoding Human Regulome for Cancer Patients</h3>
+                        <img src="images/maruyamalab.png" alt="" class="about-picture img-fluid mx-auto">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END ABOUT -->
 
+    <!-- START MISSION & LATEST -->
+    <section class="mission-wrapper section bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 animate slide-from-bottom">
+                    <h5 class="text-custom font-weight-bold mb-3 text-center">MISSION</h5>
+                    <p class="text-muted">
+                        私が研究を続ける動機は「将来一人でも多くのがん患者さんを救うこと」それだけです。これだけは譲れません。臨床医をしていた時に出会った多くのがん患者さんとその家族、私を導いてくれた恩師・・・必ずがんを克服しますと誓ったあの時の気持ちを忘れてはいません。がんについて研究することは自分の使命であると常に思っています。またこの活動そのものが現在がんに苦しむ患者さんやご家族の心の救いになると信じて、研究を続けています。
+                    </p>
+                    <p class="text-muted">
+                        一方で研究は使命感だけではうまくいかないことも理解しています。努力は“夢中”にはかなわない。好奇心のみに従って夢中になって何かを追求することこそが研究の推進に重要です。私自身、がんの魅力にすっかり取り憑かれています。がんについて学べば学ぶほど、がんが如何に複雑で多様であるかということを思い知らされます。その複雑性には神の存在すら感じます。生命進化の縮図を見るようであり、宇宙や哲学のような無限の深さもあります。「がんとは一体何か」ということを一日中考え続けることができます。一人でも多くの研究者にがん研究の面白さを伝え共有する、これも自身の大事な使命と思っています。
+                    </p>
+                    <p class="text-muted">
+                        研究は一人ではできません。様々な人の協力や異分野の融合が不可欠です。「がん」に興味を持った多様な人間が集まり、メンバー全員がワクワクした時間を過ごしながらがん研究に没頭できる環境を作ること、がん研究会にそのような「場」を作ること、これが私のミッションです。願わくば、研究者だけではなく、臨床現場のスタッフ、患者さん、ご家族までもがチームを作り一丸となってがん研究を推進する、がん研究会にそのような「場」を作りたいです。それが最終的には「一人でも多くのがん患者さんを救うこと」という目的の達成につながると信じています。この理念に共感し一緒に挑戦して下さる仲間を求めています。
+                    </p>
+                    <p class="text-muted">(2021年7月丸山玲緒)</p>
+                </div>
+                <div class="col-lg-6 news-wrapper animate slide-from-bottom">
+                    <h5 class="text-custom font-weight-bold mb-3 text-center">LATEST NEWS</h5>
+                    <a class="twitter-timeline mt-3" data-height="700" data-dnt="true" data-chrome="noheader"
+                        href="https://twitter.com/LabMaruyama?ref_src=twsrc%5Etfw"></a>
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END MISSION & LATEST -->
 
-<!-- MISSION END-->
+    <!-- START PHILOSOPHY & IMPORTANCE -->
+    <section class="philosophy-wrapper section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 animate slide-from-bottom">
+                    <h5 class="text-custom font-weight-bold mb-3 text-center">基本理念</h5>
+                    <ul>
+                        <li class="works-list-item">真実を追求する</li>
+                        <li class="works-list-item">がんを俯瞰的に捉える</li>
+                        <li class="works-list-item">総力を結集して挑戦する</li>
+                        <li class="works-list-item">全てはがん患者さんのために<br>
+                            （詳しい基本理念はこちら <a href="principle.html" target="_Blank"><i class="far fa-clone"></i></a>）</li>
+                        </li>
+                        <li class="works-list-item">マインドセット</li>
+                        <ol>
+                            <li>何かおもしろいことをする！</li>
+                            <p>ワクワクする時間をできるだけ長くする<br>研究は本来、辛いと思いながらやることではない！</p>
+                            <li>大きなことを考える！</li>
+                            <p>けちなことはぜったい考えない！</p>
+                            <li>競争するなら世界を相手にする！</li>
+                            <p>身内や国内で足を引っ張りあっても仕方がない。とにかく協力し合う！</p>
+                            <li>でも最終ゴールは患者さん・・</li>
+                            <p>自分のために研究しない</p>
+                        </ol>
+                    </ul>
+                    <img src="images/works/heartbreaking.jpg" class="philosophy-pic" alt="PHILOSOPHY">
+                </div>
+                <div class="col-lg-6 animate slide-from-bottom">
+                    <h5 class="text-custom philosophy-importance-title font-weight-bold mb-3 text-center">大切にしたいことと避けたいこと</h5>
+                    <p><u>大切にしたいこと</u></p>
+                    <ul>
+                        <li class="pb-1">正確性（品質の追求、過不足のない正確な解釈、深い洞察）</li>
+                        <li class="pb-1">柔軟性（頑固にならないこと、思考の柔軟性）</li>
+                        <li class="pb-1">有機的な連携（expertiseの掛け算で。一人ではできないことをする）</li>
+                        <li class="pb-1">全体への貢献（チームの発展無くして各自の発展はない。give and take）</li>
+                        <li class="pb-1">ワクワク（できる限りワクワクする時間にする）</li>
+                        <li class="pb-1">効率性の重視（効率を下げることを徹底的に排除）</li>
+                        <li class="pb-1">バランス感</li>
+                        <li class="pb-1">革新性（突拍子もない考え、妄想、セレンディピティ）</li>
+                        <li class="pb-1">集中力（各自のパフォーマンスを最大限にあげる工夫、お互いの配慮）</li>
+                    </ul>
+                    <p><u>避けたいこと</u></p>
+                    <ul>
+                        <li class="pb-1">不正確な解釈・結論</li>
+                        <li class="pb-1">頑固・固執</li>
+                        <li class="pb-1">非協調的・自己本位（ずるいこと）</li>
+                        <li class="pb-1">意味のない作業に時間を費やすこと</li>
+                        <li class="pb-1">ゆるんだ雰囲気（お遊びじゃなくプロ意識を持ちたい）</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END PHILOSOPHY & IMPORTANCE -->
 
+    <!--START FOOTER-->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-alt">
+                <p class="text-muted mb-0">Copyright &copy; 2020 Japanese Foundation For Cancer Research. All Rights
+                    Reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!--END FOOTER-->
 
-<!-- MISSION -->
-<section class="bg-light">
-<div class="container text-center">
-  <div class="row text-center">
-      <div class="col-lg-6 mb-6 mb-lg-0">
-      <br>
-      <p class="lead">MISSION</p>
-            <p style="text-align: left">私が研究を続ける動機は「将来一人でも多くのがん患者さんを救うこと」それだけです。これだけは譲れません。臨床医をしていた時に出会った多くのがん患者さんとその家族、私を導いてくれた恩師・・・必ずがんを克服しますと誓ったあの時の気持ちを忘れてはいません。がんについて研究することは自分の使命であると常に思っています。またこの活動そのものが現在がんに苦しむ患者さんやご家族の心の救いになると信じて、研究を続けています。<br>
-一方で研究は使命感だけではうまくいかないことも理解しています。努力は“夢中”にはかなわない。好奇心のみに従って夢中になって何かを追求することこそが研究の推進に重要です。私自身、がんの魅力にすっかり取り憑かれています。がんについて学べば学ぶほど、がんが如何に複雑で多様であるかということを思い知らされます。その複雑性には神の存在すら感じます。生命進化の縮図を見るようであり、宇宙や哲学のような無限の深さもあります。「がんとは一体何か」ということを一日中考え続けることができます。一人でも多くの研究者にがん研究の面白さを伝え共有する、これも自身の大事な使命と思っています。<br>
-研究は一人ではできません。様々な人の協力や異分野の融合が不可欠です。「がん」に興味を持った多様な人間が集まり、メンバー全員がワクワクした時間を過ごしながらがん研究に没頭できる環境を作ること、がん研究会にそのような「場」を作ること、これが私のミッションです。願わくば、研究者だけではなく、臨床現場のスタッフ、患者さん、ご家族までもがチームを作り一丸となってがん研究を推進する、がん研究会にそのような「場」を作りたいです。それが最終的には「一人でも多くのがん患者さんを救うこと」という目的の達成につながると信じています。この理念に共感し一緒に挑戦して下さる仲間を求めています。<br>
-(2021年7月丸山玲緒)</p>
-      </div>
-      
-      <div class="col-lg-6 mb-6 mb-lg-0">
-      <br>
-      <p class="lead">LATEST NEWS</p>
-      <a class="twitter-timeline" data-height="500" data-dnt="true" data-chrome="noheader" href="https://twitter.com/LabMaruyama?ref_src=twsrc%5Etfw">Tweets by RMaruyamaLab</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-   
-      </div>
-     
-  </div>
-</div>
-</section>
-<!-- MISSION END-->
+    <!-- Back To Top -->
+    <a href="#" class="back_top"> <i class="mdi mdi-chevron-up"> </i> </a>
 
-<!-- FOOTER -->
-<footer class="footer">
-   <div class="container-fluid">
-     <p class="text-white mt-2">Copyright © 2020 Japanese Foundation For Cancer Research. All Rights Reserved.</p>
-<script src="https://www.w3counter.com/tracker.js?id=112670"></script> <!-- カウンターの設置を試みる -->
-
-        
-   </div>
-</footer>
-
-<!-- jQuery, Popper.js, bootstrap.min.js -->
-
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <!-- JAVASCRIPTS -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!--EASING JS-->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/scrollspy.min.js"></script>
+    <!--PORTFOLIO FILTER JS-->
+    <script src="js/isotope.js"></script>
+    <!-- Magnific Popup Js -->
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <!-- TYPED -->
+    <script src="js/typed.js"></script>
+    <!-- OWL CAROUSEL -->
+    <script src="js/owl.carousel.min.js"></script>
+    <!-- CONTACT JS -->
+    <script src="js/contact.js"></script>
+    <!--CUSTOM JS-->
+    <script src="js/custom.js"></script>
+    <script src="js/fadeIn.js"></script>
 </body>
+
 </html>
