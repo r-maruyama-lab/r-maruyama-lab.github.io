@@ -138,11 +138,11 @@
       <div class="container">
         <h3 class="works-article-title animate slide-from-bottom" id="methods">研究に用いる主な手法</h3>
         <ul class="animate slide-from-bottom">
-          <li class="pb-1">NGS解析 (主にNextSeqとMiSeqを使用, ATAC-seq, ChIP-seq, RNA-seq, targeted-resequencing,
+          <li class="pb-1">NGS解析 (主にNextSeqを使用, ATAC-seq, ChIP-seq, Cut&Tag, RNA-seq, targeted-resequencing, CNV,
             hybridization capture)</li>
           <li class="pb-1">シングルセル解析 (dscATAC-seq(ddSEQ), dsciATAC-seq(ddSEQ+combinatorial
             indexing),
-            scRNA-seq(Rhapsody), scRamDA-seq(CellenONE))</li>
+            scRNA-seq(Rhapsody / Chromium), scRamDA-seq(CellenONE))</li>
           <li class="pb-1">臨床検体からのオルガノイド樹立と解析</li>
           <li class="pb-1">データマイニング, bioinformatics</li>
           <li class="pb-1">分子生物学的解析 (RNA,DNA,Protein)</li>
@@ -162,7 +162,7 @@
                 <p class="text-justify works-article-text">
                   がんを単なる塊ではなく「多様な細胞の集合体」として捉えます。腫瘍を構成する細胞ひとつひとつの「個性」を理解し、さらには細胞間で交わされる「会話」やそれらが作り出す「社会」の成り立ちを理解することによって、がんの本質に迫りたいと考えています。この研究の基盤となるのが、微量で貴重ながん検体を単一細胞レベルで詳細に解析する技術です。<br>これまで各種シングルセルオミックス解析技術の確立を試みてきました。ddSEQを用いたdroplet-baseのscATAC-seqやRhapsodyを用いたmicrowell-baseのscRNA-seq、CellenONEシングルセル分注機を用いたscRNA-seq等をルーチンで実施しています。combinatorial
                   indexingとdropletを組み合わせたdsciATAC-seqも順調に稼働しています。また現在、scATAC-seqとscRNA-seqを単一細胞から同時に実施する手法や、single-cellのChIP-seq、単一細胞のlineage
-                  tracingなど最先端の高度な技術の確立にも挑戦しています。<br>ライブラリ作成からデータ解析まで全てラボ内で完結します。WET実験を行う人、DRY解析を行う人、その両方を一人で行う人がいますが、メンバー全員で情報やノウハウを共有し、皆がそのどちらも理解できることを目指しています。両者を深く理解することが、実験や解析の品質の向上や研究の深みにつながるからです。
+                  tracingなど最先端の高度な技術の確立にも挑戦しています。<br>ライブラリ作成からデータ解析まで全てラボ内で完結します。WET実験を行う人、DRY解析を行う人、その両方を一人で行う人がいますが、メンバー全員で情報やノウハウを共有し、皆がそのどちらも理解できることを目指しています。両者を深く理解することが、実験や解析の品質の向上や研究の深みにつながるからです。WETとDRYの連携ではなく、WETとDRYが真に融合した研究を目指しています。
                 </p>
               </div>
               <div class="col-lg-6 text-center works-article__right animate slide-from-right">
@@ -241,25 +241,21 @@
     <!--  START 様々な共同研究-->
     <section class="works-article-wrapper mb-4">
       <div class="container">
-        <h3 class="works-article-title animate slide-from-bottom link-adjust" id="colab">様々な共同研究</h3>
-        <article class="container animate slide-from-bottom">
-          <p>がん研究所内・外の様々な研究室と共同研究を行なっています。</p>
-          <ul class="works-list">
-            <li class="works-list-item">がん研究所・細胞生物部</li>
-            <li class="works-list-item">がん研究所・発がん研究部</li>
-            <li class="works-list-item">CPMセンター・次世代がん研究シーズ育成プロジェクト</li>
-            <li class="works-list-item">がん研究所・細胞老化プロジェクト</li>
-            <li class="works-list-item">がん研究所・がん生物部</li>
-            <li class="works-list-item">がん研究所・分子標的病理プロジェクト</li>
-            <li class="works-list-item">東京大学消化器内科</li>
-            <li class="works-list-item">東京大学産婦人科</li>
-            <li class="works-list-item">札幌医科大学分子生物学講座</li>
-            <li class="works-list-item">順天堂大学分子病理病態学</li>
-            <li class="works-list-item">北海道大学腫瘍病理学</li>
-            <li class="works-list-item">国立精神神経医療研究センター・病態生化学研究部</li>
-          </ul>
-          <p class="text-right pr-5">等</p>
-        </article>
+        <h3 class="works-article-title animate slide-from-bottom" id="colab">様々な共同研究</h3>
+        <ul class="animate slide-from-bottom">
+          <li class="pb-1">がん研究所・細胞生物部 (大腸がん患者由来オルガノイドのエピゲノム解析・シングルセル解析)</li>
+          <li class="pb-1">がん研究所・発がん研究部 (マウス肉腫発がんモデルのエピゲノム解析・シングルセル解析)</li>
+          <li class="pb-1">CPMセンター・次世代がん研究シーズ育成プロジェクト (新規解析アルゴリズムの開発、婦人科がんのエピゲノム解析)</li>
+          <li class="pb-1">がん研究所・細胞老化プロジェクト (サテライトRNAの解析)</li>
+          <li class="pb-1">がん研究所・がん生物部 (lncRNA調節領域の解析)</li>
+          <li class="pb-1">がん研究所・分子標的病理プロジェクト ()</li>
+          <li class="pb-1">東京大学消化器内科 (B型肝炎、肝がん)</li>
+          <li class="pb-1">東京大学産婦人科 (婦人科がんにおけるヒストン修飾酵素阻害剤の機能的解析)</li>
+          <li class="pb-1">札幌医科大学分子生物学講座 (乳がん、血液腫瘍におけるヒストン修飾酵素阻害剤の機能的解析、胃がんのlncRNA)</li>
+          <li class="pb-1">順天堂大学分子病理病態学 ()</li>
+          <li class="pb-1">北海道大学腫瘍病理学 (バイオマテリアルの臨床応用)</li>
+          <li class="pb-1">国立精神神経医療研究センター・病態生化学研究部 (小児脳腫瘍マウスモデルのエピゲノム解析)</li>
+        </ul>
       </div><!-- container -->
     </section><!-- works-article-wrapper -->
     <!-- END 様々な共同研究 -->
