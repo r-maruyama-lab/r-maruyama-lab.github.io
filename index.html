@@ -44,6 +44,22 @@
 
 <body>
 
+        <style>
+    .subtitle {
+        font-size: 0.6em; /* 小さな文字サイズ */
+        color: orange; /* オレンジ色 */
+        opacity: 0; /* 初期状態では非表示 */
+        animation: fadeInSubtitle 3s forwards 6s; /* 6秒後にフェードインアニメーションを開始 */
+    }
+
+    @keyframes fadeInSubtitle {
+        to {
+            opacity: 1;
+        }
+    }
+</style>
+        
+        
     <!-- Loader -->
     <div id="preloader">
         <div id="status">
@@ -108,7 +124,9 @@
                             <div class="text-center header-content mx-auto">
                                 <h2 class="header-name text-white text-capitalize mb-0"><span
                                         class="element font-weight-bold"
-                                        data-elements="Decoding Human Regulome for Cancer Patients"></span></h2>
+                                        data-elements="Diving Deep into Cancer Cell Diversity"></span>
+                                    <div class="subtitle">Unraveling the Essence of Tumors for Patient Care</div>
+                                    </h2>
                             </div>
                         </div>
                     </div>
@@ -144,7 +162,8 @@
                 </div>
                 <div class="col-lg-6 about-section">
                     <div class="about-section__right animate slide-from-right">
-                        <h3 class="text-muted">Decoding Human Regulome for Cancer Patients</h3>
+                            <h4 class="text-muted">Diving Deep into Cancer Cell Diversity: <br></h4>
+                            <h6 class="text-muted">Unraveling the Essence of Tumors for Patient Care</h6>
                         <img src="images/maruyamalab.png" alt="" class="about-picture img-fluid mx-auto">
                     </div>
                 </div>
