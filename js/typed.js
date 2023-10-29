@@ -311,7 +311,7 @@
         // loop
         loop: true,
         // false = infinite
-        loopCount: false,
+        loopCount: 1,
         // show cursor
         showCursor: true,
         // character for cursor
