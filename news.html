@@ -1,454 +1,1249 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>REO MARUYAMA LAB</title>
-  <meta name="description"
-    content="公益財団法人がん研究会 丸山玲緒研究室 公式HPです。「がん」とは何か？その本質は？を追求するため、細胞生物学、分子生物学、生化学、情報科学、臨床医学など多様な専門性を持つ人間がタッグを組み、WETとDRYの両面からアプローチしています。" />
-  <meta name="keywords" content="がん, エピゲノム, 乳がん" />
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>REO MARUYAMA LAB</title>
+<meta content="公益財団法人がん研究会 丸山玲緒研究室 公式HPです。「がん」とは何か？その本質は？を追求するため、細胞生物学、分子生物学、生化学、情報科学、臨床医学など多様な専門性を持つ人間がタッグを組み、WETとDRYの両面からアプローチしています。" name="description"/>
+<meta content="がん, エピゲノム, 乳がん" name="keywords"/>
+<!--Favicon-->
+<link href="images/favicon.ico" rel="shortcut icon"/>
+<!--Bootstrap Css-->
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+<!-- Materialdesign icons Css -->
+<link href="css/materialdesignicons.min.css" rel="stylesheet"/>
+<!-- Mobirise icons Css -->
+<link href="css/mobiriseicons.css" rel="stylesheet"/>
+<!-- Magnific-popup -->
+<link href="css/magnific-popup.css" rel="stylesheet"/>
+<!-- Animate Css -->
+<link href="css/animate.min.css" rel="stylesheet"/>
+<link href="css/animation.css" rel="stylesheet"/>
+<!-- OWL SLIDER -->
+<link href="css/owl.carousel.css" rel="stylesheet"/>
+<link href="css/owl.theme.css" rel="stylesheet"/>
+<link href="css/owl.transitions.css" rel="stylesheet"/>
+<!-- Custom style Css -->
+<link href="css/style.css" rel="stylesheet"/>
+<link href="css/responsive.css" rel="stylesheet"/>
+<link href="css/color/blue.css" id="option-color" rel="stylesheet"/>
 
-  <!--Favicon-->
-  <link rel="shortcut icon" href="images/favicon.ico">
-
-  <!--Bootstrap Css-->
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
-
-  <!-- Materialdesign icons Css -->
-  <link href="css/materialdesignicons.min.css" rel="stylesheet">
-
-  <!-- Mobirise icons Css -->
-  <link href="css/mobiriseicons.css" rel="stylesheet">
-
-  <!-- Magnific-popup -->
-  <link rel="stylesheet" href="css/magnific-popup.css">
-
-  <!-- Animate Css -->
-  <link rel="stylesheet" href="css/animate.min.css">
-  <link rel="stylesheet" href="css/animation.css">
-
-  <!-- OWL SLIDER -->
-  <link rel="stylesheet" href="css/owl.carousel.css" />
-  <link rel="stylesheet" href="css/owl.theme.css" />
-  <link rel="stylesheet" href="css/owl.transitions.css" />
-
-  <!-- Custom style Css -->
-  <link href="css/style.css" rel="stylesheet">
-  <link href="css/responsive.css" rel="stylesheet">
-  <link href="css/color/blue.css" rel="stylesheet" id="option-color">
+  <!-- 活動記録リスト用スタイル（追加） -->
+  <style>
+    #news .news-lead { font-size: .85rem; color: #8a94a6; margin: 0 0 18px; }
+    #news .news-list { list-style: none; padding-left: 0; margin: 0; }
+    #news .news-item { padding: 0 0 11px; }
+    #news .news-date {
+      display: block; font-size: .72rem; font-weight: 600;
+      letter-spacing: .06em; color: #8a94a6; line-height: 1.5;
+    }
+    #news .news-text {
+      display: block; font-size: .88rem; line-height: 1.6; color: #3f4a59;
+    }
+    #news .news-text a { color: #8B4513; }
+    #news .news-text a:hover { text-decoration: underline; }
+    #news .news-note {
+      display: block; font-size: .78rem; line-height: 1.6;
+      color: darkorange; margin-top: 2px;
+    }
+    #news .news-prev { margin-top: 26px; font-size: .85rem; }
+    @media (max-width: 575px) {
+      #news .news-text { font-size: .84rem; }
+      #news .news-item { padding-bottom: 13px; }
+    }
+  </style>
 </head>
-
 <body>
+<!-- Loader -->
+<div id="preloader">
+<div id="status">
+<div class="spinner">Loading...</div>
+</div>
+</div>
+<!-- Start Navbar -->
+<nav class="navbar navbar-expand-lg fixed-top custom-nav sticky">
+<div class="container">
+<a class="navbar-brand pt-0 logo" href="index.html">
+<img alt="REO MARUYAMA LAB LOGO" class="img-fluid logo-light" src="images/logo2.png"/>
+<img alt="REO MARUYAMA LAB LOGO" class="img-fluid logo-dark" src="images/logo2-dark.png"/>
+</a>
+<button aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarCollapse" data-toggle="collapse" type="button">
+<span class="mdi mdi-menu"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarCollapse">
+<ul class="navbar-nav ml-auto">
+<li class="nav-item active">
+<a class="nav-link" href="index.html">TOP</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="index.html#about">ABOUT</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="team.html#team">TEAM</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="works.html#works">WORKS</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="public.html#public">PUBLICATIONS</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="#news">NEWS</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="contact.html#contact">CONTACT</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="joinus.html#joinus">JOIN</a>
+</li><li class="nav-item">
+<a class="nav-link" href="team_En.html#team_En">ENGLISH</a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+<!-- End Navbar -->
+<!-- START HOME -->
+<section class="section" id="top">
+<div class="bg-overlay"></div>
+</section>
+<!-- END HOME -->
+<!-- START NEWS -->
+<section class="bg-white joinus-wrapper" id="news">
+<div class="container works-article-text">
+<!-- START NEWS2 -->
+<div>
+<h3 class="joinus-title mt-1"><span class="text-danger"></span><u>活動記録</u></h3>
+<div class="pt-2">
+ <p class="news-lead">丸山研究室のアクティビティを簡単にご報告します</p>
+<ul class="news-list">
+<li class="news-item">
+<span class="news-date">2026.10.16.</span>
+<span class="news-text">前澤さん（現・東京大学）の研究成果が<b>Veterinary Microbiology</b>に掲載されました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2026.10.15.</span>
+<span class="news-text">古川さんの送別会・壮行会を行いました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2026.10.8.</span>
+<span class="news-text">宮田さんの研究成果が<b>Science Advances</b>に掲載されました！<a href="https://www.jfcr.or.jp/laboratory/news/12277.html" rel="noopener" target="_blank">（がん研HP）</a></span>
+</li>
+<li class="news-item">
+<span class="news-date">2026.10.1.</span>
+<span class="news-text">宮田さんと柴田さん（現・東京大学）の研究提案ががん研究フロンティア基⾦の研究助成に採択されました<a href="https://np-foundation.or.jp/information/000424.html" rel="noopener" target="_blank">（財団HP）</a></span>
+</li>
+<li class="news-item">
+<span class="news-date">2026.9.26.</span>
+<span class="news-text">第85回日本癌学会学術総会で成果を発表しました（京都）</span>
+<span class="news-note">丸山・宮田・家里がシンポジウムの講演、粂川・木藤・佐伯・劉が口頭発表（英語）、尾辻が口頭発表（日本語）、楊がポスター発表、粂川が受賞記念講演を行いました。その他、共同研究4演題の発表がありました。</span>
+</li>
+<li class="news-item">
+<span class="news-date">2026.9.26.</span>
+<span class="news-text">粂川さんが2026年度日本癌学会奨励賞を受賞しました。おめでとうございます！<a href="https://www.jfcr.or.jp/laboratory/news/12274.html" rel="noopener" target="_blank">（がん研HP）</a></span>
+</li>
+<li class="news-item">
+<span class="news-date">2026.9.8.</span>
+<span class="news-text">名古屋市立大学の川内先生、東京科学大学の上阪先生らとの共同研究が<b>Neuron</b>に掲載されました<a href="https://www.jfcr.or.jp/laboratory/news/12226.html" rel="noopener" target="_blank">（がん研HP）</a></span>
+</li>
+<li class="news-item">
+<span class="news-date">2026.9.1.</span>
+<span class="news-text">丸山が若手支援技術講習会に実行委員として参加しました（長野・蓼科）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2026.8.19.</span>
+<span class="news-text">家里さんが日本患者由来がんモデル学会学術集会2026で講演を行いました（東京）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2026.8.8.</span>
+<span class="news-text">柴田さんの研究成果が<b>Nature Communications</b>に掲載されました！<a href="https://www.jfcr.or.jp/laboratory/news/12224.html" rel="noopener" target="_blank">（がん研HP）</a></span>
+</li>
+<li class="news-item">
+<span class="news-date">2026.7.30.</span>
+<span class="news-text">宮田さんがWorkshop on Cancer Research for Well-being 2026で研究成果を発表しました（別府）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2026.7.22.</span>
+<span class="news-text">21,22日の丸2日間、がん研夏の発表会が開催されました。合計93演題の発表があり、丸山研究室からは宮田・リュウ・采女・ヤン・丸山・尾辻・粂川・家里・古川・吉野の10名が発表しました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2026.6.30.</span>
+<span class="news-text">細胞生物部八尾先生らとの共同研究が<b>Nature Communications</b>にアクセプトされました<a href="https://www.jfcr.or.jp/laboratory/news/12225.html" rel="noopener" target="_blank">（がん研HP）</a></span>
+</li>
+<li class="news-item">
+<span class="news-date">2026.6.25.</span>
+<span class="news-text">佐伯さん、尾辻さん、家里さん、呉さん、秋谷さんが日本乳癌学会年会で研究成果を発表しました（京都）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2026.6.22.</span>
+<span class="news-text">順天堂大学病理・腫瘍学講座の折茂先生、小林先生、目澤先生との共同研究が<b>Genes to Cells誌</b>にアクセプトされました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2026.4.24.</span>
+<span class="news-text">家里さんの研究提案が2025年度創発的研究支援事業に採択されました！おめでとうございます。<a href="https://www.jst.go.jp/souhatsu/document/res2025.pdf" rel="noopener" target="_blank">（JST）</a></span>
+</li>
+<li class="news-item">
+<span class="news-date">2026.4.16.</span>
+<span class="news-text">木藤さんがメンバーに加わりました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2026.4.1.</span>
+<span class="news-text">田中さんが国立がん研究センター研究所部門長に、柴田さんが東京大学薬学部助教にそれぞれ栄転されました。今後のご活躍を祈念しております。</span>
+</li>
+<li class="news-item">
+<span class="news-date">2026.3.31.</span>
+<span class="news-text">古川さんが学位を取得しました。</span>
+</li>
+<li class="news-item">
+<span class="news-date">2026.3.20.</span>
+<span class="news-text">BarBar大塚が開催されました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2026.3.16.</span>
+<span class="news-text">田中さんと柴田さんの送別会・壮行会を行いました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2026.3.10.</span>
+<span class="news-text">崎山さんの研究成果が<b>Biochem Biophys Res Commun</b>にアクセプトされました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2026.3.1.</span>
+<span class="news-text">研究室から5名の科研費が採択されました（家里：基盤C、佐伯・柴田・粂川：若手、他分担1）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2026.2.11.</span>
+<span class="news-text">家里さんががん関連三学会Rising Starネットワーキング2026で成果を発表し、優秀演題賞を受賞しました（東京）<a href="https://www.jfcr.or.jp/laboratory/news/11920.html" rel="noopener" target="_blank">（がん研HP）</a></span>
+</li>
+<li class="news-item">
+<span class="news-date">2026.2.7.</span>
+<span class="news-text">古川さんの研究成果（学位論文）が<b>J Exp Clin Cancer Res</b>にアクセプトされました！</span>
+</li>
+<li class="news-item">
+<span class="news-date">2026.2.6.</span>
+<span class="news-text">大阪大学幸谷先生らとの共同研究が<b>eLife</b>に掲載されました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2026.1.19.</span>
+<span class="news-text">丸山が第10回理論免疫学ワークショップで講演しました（新潟）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2026.1.15.</span>
+<span class="news-text">丸山が名市大がん卓越研究グループキックオフシンポジウムで講演を行いました（名古屋）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2026.1.13.</span>
+<span class="news-text">田中さんがAACR Special conference in cancer research: fusion-positive cancerで成果を発表しました（Philadelphia）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2026.1.1.</span>
+<span class="news-text">新年あけましておめでとうございます。4月からラボ設立10年目に入ります。引き続きよろしくお願いいたします</span>
+</li>
+<li class="news-item">
+<span class="news-date">2025.12.24.</span>
+<span class="news-text">冬のがん研発表会が開催されました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2025.12.19.</span>
+<span class="news-text">BarBar大塚-クリスマス会が開催されました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2025.12.17.</span>
+<span class="news-text">フランスのキュリー研究所との多施設国際共同研究が<b>Cancer Cell</b>にアクセプトされました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2025.12.17.</span>
+<span class="news-text">豊原さん（現在東京大学に所属）の研究成果が<b>BMC Cancer</b>に掲載されました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2025.12.17.</span>
+<span class="news-text">古川さんと宮田さんが日本患者由来がんモデル学会学術集会2025で講演を行いました（東京）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2025.12.16.</span>
+<span class="news-text">細胞生物部八尾先生らとの共同研究が<b>Nature Communications</b>にアクセプトされました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2025.12.16.</span>
+<span class="news-text">名古屋大学新城先生らとの共同研究が<b>British Journal of Cancer</b>に掲載されました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2025.12.16.</span>
+<span class="news-text">宮田さんが第36回日本消化器癌発生学会総会のシンポジウムで、田中さんがパネルディスカッションで講演を行いました（福岡）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2025.12.4.</span>
+<span class="news-text">宮田さん、楊さん、采女さんが第48回日本分子生物学会のシンポジウムで成果を発表しました（横浜）。宮田さんはシンポジウムをオーガナイズしました。</span>
+</li>
+<li class="news-item">
+<span class="news-date">2025.11.28.</span>
+<span class="news-text">家里さんが第68回日本甲状腺学会学術集会でヤマサ基礎医学研究助成の受賞講演を発表しました（郡山）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2025.11.28.</span>
+<span class="news-text">宮田さんが北海道がん若手研究者交流会で研究成果を発表しました（旭川）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2025.11.28.</span>
+<span class="news-text">丸山が第11回細胞凝集研究会で講演を行いました（佐賀）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2025.11.27.</span>
+<span class="news-text">札幌医科大学鈴木先生との共同研究が<b>Clinical Epigenetics</b>に掲載されました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2025.11.4.</span>
+<span class="news-text">田中さんと丸山が第98回日本生化学会大会のシンポジウムで講演を行いました（京都）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2025.10.29.</span>
+<span class="news-text">宮田さんがNGS EXPO 2025で成果を発表し、ベストプレゼンテーション賞を受賞しました（奈良）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2025.10.7.</span>
+<span class="news-text">粂川さん、堀さんらの研究成果が<b>Genome Medicine</b>にアクセプトされました！<a href="https://www.jfcr.or.jp/laboratory/pickup/index.html" rel="noopener" target="_blank">（がん研HP）</a></span>
+</li>
+<li class="news-item">
+<span class="news-date">2025.9.30.</span>
+<span class="news-text">采女さんが学振DC2に採用されました！</span>
+</li>
+<li class="news-item">
+<span class="news-date">2025.9.28.</span>
+<span class="news-text">家里さんの研究提案ががん研究フロンティア基⾦の研究助成に採択されました<a href="https://np-foundation.or.jp/information/000309.html" rel="noopener" target="_blank">（財団HP）</a></span>
+</li>
+<li class="news-item">
+<span class="news-date">2025.9.27.</span>
+<span class="news-text">第84回日本癌学会学術総会で成果を発表しました（金沢）</span>
+<span class="news-note">丸山・田中・古川がシンポジウムの講演、尾辻・家里・佐伯が口頭発表（英語）、宮田・秋谷が口頭発表（日本語）、粂川がポスター発表を行いました。その他、共同研究4演題の発表がありました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2025.9.27.</span>
+<span class="news-text">柴田さんの研究提案がJCA-KFCR若手研究助成に採択され、第84回日本癌学会学術総会で表彰されました<a href="https://www.cancer.or.jp/modules/recruiting/index.php?content_id=9" rel="noopener" target="_blank">（学会HP）</a></span>
+</li>
+<li class="news-item">
+<span class="news-date">2025.9.3.</span>
+<span class="news-text">宮田さんが先端モデル動物支援プラットフォーム若手支援技術講習会に参加し口頭発表を行いました。丸山は実行委員として参加しました（長野・蓼科）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2025.8.28.</span>
+<span class="news-text">宮田さんが第16回日本ＲＮＡｉ研究会で招待講演を行いました（広島）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2025.7.25.</span>
+<span class="news-text">久しぶりにBarBar大塚が開催されました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2025.7.24.</span>
+<span class="news-text">札幌医科大学鈴木先生との共同研究が<b>Cancer Letters</b>に掲載されました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2025.7.23.</span>
+<span class="news-text">22,23日の丸2日間、がん研夏の発表会が開催されました。合計96演題の発表があり、丸山研究室からは田中・宮田・柴田・ヤン・リュウ・采女・尾辻・家里・粂川・古川・吉野の11名が発表しました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2025.7.17.</span>
+<span class="news-text">田中さんが第58回日本整形外科学会骨軟部腫瘍学術集会のシンポジウムで講演を行いました（奈良）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2025.7.16.</span>
+<span class="news-text">札幌医科大学鈴木先生との共同研究が<b>Gastric Cancer</b>に掲載されました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2025.7.14.</span>
+<span class="news-text">呉さんがメンバーに加わりました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2025.7.11.</span>
+<span class="news-text">佐伯さん、尾辻さん、家里さんが日本乳癌学会年会で研究成果を発表しました（東京）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2025.7.4.</span>
+<span class="news-text">宮田さんが第29回日本がん分子標的治療学会学術集会の若手アンビシャスセッションで発表を行いました（札幌）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2025.7.1.</span>
+<span class="news-text">宮田さんの研究提案が科研費挑戦的研究(萌芽)に採択されました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2025.6.20.</span>
+<span class="news-text">丸山が第18回日本エピジェネティクス研究会年会でポスター発表を行いました（福井）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2025.6.17.</span>
+<span class="news-text">田中さんが名古屋大学大学院医学系研究科の講義（先進がん治療開発研究コース）を行いました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2025.6.17.</span>
+<span class="news-text">家里さんの研究成果が<b>Breast Cancer Research</b>に掲載されました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2025.6.15.</span>
+<span class="news-text">丸山が第33回乳癌基礎研究会に参加し座長を務めました（静岡）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2025.6.12.</span>
+<span class="news-text">家里さんが第21回ヤマサ基礎医学研究助成の受賞者に選ばれました<a href="https://www.japanthyroid.jp/public/introduction/grant/record.html" rel="noopener" target="_blank">（学会HP）</a></span>
+</li>
+<li class="news-item">
+<span class="news-date">2025.6.6.</span>
+<span class="news-text">新メンバーの歓迎会を開催しました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2025.6.6.</span>
+<span class="news-text">丸山がカラスに襲撃されました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2025.5.29.</span>
+<span class="news-text">宮田さんが第4回日本医学会連合 Rising Starリトリーでポスター発表を行いました（愛知）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2025.5.21.</span>
+<span class="news-text">丸山が名古屋市立大学大学院薬学研究科・修士課程の講義（創薬生命科学特別講義Ⅱ）を行いました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2025.5.20.</span>
+<span class="news-text">名古屋市立大学の川内先生らとの共同研究が<b>Cell Reports</b>に掲載されました<a href="https://www.jfcr.or.jp/laboratory/news/11422.html" rel="noopener" target="_blank">（がん研HP）</a></span>
+</li>
+<li class="news-item">
+<span class="news-date">2025.5.17.</span>
+<span class="news-text">がん研究会の連携大学院説明会が開催されました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2025.4.16.</span>
+<span class="news-text">田中さんが第114回日本病理学会総会で口頭発表を行いました（仙台）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2025.4.10.</span>
+<span class="news-text">家里さんが第125回日本外科学会定期学術集会のサージカルフォーラムで講演しました（仙台）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2025.4.1.</span>
+<span class="news-text">川原さん、小林さんがメンバーに加わりました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2025.3.28.</span>
+<span class="news-text">第9回NEXT-GankenプログラムのAdvisory Meetingを開催しました（オンライン）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2025.3.21.</span>
+<span class="news-text">野田所長の退任記念講演会ならびに祝賀会が開催されました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2025.3.21.</span>
+<span class="news-text">家里さんが第31回日本乳腺疾患研究会で口頭発表を行いました（東京）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2025.3.13.</span>
+<span class="news-text">佐伯さんがBreast Cancer Next Generation Training Seminarにて講演を行いました（三重）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2025.3.10.</span>
+<span class="news-text">丸山が第48回iSeminarを主催しました（Web）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2025.3.1.</span>
+<span class="news-text">研究室から5件の科研費が採択されました！（尾辻：若手、他分担4件）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2025.2.21.</span>
+<span class="news-text">金丸さんがメンバーに加わりました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2025.2.21.</span>
+<span class="news-text">田中さんが日本サルコーマ治療研究学会学術集会で口頭発表を行いました（札幌）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2025.2.1.</span>
+<span class="news-text">家里さんが13th AACR-JCA Joint Conferenceでポスター発表を行いました（ハワイ）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2025.1.31.</span>
+<span class="news-text">佐伯さん・尾辻さんがWeb Forum of MBC in 大阪にて講演を行いました（オンライン）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2025.1.6.</span>
+<span class="news-text">永本さんがメンバーに加わりました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2025.1.1.</span>
+<span class="news-text">鈴鹿さんがUCSFのRaleigh Labに留学しました。今後の活躍を期待しています</span>
+</li>
+<li class="news-item">
+<span class="news-date">2024.12.25.</span>
+<span class="news-text">冬のがん研発表会が開催されました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2024.12.24.</span>
+<span class="news-text">丸山の研究提案が高松宮妃癌研究基金研究助成に採択されました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2024.12.20.</span>
+<span class="news-text">家里さんの研究提案が中外創薬科学財団の特別研究助成金SRG2023に採択されました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2024.12.13.</span>
+<span class="news-text">宮田さんの研究提案が上原記念生命科学財団 研究奨励金に採択されました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2024.12.3.</span>
+<span class="news-text">宮田さん・鈴鹿さんが北海道がん若手研究者交流会で講演しました（札幌）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2024.11.27.</span>
+<span class="news-text">宮田さん、楊さん、采女さんが第47回日本分子生物学会で成果を発表しました（福岡）。宮田さんはミニシンポジウムをオーガナイズしました。</span>
+</li>
+<li class="news-item">
+<span class="news-date">2024.11.18.</span>
+<span class="news-text">丸山がThe 21st Breast Cancer Frontier Meetingで講演しました（東京）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2024.11.14.</span>
+<span class="news-text">田中さんの研究提案がアステラス病態代謝研究会の研究助成金に採択されました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2024.11.9.</span>
+<span class="news-text">札幌医科大学鈴木先生との共同研究が<b>Scientific Reports</b>に掲載されました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2024.11.7.</span>
+<span class="news-text">﨑本さん、粂川さんの研究成果が<b>BJC Reports</b>にアクセプトされました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2024.11.7.</span>
+<span class="news-text">田中さんが日本病理学会秋期特別総会のシンポジウムで講演を行いました（東京）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2024.11.1.</span>
+<span class="news-text">本日より「がんエピゲノム研究部」となりました。これまで研究室の発展のために貢献してくださった全ての方に感謝申し上げます。引き続き研究に精進いたします。</span>
+</li>
+<li class="news-item">
+<span class="news-date">2024.10.27.</span>
+<span class="news-text">田中さんの研究提案が日本対がん協会RFLJ「プロジェクト未来」研究助成に採択されました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2024.10.27.</span>
+<span class="news-text">粂川さんの研究提案が安田記念医学財団若手癌研究助成金に採択されました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2024.10.15.</span>
+<span class="news-text">吉野さんがメンバーに加わりました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2024.10.5.</span>
+<span class="news-text">家里さんが第67回日本甲状腺学会学術集会のシンポジウムで講演しました（横浜）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2024.10.1.</span>
+<span class="news-text">采女さんがメンバーに加わりました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2024.10.1.</span>
+<span class="news-text">第8回NEXT-GankenプログラムのAdvisory Meetingを開催しました（オンライン）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2024.9.30.</span>
+<span class="news-text">尾辻さんの研究成果が<b>npj Precision Oncology</b>にアクセプトされました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2024.9.19.</span>
+<span class="news-text">多くのメンバーが第83回日本癌学会学術総会で成果を発表しました（福岡）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2024.9.10.</span>
+<span class="news-text">粂川さんの研究提案が持田記念医学薬学振興財団・研究助成金に採択されました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2024.9.4.</span>
+<span class="news-text">宮田さんがNGS EXPO 2024でポスター発表を行いました（大阪）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2024.8.30.</span>
+<span class="news-text">ヤンさんが先端モデル動物支援プラットフォーム若手支援技術講習会に参加しポスター発表をしました。丸山は実行委員として参加しました（名古屋）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2024.8.29.</span>
+<span class="news-text">丸山の研究提案と田中さんの研究提案がAMED次世代がんに採択されました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2024.8.26.</span>
+<span class="news-text">宮田さんが第43回日本癌学会奨励賞を受賞しました。おめでとうございます！<a href="https://www.jfcr.or.jp/laboratory/news/11109.html" rel="noopener" target="_blank">（がん研HP）</a></span>
+</li>
+<li class="news-item">
+<span class="news-date">2024.8.23.</span>
+<span class="news-text">田中さんが日本患者由来がんモデル学会・日本ヒト細胞学会合同学術集会で特別講演を行いました（東京）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2024.8.15.</span>
+<span class="news-text">鈴鹿さんがCSHLの「Biology of Cancer: Microenvironment &amp; Metastasis」ミーティングでポスター発表しました（NY, Cold Spring Harbor）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2024.7.27.</span>
+<span class="news-text">田中さんが第20回日本病理学会カンファレンスで成果を発表しました（山形）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2024.7.17.</span>
+<span class="news-text">16,17日の丸2日間、がん研夏の発表会が開催されました。合計94演題の発表があり、丸山研究室からは田中・宮田・柴田・佐伯・尾辻・家里・鈴鹿・粂川・古川の9名が発表しました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2024.7.13.</span>
+<span class="news-text">丸山・佐伯・尾辻・家里・土屋が日本乳癌学会年会で研究成果を発表しました（シンポジウム・受賞記念講演・厳選ポスター）。佐伯さんは研究奨励賞と優秀論文賞のダブル受賞で、連続表彰されました！（仙台）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2024.7.5.</span>
+<span class="news-text">鈴木さんがメンバーに加わりました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2024.6.28.</span>
+<span class="news-text">田中さんが第33回日本がん転移学会学術集会で学会賞受賞講演を行いました。また土屋さんがワークショップで研究成果を発表しました（奈良）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2024.6.28.</span>
+<span class="news-text">田中さんが日本がん転移学会女性研究者がん転移研究グラント賞を受賞しました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2024.6.21.</span>
+<span class="news-text">田中さんが第28回日本がん分子標的治療学会学術集会のシンポジウムで講演しました（東京）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2024.6.19.</span>
+<span class="news-text">田中さんが第9回日本ゲノム編集学会で成果を発表しました（大阪）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2024.6.6.</span>
+<span class="news-text">田中さんの研究提案が認定NPO法人ゴールドリボン・ネットワークのゴールドリボン研究助成に採択されました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2024.6.4.</span>
+<span class="news-text">国立精神神経医療研究センターの川内先生らとの共同研究が<b>Developmental Cell</b>に掲載されました！</span>
+</li>
+<li class="news-item">
+<span class="news-date">2024.5.27.</span>
+<span class="news-text">佐伯さんが第24回Breast Cancer優秀論文賞を受賞しました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2024.5.13.</span>
+<span class="news-text">CPMセンター森先生との共同研究が<b>Journal of Pathology</b>に掲載されました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2024.5.9.</span>
+<span class="news-text">古川さんが第110回日本消化器病学会総会のワークショップで研究成果を発表しました（徳島）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2024.4.19.</span>
+<span class="news-text">豊原さんが第76回日本産科婦人科学会学術講演会で研究成果を発表し、JSOG Congress Encouragement Awardを受賞しました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2024.4.9.</span>
+<span class="news-text">佐伯さんが日本乳癌学会班研究の班員に選出されました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2024.4.9.</span>
+<span class="news-text">佐伯さんが日本乳癌学会研究奨励賞を受賞しました！</span>
+</li>
+<li class="news-item">
+<span class="news-date">2024.4.6.</span>
+<span class="news-text">前澤さんの研究が<b>Vet Res Commun</b>に掲載されました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2024.4.1.</span>
+<span class="news-text">マハムットさんが自治医科大学腫瘍病理学部門助教に栄転されました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2024.4.1.</span>
+<span class="news-text">増田さんがメンバーに加わりました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2024.3.28.</span>
+<span class="news-text">田中さんが第113回日本病理学会総会で成果を発表しました（名古屋）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2024.3.27.</span>
+<span class="news-text">歓送迎を兼ねて豊洲でBBQパーティーを開催しました（外部のゲストの方にもご参加いただきました）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2024.3.26.</span>
+<span class="news-text">田中さんと京都大学の共同研究が<b>Proc Natl Acad Sci USA</b>に掲載されました！</span>
+</li>
+<li class="news-item">
+<span class="news-date">2024.3.25.</span>
+<span class="news-text">劉さんがメンバーに加わりました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2024.3.22.</span>
+<span class="news-text">第7回NEXT-GankenプログラムのAdvisory Meetingを開催しました（オンライン）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2024.3.19.</span>
+<span class="news-text">丸山が第36回iSeminarを主催しました（Web）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2024.3.7.</span>
+<span class="news-text">丸山がBreast Cancer Expert Seminarにて特別講演を行いました（Web）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2024.3.4.</span>
+<span class="news-text">田中さんの研究提案がノバルティス科学振興財団の研究奨励金に採択されました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2024.3.2.</span>
+<span class="news-text">丸山が第18回TRS研究会にて特別講演を行いました（東京）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2024.3.1.</span>
+<span class="news-text">研究室から5名の科研費が採択されました！（丸山・田中：基盤B、佐伯・柴田・粂川：若手）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2024.2.9.</span>
+<span class="news-text">田中さんが日本サルコーマ治療研究学会学術集会のシンポジウムで講演しました（名古屋）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2024.2.8.</span>
+<span class="news-text">楊さん、粂川さんの研究成果が<b>Cancer Gene Therapy</b>にアクセプトされました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2024.2.4.</span>
+<span class="news-text">田中さんがKeystone Symposia (Epigenetic mechanisms and cancer treatment)でポスター発表を行いました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2024.2.1.</span>
+<span class="news-text">佐伯さんの研究提案が2023年度がん検診研究助成事業（臨床研究）に採択されました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2024.1.27.</span>
+<span class="news-text">丸山が2024年がん関連三学会Rising Starネットワーキングにコアメンバーとして参加しました（川崎）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2024.1.10.</span>
+<span class="news-text">宮田さんとFox Chase Cancer Centerの村山さんらとの共同研究が<b>Cancer Discovery</b>に掲載されました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2023.12.20.</span>
+<span class="news-text">冬のがん研発表会が開催されました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2023.12.19.</span>
+<span class="news-text">田中さんの研究提案が高松宮妃癌研究基金研究助成に採択されました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2023.12.16.</span>
+<span class="news-text">田中さんががんゲノム・エピゲノム・数理統計解析勉強会で講演しました（大分）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2023.12.8.</span>
+<span class="news-text">家里さん日本甲状腺学会年会に参加しました（金沢）。ロシュ若手奨励賞（YIA）を受賞しました！</span>
+</li>
+<li class="news-item">
+<span class="news-date">2023.12.1.</span>
+<span class="news-text">八條さんがメンバーに加わりました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2023.11.30.</span>
+<span class="news-text">田中・宮田・鈴鹿・粂川・楊が第46回日本分子生物学会で成果を発表しました（神戸）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2023.11.22.</span>
+<span class="news-text">丸山が順天堂大学大学院医学研究科・修士課程の講義（病理腫瘍病態学概論）を行いました（zoom）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2023.11.9.</span>
+<span class="news-text">家里さんの研究提案が興和生命科学振興財団研究助成に採択されました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2023.11.16.</span>
+<span class="news-text">宮田さんの前職での研究成果が<b>Int. J. Mol. Sci.</b>にアクセプトされました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2023.11.9.</span>
+<span class="news-text">家里さんの研究提案ががん集学的治療研究財団一般研究助成（がん薬物療法部門）に採択されました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2023.11.7.</span>
+<span class="news-text">鈴鹿さんが第45回日本バイオマテリアル学会大会で口頭発表しハイライト講演に選出されました（神戸）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2023.10.22.</span>
+<span class="news-text">家里さんの研究成果が<b>Breast Cancer</b>にアクセプトされました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2023.10.21.</span>
+<span class="news-text">丸山が第61回日本癌治療学会学術集会のYoung rising star lectureで講演しました（横浜）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2023.10.20.</span>
+<span class="news-text">土屋さんがAsian Oncology Society：The 3rd International Congressで口頭発表し、Best Oral Presentationに選ばれました！（横浜）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2023.10.6.</span>
+<span class="news-text">粂川さんの学位取得のお祝いをしました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2023.10.6.</span>
+<span class="news-text">粂川さんの研究提案が日本対がん協会RFLJ「プロジェクト未来」研究助成に採択されました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2023.9.30.</span>
+<span class="news-text">家里さんが「マンスフィールド-PhRMA 研究者プログラム第9期スカラー」として米国研修ツアーに参加しました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2023.9.29.</span>
+<span class="news-text">第6回NEXT-GankenプログラムのAdvisory Meetingを開催しました（オンライン）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2023.9.28.</span>
+<span class="news-text">粂川さんが学位を取得しました。おめでとうございます！</span>
+</li>
+<li class="news-item">
+<span class="news-date">2023.9.25.</span>
+<span class="news-text"><a href="https://www.jfcr.or.jp/next-ganken/">NEXT-Gankenのホームページ</a>が少し改訂されました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2023.9.23.</span>
+<span class="news-text">第82回日本癌学会学術総会で成果を発表しました（横浜）</span>
+<span class="news-note">田中がシンポジウムの講演、佐伯・粂川・古川・土屋の4名が口頭発表（英語）、鈴鹿が口頭発表（日本語）、宮田・尾辻・丸山の3名がポスター発表を行いました。その他、共同研究7演題（シンポジウムx1、口頭発表x2、ポスターx4）の発表がありました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2023.9.14.</span>
+<span class="news-text">順天堂大学病理・腫瘍学講座の折茂先生、目澤先生との共同研究が<b>Cancer Science</b>に掲載されました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2023.9.11.</span>
+<span class="news-text">宮田さんの研究提案が持田記念医学薬学振興財団・研究助成金に採択されました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2022.9.8.</span>
+<span class="news-text">先端モデル動物支援プラットフォーム若手支援技術講習会で田中さんが特別講演を、柴田さん・粂川さんがポスター発表をしました（名古屋）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2023.8.30.</span>
+<span class="news-text">薬学部3年の学生さんが研究室見学に来てくれました。その熱意に感銘を受け、我々のモチベーションも高まりました！</span>
+</li>
+<li class="news-item">
+<span class="news-date">2023.8.29.</span>
+<span class="news-text">順天堂大学病理・腫瘍学講座の折茂先生、安川先生との共同研究が<b>Cancer Medicine</b>に掲載されました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2023.8.1.</span>
+<span class="news-text">細胞老化研究部との共同研究が<b>Proc Natl Acad Sci USA</b>に掲載されました！</span>
+</li>
+<li class="news-item">
+<span class="news-date">2023.7.31.</span>
+<span class="news-text">宮田さんの研究提案が武田科学振興財団・医学系研究助成に採択されました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2023.7.25.</span>
+<span class="news-text">田中さんが東京医科歯科大学難治疾患研究所セミナーで講演しました（東京）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2023.7.24.</span>
+<span class="news-text">丸山が金沢国際がん生物学シンポジウムで講演しました（金沢）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2023.7.21.</span>
+<span class="news-text">田中さん・宮田さん・佐伯さんがWorkshop on Cancer Research for Well-being 2023で口頭発表しました（熱海）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2023.7.19.</span>
+<span class="news-text">18,19日の丸2日間、がん研夏の発表会が開催されました。合計83演題の発表があり、丸山研究室からは田中・宮田・柴田・尾辻・家里・鈴鹿・粂川・古川の8名が発表しました。また宮田さんの発表がベスト3の発表に選ばれました！</span>
+</li>
+<li class="news-item">
+<span class="news-date">2023.7.14.</span>
+<span class="news-text">札幌医大との共同研究が<b>Cell Death and Disease</b>に掲載されました！</span>
+</li>
+<li class="news-item">
+<span class="news-date">2023.7.1.</span>
+<span class="news-text">宮田さんの研究提案が科研費挑戦的研究(萌芽)に採択されました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2023.6.29.</span>
+<span class="news-text">尾辻さんが日本乳癌学会年会のシンポジウムで講演しました。佐伯さんが口頭発表、土屋さん、家里さんがポスター発表しました（東京）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2023.6.19.</span>
+<span class="news-text">田中さん・粂川さんが日本エピジェネティクス研究会年会でポスター発表しました（東京）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2023.6.6.</span>
+<span class="news-text">田中さんが日本ゲノム編集学会でポスター発表しました（東京）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2023.5.12.</span>
+<span class="news-text">佐藤さんが仲間に加わりました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2023.5.10.</span>
+<span class="news-text">丸山が名古屋市立大学大学院薬学研究科・修士課程の講義（創薬生命科学特別講義Ⅱ）を行いました（zoom）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2023.5.1.</span>
+<span class="news-text">増田さんが仲間に加わりました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2023.4.28.</span>
+<span class="news-text">粂川さん・楊さんらの研究が<b>Frontiers in Oncology</b>にアクセプトされました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2023.4.15.</span>
+<span class="news-text">田中さんが日本病理学会総会で口頭発表しました（下関）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2023.4.14.</span>
+<span class="news-text">田中さんのお仕事が<b>JCI insight</b>にアクセプトされました！</span>
+</li>
+<li class="news-item">
+<span class="news-date">2023.4.5.</span>
+<span class="news-text">がん研究所を背景に集合写真を撮りました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2023.4.1.</span>
+<span class="news-text">柴田さん・中筋さん・楊さんが仲間に加わりました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2023.3.31.</span>
+<span class="news-text">佐伯さん・井上さんが博士の学位を取得されました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2023.3.27.</span>
+<span class="news-text">田中さんの総説が<b>Genes Chromosomes Cancer</b>から出版されました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2023.3.27.</span>
+<span class="news-text">丸山が第24回iSeminarを主催しました（Web）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2023.3.20.</span>
+<span class="news-text">丸山が第9回SaiBoHの会で講演しました（札幌）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2023.3.17.</span>
+<span class="news-text">宮田さん・鈴鹿さんが第1回北海道がん若手研究者交流会で講演しました（札幌）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2023.3.7.</span>
+<span class="news-text">第5回NEXT-GankenプログラムのAdvisory Meetingを開催しました（オンライン）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2023.3.5.</span>
+<span class="news-text">田中さんが日本医学会連合基礎部会セミナー「Rising Starリトリート」で講演しました（淡路）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2023.3.2.</span>
+<span class="news-text">田中さんの前職でのお仕事が<b>Nature Communications</b>にアクセプトされました！</span>
+</li>
+<li class="news-item">
+<span class="news-date">2023.3.1.</span>
+<span class="news-text">宮田さんの研究提案が第34回加藤記念研究助成金に採択されました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2023.3.1.</span>
+<span class="news-text">宮田さん・家里さんの科研費が採択されました！</span>
+</li>
+<li class="news-item">
+<span class="news-date">2023.2.25.</span>
+<span class="news-text">田中さんが第6回日本サルコーマ治療研究学会学術集会で口頭発表し最優秀演題賞に選出されました（神戸）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2023.2.11.</span>
+<span class="news-text">佐伯さん・粂川さん・洋子さんらの研究が<b>Breast Cancer Research</b>にアクセプトされました！</span>
+</li>
+<li class="news-item">
+<span class="news-date">2023.2.1.</span>
+<span class="news-text">柴田さんが客員研究員として仲間に加わりました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2023.1.28.</span>
+<span class="news-text">田中さんが第13回がんゲノム・エピゲノム、数理統計解析についての勉強会で講演しました（別府）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2023.1.25.</span>
+<span class="news-text">粂川さん・佐伯さん・洋子さん・楊さんらの研究が<b>British Journal of Cancer</b>にアクセプトされました！</span>
+<span class="news-note">乳がん臨床検体を用いた研究成果の第二弾です。こちらも初期の頃のラボメンバー全員の努力の賜物です。患者さんのリクルートから検体処理・NGS実験・バイオンフォマティクス解析まで、研究室内の各自の専門性を結集させた研究です。ご協力頂いた研究所内の皆様、病院の皆様、そして患者様に感謝申し上げます。いつか患者さんに成果を返せるように引き続き頑張ります！</span>
+</li>
+<li class="news-item">
+<span class="news-date">2023.1.1.</span>
+<span class="news-text">家里さんがクリニカルリサーチフェローとして仲間に加わりました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2022.12.10.</span>
+<span class="news-text">佐伯さんが第12回日米癌合同会議でポスター発表しました（ハワイ）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2022.12.2.</span>
+<span class="news-text">中太さんの研究が<b>Cell Research</b>にアクセプトされました！</span>
+</li>
+<li class="news-item">
+<span class="news-date">2022.11.30.</span>
+<span class="news-text">田中・宮田・鈴鹿が第45回日本分子生物学会で成果を発表しました（千葉）</span>
+<span class="news-note">田中がワークショップの講演、宮田がフォーラムでの座長と講演、鈴鹿がポスター発表を行いました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2022.11.28.</span>
+<span class="news-text">丸山が第4回がん三次元培養研究会で講演しました（東京）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2022.11.27.</span>
+<span class="news-text">中太さんの研究が<b>Mol Biol Rep</b>に掲載されました！</span>
+</li>
+<li class="news-item">
+<span class="news-date">2022.11.16.</span>
+<span class="news-text">丸山が順天堂大学大学院医学研究科・修士課程の講義（病理腫瘍病態学概論）を行いました（zoom）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2022.11.01.</span>
+<span class="news-text">岩元さんが特任研究助手として仲間に加わりました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2022.11.01.</span>
+<span class="news-text">鈴鹿さんが武田科学振興財団・医学系研究助成に採択されました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2022.10.21.</span>
+<span class="news-text">鈴鹿さんが北海道癌談話会奨励賞を受賞しました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2022.10.13.</span>
+<span class="news-text">粂川さんが第81回日本癌学会学術総会で若手研究者ポスター賞を受賞しました！</span>
+</li>
+<li class="news-item">
+<span class="news-date">2022.9.30.</span>
+<span class="news-text">多くのメンバーが第81回日本癌学会学術総会で成果を発表しました（横浜）</span>
+<span class="news-note">田中がシンポジウムの座長と講演、尾辻・佐伯・粂川・谷本の4名が口頭発表（英語）、鈴鹿がポスター発表を行いました。その他、共同研究5演題の発表がありました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2022.9.20.</span>
+<span class="news-text">第4回NEXT-GankenプログラムのAdvisory Meetingを開催しました（オンライン）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2022.9.16.</span>
+<span class="news-text">宮田さんが日本遺伝学会第94回大会のワークショップで講演しました（札幌）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2022.9.8.</span>
+<span class="news-text">丸山が東北大学大学院医学系研究科・修士課程の講義（がん生物学）を行いました（zoom）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2022.9.1.</span>
+<span class="news-text">菖蒲さんが特任研究助手として仲間に加わりました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2022.8.30.</span>
+<span class="news-text">丸山が先端モデル動物支援プラットフォーム若手支援技術講習会で講演しました（名古屋）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2022.8.29.</span>
+<span class="news-text">丸山がリプロセル主催Webinar講演で講演しました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2022.8.23.</span>
+<span class="news-text">丸山がワークショップ「異分野融合研究における細胞ダイバーシティの数理科学的解析に向けて」で講演しました（新潟）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2022.7.19-20.</span>
+<span class="news-text">毎年恒例の「夏のがん研発表会」が開催されました。</span>
+<span class="news-note">丸2日間、朝から夜まで、合計91演題の発表がありました。当研究室からは田中・宮田・尾辻・鈴鹿・粂川・佐伯・古川の7名が研究成果を発表しました。お疲れ様でした！</span>
+</li>
+<li class="news-item">
+<span class="news-date">2022.7.15.</span>
+<span class="news-text">谷本さんが研究生として仲間に加わりました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2022.7.8.</span>
+<span class="news-text">田中さんが第31回日本がん転移学会学術集会総会のシンポジウムで講演しました（京都）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2022.7.1.</span>
+<span class="news-text">尾辻さん、佐伯さんが第30回日本乳癌学会学術総会で成果を発表しました（横浜）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2022.7.1.</span>
+<span class="news-text">丸山が第30回日本乳癌学会学術総会のシンポジウムで講演しました（横浜）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2022.6.30.</span>
+<span class="news-text">丸山が第74回日本細胞生物学会大会のシンポジウムで講演しました（東京）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2022.6.25.</span>
+<span class="news-text">鈴鹿さんと丸山が第40回札幌国際がんシンポジウムでポスター発表しました（札幌）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2022.6.20.</span>
+<span class="news-text">丸山さんが研究助手として仲間に加わりました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2022.6.10.</span>
+<span class="news-text">丸山が「Clinical Science Small Meeting in Hokkaido」で講演しました（札幌）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2022.6.6-8.</span>
+<span class="news-text">大学院進学を検討している学部学生さんが研究室見学に来てくれました！</span>
+</li>
+<li class="news-item">
+<span class="news-date">2022.6.8.</span>
+<span class="news-text">粂川さん・洋子さん・佐伯さんの研究が<b>npj Breast Cancer</b>に掲載されました！</span>
+<span class="news-note">丸山ががん研に着任して、ゼロから体制構築と技術確立を行い、ようやく出てきた成果ということで、自分の中ではとりあえずの「集大成」となるものです。初期の頃のラボメンバー全員の努力があって、ここまで辿り着きました。また本研究にご協力頂いた研究所内の皆様、病院の皆様に感謝申し上げます。これからどんどん成果を出せるように引き続き頑張ります</span>
+</li>
+<li class="news-item">
+<span class="news-date">2022.6.1.</span>
+<span class="news-text">有明病院の若手の先生方と丸山研の研究室のメンバーで「シングルセル解析」に関する勉強会をしました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2022.5.23.</span>
+<span class="news-text">バージマンさんが研究助手として仲間に加わりました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2022.5.21.</span>
+<span class="news-text">鈴鹿さんが高槻中学高等学校のSSセミナーで出張講義を行いました（大阪）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2022.5.20.</span>
+<span class="news-text">田中さんの研究開発提案が、AMED次世代がん（応用研究フェーズB-1）に採択されました！</span>
+<span class="news-note">大変素晴らしいです！おめでとうございます！</span>
+</li>
+<li class="news-item">
+<span class="news-date">2022.4.28.</span>
+<span class="news-text">東大医科研・山田教授との共同研究の成果が<b>Cell Reports</b>に掲載されました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2022.4.27.</span>
+<span class="news-text">丸山が“がん研での持続可能なTRとは？”というテーマの座談会に参加しました。モチベーションの高い有明病院の若手・中堅の先生方とお話ができました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2022.4.27.</span>
+<span class="news-text">東京ビッグサイトを背景に集合写真を撮りました。メンバー入れ替えに伴い、コンテンツの大幅改訂を実施中です</span>
+</li>
+<li class="news-item">
+<span class="news-date">2022.4.25.</span>
+<span class="news-text">崎山さんが研究生として仲間に加わりました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2022.4.23.</span>
+<span class="news-text">田中さんが『がん進展に重要なエンハンサー・遺伝子発現制御機構の研究会』で特別講演を行いました（大分）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2022.4.16.</span>
+<span class="news-text">田中さんが第111回日本病理学会総会で成果を発表しました（神戸）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2022.4.1.</span>
+<span class="news-text">田中さん・宮田さん・高原さん・古川さん・土屋さん・堀さんが仲間に加わりました</span>
+<span class="news-note">宜しくお願いします！</span>
+</li>
+<li class="news-item">
+<span class="news-date">2022.3.24.</span>
+<span class="news-text">第3回NEXT-GankenプログラムのAdvisory Meetingを開催しました（オンライン）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2022.3.14.</span>
+<span class="news-text">丸山が第6回理論免疫学ワークショップで講演しました（オンライン）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2022.3.11.</span>
+<span class="news-text">丸山が第12回異分野融合研究セミナーを主催し、川内先生にご講演頂きました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2022.3.1.</span>
+<span class="news-text">中太さん・尾辻さん・鈴鹿さんの３名の科研費が採択されました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2022.1.21.</span>
+<span class="news-text">中太さんの最終ラボトークを実施しました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2021.12.27.</span>
+<span class="news-text">鈴鹿さんが上原記念生命科学財団の研究奨励金に採択されました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2021.12.23.</span>
+<span class="news-text">鈴鹿さんが『令和3年度フラテ研究奨励賞』を受賞しました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2021.12.22.</span>
+<span class="news-text">丸山が毎年恒例のがん研冬の発表会で「この1年の成果と来年の目標」を発表しました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2021.11.08.</span>
+<span class="news-text">中太さんの海外研究機関との共同研究の成果が<b>eLife</b>に掲載されました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2021.10.17.</span>
+<span class="news-text">札幌医大・鈴木教授との共同研究の成果が<b>Scientific Reports</b>に掲載されました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2021.10.4.</span>
+<span class="news-text">第80回日本癌学会学術総会で当研究室から5演題、共同研究として6演題、成果を発表しました（横浜）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2021.10.4.</span>
+<span class="news-text">丸山が第80回日本癌学会学術総会のモーニングレクチャーでシングルセル解析について講演しました（横浜）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2021.9.14.</span>
+<span class="news-text">第3回NEXT-GankenプログラムのAdvisory Meetingを開催しました（オンライン）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2021.8.24.</span>
+<span class="news-text">豊原さんと堀さんが仲間に加わりました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2021.8.24.</span>
+<span class="news-text">細胞老化プロジェクト・高橋先生・宮田さんとの共同研究の成果が<b>PNAS</b>に掲載されました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2021.8.11.</span>
+<span class="news-text">尾辻さんの前職での成果が<b>Pathol Int.</b>に掲載されました</span>
+</li>
+<li class="news-item">
+<span class="news-date">2021.7.21.</span>
+<span class="news-text">毎年恒例のがん研夏の発表会が丸2日間にわたって開催されました（オンライン）</span>
+</li>
+<li class="news-item">
+<span class="news-date">2021.7.11.</span>
+<span class="news-text">ホームページを刷新しました</span>
+<span class="news-note">ホームページ作成にあたり粂川さん、宮田さんに大変お世話になりました</span>
+</li>
+</ul>
+<p class="news-prev"><b>以前の近況報告</b> <a href="https://r-maruyama-lab.github.io/blog.html">（リンク）</a></p>
 
-  <!-- Loader -->
-  <div id="preloader">
-    <div id="status">
-      <div class="spinner">Loading...</div>
-    </div>
-  </div>
-
-  <!-- Start Navbar -->
-  <nav class="navbar navbar-expand-lg fixed-top custom-nav sticky">
-    <div class="container">
-
-      <a class="navbar-brand pt-0 logo" href="index.html">
-        <img src="images/logo2.png" alt="REO MARUYAMA LAB LOGO" class="img-fluid logo-light">
-        <img src="images/logo2-dark.png" alt="REO MARUYAMA LAB LOGO" class="img-fluid logo-dark">
-      </a>
-
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
-        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="mdi mdi-menu"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="index.html">TOP</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="index.html#about">ABOUT</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="team.html#team">TEAM</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="works.html#works">WORKS</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="public.html#public">PUBLICATIONS</a>
-          </li>
-          <li class="nav-item">
-          <a class="nav-link" href="#news">NEWS</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html#contact">CONTACT</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="joinus.html#joinus">JOIN</a>
-          <li class="nav-item">
-            <a class="nav-link" href="team_En.html#team_En">ENGLISH</a>
-          </li>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <!-- End Navbar -->
-
-  <!-- START HOME -->
-  <section class="section" id="top">
-    <div class="bg-overlay"></div>
-  </section>
-  <!-- END HOME -->
-
-  <!-- START NEWS -->
-  <section id="news" class="bg-white joinus-wrapper">
-    <div class="container works-article-text">
-      <!-- START NEWS2 -->
-      <div>
-        <h3 class="joinus-title mt-1"><span class="text-danger"></span><u>活動記録</u></h3>
-        <div class="pt-2">
-          <ul>
-              丸山研究室のアクティビティを簡単にご報告します<br>
-              <li><b>2026.10.16.</b> 前澤さん（現・東京大学）の研究成果が<b>Veterinary Microbiology</b>に掲載されました</li>
-              <li><b>2026.10.15.</b> 古川さんの送別会・壮行会を行いました</li> 
-              <li><b>2026.10.8.</b> 宮田さんの研究成果が<b>Science Advances</b>に掲載されました！<a href="https://www.jfcr.or.jp/laboratory/news/12277.html" target="_blank" rel="noopener">（がん研HP）</a></li>
-              <li><b>2026.10.1.</b> 宮田さんと柴田さん（現・東京大学）の研究提案ががん研究フロンティア基⾦の研究助成に採択されました<a href="https://np-foundation.or.jp/information/000424.html" target="_blank" rel="noopener">（財団HP）</a></li>
-              <li><b>2026.9.26.</b> 第85回日本癌学会学術総会で成果を発表しました（京都）</li>
-              <small><span style="color:brown">　　　　　　丸山・宮田・家里がシンポジウムの講演、粂川・木藤・佐伯・劉が口頭発表（英語）、尾辻が口頭発表（日本語）、楊がポスター発表、粂川が受賞記念講演を行いました。その他、共同研究4演題の発表がありました。</span></small></li>
-              <li><b>2026.9.26.</b> 粂川さんが2026年度日本癌学会奨励賞を受賞しました。おめでとうございます！<a href="https://www.jfcr.or.jp/laboratory/news/12274.html" target="_blank" rel="noopener">（がん研HP）</a></li> 
-              <li><b>2026.9.8.</b> 名古屋市立大学の川内先生、東京科学大学の上阪先生らとの共同研究が<b>Neuron</b>に掲載されました<a href="https://www.jfcr.or.jp/laboratory/news/12226.html" target="_blank" rel="noopener">（がん研HP）</a></li>
-              <li><b>2026.9.1.</b> 丸山が若手支援技術講習会に実行委員として参加しました（長野・蓼科）</li> 
-              <li><b>2026.8.19.</b> 家里さんが日本患者由来がんモデル学会学術集会2026で講演を行いました（東京）</li>
-              <li><b>2026.8.8.</b> 柴田さんの研究成果が<b>Nature Communications</b>に掲載されました！<a href="https://www.jfcr.or.jp/laboratory/news/12224.html" target="_blank" rel="noopener">（がん研HP）</a></li>
-              <li><b>2026.7.30.</b> 宮田さんがWorkshop on Cancer Research for Well-being 2026で研究成果を発表しました（別府）</li>
-              <li><b>2026.7.22.</b> 21,22日の丸2日間、がん研夏の発表会が開催されました。合計93演題の発表があり、丸山研究室からは宮田・リュウ・采女・ヤン・丸山・尾辻・粂川・家里・古川・吉野の10名が発表しました</li>
-              <li><b>2026.6.30.</b> 細胞生物部八尾先生らとの共同研究が<b>Nature Communications</b>にアクセプトされました<a href="https://www.jfcr.or.jp/laboratory/news/12225.html" target="_blank" rel="noopener">（がん研HP）</a></li>
-              <li><b>2026.6.25.</b> 佐伯さん、尾辻さん、家里さん、呉さん、秋谷さんが日本乳癌学会年会で研究成果を発表しました（京都）</li>
-              <li><b>2026.6.22.</b> 順天堂大学病理・腫瘍学講座の折茂先生、小林先生、目澤先生との共同研究が<b>Genes to Cells誌</b>にアクセプトされました</li>
-              <li><b>2026.4.24.</b> 家里さんの研究提案が2025年度創発的研究支援事業に採択されました！おめでとうございます。<a href="https://www.jst.go.jp/souhatsu/document/res2025.pdf" target="_blank" rel="noopener">（JST）</a></li> 
-              <li><b>2026.4.16.</b> 木藤さんがメンバーに加わりました</li>
-              <li><b>2026.4.1.</b> 田中さんが国立がん研究センター研究所部門長に、柴田さんが東京大学薬学部助教にそれぞれ栄転されました。今後のご活躍を祈念しております。</li> 
-              <li><b>2026.3.31.</b> 古川さんが学位を取得しました。</li>
-              <li><b>2026.3.20.</b> BarBar大塚が開催されました</li>
-              <li><b>2026.3.16.</b> 田中さんと柴田さんの送別会・壮行会を行いました</li> 
-              <li><b>2026.3.10.</b> 崎山さんの研究成果が<b>Biochem Biophys Res Commun</b>にアクセプトされました</li>
-              <li><b>2026.3.1.</b> 研究室から5名の科研費が採択されました（家里：基盤C、佐伯・柴田・粂川：若手、他分担1）</li>
-              <li><b>2026.2.11.</b> 家里さんががん関連三学会Rising Starネットワーキング2026で成果を発表し、優秀演題賞を受賞しました（東京）<a href="https://www.jfcr.or.jp/laboratory/news/11920.html" target="_blank" rel="noopener">（がん研HP）</a></li> 
-              <li><b>2026.2.7.</b> 古川さんの研究成果（学位論文）が<b>J Exp Clin Cancer Res</b>にアクセプトされました！</li>
-              <li><b>2026.2.6.</b> 大阪大学幸谷先生らとの共同研究が<b>eLife</b>に掲載されました</li>
-              <li><b>2026.1.19.</b> 丸山が第10回理論免疫学ワークショップで講演しました（新潟）</li>
-              <li><b>2026.1.15.</b> 丸山が名市大がん卓越研究グループキックオフシンポジウムで講演を行いました（名古屋）</li>
-              <li><b>2026.1.13.</b> 田中さんがAACR Special conference in cancer research: fusion-positive cancerで成果を発表しました（Philadelphia）</li> 
-              <li><b>2026.1.1.</b> 新年あけましておめでとうございます。4月からラボ設立10年目に入ります。引き続きよろしくお願いいたします</li>
-              <li><b>2025.12.24.</b> 冬のがん研発表会が開催されました</li>
-              <li><b>2025.12.19.</b> BarBar大塚-クリスマス会が開催されました</li>
-              <li><b>2025.12.17.</b> フランスのキュリー研究所との多施設国際共同研究が<b>Cancer Cell</b>にアクセプトされました</li>
-              <li><b>2025.12.17.</b> 豊原さん（現在東京大学に所属）の研究成果が<b>BMC Cancer</b>に掲載されました</li>
-              <li><b>2025.12.17.</b> 古川さんと宮田さんが日本患者由来がんモデル学会学術集会2025で講演を行いました（東京）</li>
-              <li><b>2025.12.16.</b> 細胞生物部八尾先生らとの共同研究が<b>Nature Communications</b>にアクセプトされました</li>
-              <li><b>2025.12.16.</b> 名古屋大学新城先生らとの共同研究が<b>British Journal of Cancer</b>に掲載されました</li>
-              <li><b>2025.12.16.</b> 宮田さんが第36回日本消化器癌発生学会総会のシンポジウムで、田中さんがパネルディスカッションで講演を行いました（福岡）</li> 
-              <li><b>2025.12.4.</b> 宮田さん、楊さん、采女さんが第48回日本分子生物学会のシンポジウムで成果を発表しました（横浜）。宮田さんはシンポジウムをオーガナイズしました。</li>
-              <li><b>2025.11.28.</b> 家里さんが第68回日本甲状腺学会学術集会でヤマサ基礎医学研究助成の受賞講演を発表しました（郡山）</li> 
-              <li><b>2025.11.28.</b> 宮田さんが北海道がん若手研究者交流会で研究成果を発表しました（旭川）</li> 
-              <li><b>2025.11.28.</b> 丸山が第11回細胞凝集研究会で講演を行いました（佐賀）</li> 
-              <li><b>2025.11.27.</b> 札幌医科大学鈴木先生との共同研究が<b>Clinical Epigenetics</b>に掲載されました</li>
-              <li><b>2025.11.4.</b> 田中さんと丸山が第98回日本生化学会大会のシンポジウムで講演を行いました（京都）</li> 
-              <li><b>2025.10.29.</b> 宮田さんがNGS EXPO 2025で成果を発表し、ベストプレゼンテーション賞を受賞しました（奈良）</li> 
-              <li><b>2025.10.7.</b> 粂川さん、堀さんらの研究成果が<b>Genome Medicine</b>にアクセプトされました！<a href="https://www.jfcr.or.jp/laboratory/pickup/index.html" target="_blank" rel="noopener">（がん研HP）</a></li>
-              <li><b>2025.9.30.</b> 采女さんが学振DC2に採用されました！</li>
-              <li><b>2025.9.28.</b> 家里さんの研究提案ががん研究フロンティア基⾦の研究助成に採択されました<a href="https://np-foundation.or.jp/information/000309.html" target="_blank" rel="noopener">（財団HP）</a></li>
-              <li><b>2025.9.27.</b> 第84回日本癌学会学術総会で成果を発表しました（金沢）</li>
-              <small><span style="color:brown">　　　　　　丸山・田中・古川がシンポジウムの講演、尾辻・家里・佐伯が口頭発表（英語）、宮田・秋谷が口頭発表（日本語）、粂川がポスター発表を行いました。その他、共同研究4演題の発表がありました</span></small></li>
-              <li><b>2025.9.27.</b> 柴田さんの研究提案がJCA-KFCR若手研究助成に採択され、第84回日本癌学会学術総会で表彰されました<a href="https://www.cancer.or.jp/modules/recruiting/index.php?content_id=9" target="_blank" rel="noopener">（学会HP）</a></li>
-              <li><b>2025.9.3.</b> 宮田さんが先端モデル動物支援プラットフォーム若手支援技術講習会に参加し口頭発表を行いました。丸山は実行委員として参加しました（長野・蓼科）</li> 
-              <li><b>2025.8.28.</b> 宮田さんが第16回日本ＲＮＡｉ研究会で招待講演を行いました（広島）</li>
-              <li><b>2025.7.25.</b> 久しぶりにBarBar大塚が開催されました</li>
-              <li><b>2025.7.24.</b> 札幌医科大学鈴木先生との共同研究が<b>Cancer Letters</b>に掲載されました</li>
-              <li><b>2025.7.23.</b> 22,23日の丸2日間、がん研夏の発表会が開催されました。合計96演題の発表があり、丸山研究室からは田中・宮田・柴田・ヤン・リュウ・采女・尾辻・家里・粂川・古川・吉野の11名が発表しました</li>
-              <li><b>2025.7.17.</b> 田中さんが第58回日本整形外科学会骨軟部腫瘍学術集会のシンポジウムで講演を行いました（奈良）</li>
-              <li><b>2025.7.16.</b> 札幌医科大学鈴木先生との共同研究が<b>Gastric Cancer</b>に掲載されました</li>
-              <li><b>2025.7.14.</b> 呉さんがメンバーに加わりました</li>
-              <li><b>2025.7.11.</b> 佐伯さん、尾辻さん、家里さんが日本乳癌学会年会で研究成果を発表しました（東京）</li>
-              <li><b>2025.7.4.</b> 宮田さんが第29回日本がん分子標的治療学会学術集会の若手アンビシャスセッションで発表を行いました（札幌）</li>
-              <li><b>2025.7.1.</b> 宮田さんの研究提案が科研費挑戦的研究(萌芽)に採択されました</li>
-              <li><b>2025.6.20.</b> 丸山が第18回日本エピジェネティクス研究会年会でポスター発表を行いました（福井）</li>
-              <li><b>2025.6.17.</b> 田中さんが名古屋大学大学院医学系研究科の講義（先進がん治療開発研究コース）を行いました</li>
-              <li><b>2025.6.17.</b> 家里さんの研究成果が<b>Breast Cancer Research</b>に掲載されました</li></li>
-              <li><b>2025.6.15.</b> 丸山が第33回乳癌基礎研究会に参加し座長を務めました（静岡）</li>
-              <li><b>2025.6.12.</b> 家里さんが第21回ヤマサ基礎医学研究助成の受賞者に選ばれました<a href="https://www.japanthyroid.jp/public/introduction/grant/record.html" target="_blank" rel="noopener">（学会HP）</a></li> 
-              <li><b>2025.6.6.</b> 新メンバーの歓迎会を開催しました</li> 
-              <li><b>2025.6.6.</b> 丸山がカラスに襲撃されました</li> 
-              <li><b>2025.5.29.</b> 宮田さんが第4回日本医学会連合 Rising Starリトリーでポスター発表を行いました（愛知）</li> 
-              <li><b>2025.5.21.</b> 丸山が名古屋市立大学大学院薬学研究科・修士課程の講義（創薬生命科学特別講義Ⅱ）を行いました</li>
-              <li><b>2025.5.20.</b> 名古屋市立大学の川内先生らとの共同研究が<b>Cell Reports</b>に掲載されました<a href="https://www.jfcr.or.jp/laboratory/news/11422.html" target="_blank" rel="noopener">（がん研HP）</a></li>
-              <li><b>2025.5.17.</b> がん研究会の連携大学院説明会が開催されました</li></li>
-              <li><b>2025.4.16.</b> 田中さんが第114回日本病理学会総会で口頭発表を行いました（仙台）</li> 
-              <li><b>2025.4.10.</b> 家里さんが第125回日本外科学会定期学術集会のサージカルフォーラムで講演しました（仙台）</li> 
-              <li><b>2025.4.1.</b> 川原さん、小林さんがメンバーに加わりました</li> 
-              <li><b>2025.3.28.</b> 第9回NEXT-GankenプログラムのAdvisory Meetingを開催しました（オンライン）</li>
-              <li><b>2025.3.21.</b> 野田所長の退任記念講演会ならびに祝賀会が開催されました</li> 
-              <li><b>2025.3.21.</b> 家里さんが第31回日本乳腺疾患研究会で口頭発表を行いました（東京）</li> 
-              <li><b>2025.3.13.</b> 佐伯さんがBreast Cancer Next Generation Training Seminarにて講演を行いました（三重）</li>
-              <li><b>2025.3.10.</b> 丸山が第48回iSeminarを主催しました（Web）</li>
-              <li><b>2025.3.1.</b> 研究室から5件の科研費が採択されました！（尾辻：若手、他分担4件）</li>
-              <li><b>2025.2.21.</b> 金丸さんがメンバーに加わりました</li> 
-              <li><b>2025.2.21.</b> 田中さんが日本サルコーマ治療研究学会学術集会で口頭発表を行いました（札幌）</li> 
-              <li><b>2025.2.1.</b> 家里さんが13th AACR-JCA Joint Conferenceでポスター発表を行いました（ハワイ）</li> 
-              <li><b>2025.1.31.</b> 佐伯さん・尾辻さんがWeb Forum of MBC in 大阪にて講演を行いました（オンライン）</li> 
-              <li><b>2025.1.6.</b> 永本さんがメンバーに加わりました</li> 
-              <li><b>2025.1.1.</b> 鈴鹿さんがUCSFのRaleigh Labに留学しました。今後の活躍を期待しています</li>
-              <li><b>2024.12.25.</b> 冬のがん研発表会が開催されました</li>
-              <li><b>2024.12.24.</b> 丸山の研究提案が高松宮妃癌研究基金研究助成に採択されました</li>
-              <li><b>2024.12.20.</b> 家里さんの研究提案が中外創薬科学財団の特別研究助成金SRG2023に採択されました</li>
-              <li><b>2024.12.13.</b> 宮田さんの研究提案が上原記念生命科学財団 研究奨励金に採択されました</li>
-              <li><b>2024.12.3.</b> 宮田さん・鈴鹿さんが北海道がん若手研究者交流会で講演しました（札幌）</li>
-              <li><b>2024.11.27.</b> 宮田さん、楊さん、采女さんが第47回日本分子生物学会で成果を発表しました（福岡）。宮田さんはミニシンポジウムをオーガナイズしました。</li>
-              <li><b>2024.11.18.</b> 丸山がThe 21st Breast Cancer Frontier Meetingで講演しました（東京）</li> 
-              <li><b>2024.11.14.</b> 田中さんの研究提案がアステラス病態代謝研究会の研究助成金に採択されました</li>
-              <li><b>2024.11.9.</b> 札幌医科大学鈴木先生との共同研究が<b>Scientific Reports</b>に掲載されました</li>
-              <li><b>2024.11.7.</b> 﨑本さん、粂川さんの研究成果が<b>BJC Reports</b>にアクセプトされました</li> 
-              <li><b>2024.11.7.</b> 田中さんが日本病理学会秋期特別総会のシンポジウムで講演を行いました（東京）</li> 
-              <li><b>2024.11.1.</b> 本日より「がんエピゲノム研究部」となりました。これまで研究室の発展のために貢献してくださった全ての方に感謝申し上げます。引き続き研究に精進いたします。</li>
-              <li><b>2024.10.27.</b> 田中さんの研究提案が日本対がん協会RFLJ「プロジェクト未来」研究助成に採択されました</li>
-              <li><b>2024.10.27.</b> 粂川さんの研究提案が安田記念医学財団若手癌研究助成金に採択されました</li>
-              <li><b>2024.10.15.</b> 吉野さんがメンバーに加わりました</li> 
-              <li><b>2024.10.5.</b> 家里さんが第67回日本甲状腺学会学術集会のシンポジウムで講演しました（横浜）</li> 
-              <li><b>2024.10.1.</b> 采女さんがメンバーに加わりました</li>
-              <li><b>2024.10.1.</b> 第8回NEXT-GankenプログラムのAdvisory Meetingを開催しました（オンライン）</li>
-              <li><b>2024.9.30.</b> 尾辻さんの研究成果が<b>npj Precision Oncology</b>にアクセプトされました</li>
-              <li><b>2024.9.19.</b> 多くのメンバーが第83回日本癌学会学術総会で成果を発表しました（福岡）</li>
-              <li><b>2024.9.10.</b> 粂川さんの研究提案が持田記念医学薬学振興財団・研究助成金に採択されました</li>
-              <li><b>2024.9.4.</b> 宮田さんがNGS EXPO 2024でポスター発表を行いました（大阪）</li> 
-              <li><b>2024.8.30.</b> ヤンさんが先端モデル動物支援プラットフォーム若手支援技術講習会に参加しポスター発表をしました。丸山は実行委員として参加しました（名古屋）</li> 
-              <li><b>2024.8.29.</b> 丸山の研究提案と田中さんの研究提案がAMED次世代がんに採択されました</li> 
-              <li><b>2024.8.26.</b> 宮田さんが第43回日本癌学会奨励賞を受賞しました。おめでとうございます！<a href="https://www.jfcr.or.jp/laboratory/news/11109.html" target="_blank" rel="noopener">（がん研HP）</a></li> 
-              <li><b>2024.8.23.</b> 田中さんが日本患者由来がんモデル学会・日本ヒト細胞学会合同学術集会で特別講演を行いました（東京）</li> 
-              <li><b>2024.8.15.</b> 鈴鹿さんがCSHLの「Biology of Cancer: Microenvironment & Metastasis」ミーティングでポスター発表しました（NY, Cold Spring Harbor）</li> 
-              <li><b>2024.7.27.</b> 田中さんが第20回日本病理学会カンファレンスで成果を発表しました（山形）</li> 
-              <li><b>2024.7.17.</b> 16,17日の丸2日間、がん研夏の発表会が開催されました。合計94演題の発表があり、丸山研究室からは田中・宮田・柴田・佐伯・尾辻・家里・鈴鹿・粂川・古川の9名が発表しました</li>
-              <li><b>2024.7.13.</b> 丸山・佐伯・尾辻・家里・土屋が日本乳癌学会年会で研究成果を発表しました（シンポジウム・受賞記念講演・厳選ポスター）。佐伯さんは研究奨励賞と優秀論文賞のダブル受賞で、連続表彰されました！（仙台）</li>
-              <li><b>2024.7.5.</b> 鈴木さんがメンバーに加わりました</li>
-              <li><b>2024.6.28.</b> 田中さんが第33回日本がん転移学会学術集会で学会賞受賞講演を行いました。また土屋さんがワークショップで研究成果を発表しました（奈良）</li>
-              <li><b>2024.6.28.</b> 田中さんが日本がん転移学会女性研究者がん転移研究グラント賞を受賞しました</li> 
-              <li><b>2024.6.21.</b> 田中さんが第28回日本がん分子標的治療学会学術集会のシンポジウムで講演しました（東京）</li> 
-              <li><b>2024.6.19.</b> 田中さんが第9回日本ゲノム編集学会で成果を発表しました（大阪）</li> 
-              <li><b>2024.6.6.</b> 田中さんの研究提案が認定NPO法人ゴールドリボン・ネットワークのゴールドリボン研究助成に採択されました</li>
-              <li><b>2024.6.4.</b> 国立精神神経医療研究センターの川内先生らとの共同研究が<b>Developmental Cell</b>に掲載されました！</li></li>
-              <li><b>2024.5.27.</b> 佐伯さんが第24回Breast Cancer優秀論文賞を受賞しました</li></li>
-              <li><b>2024.5.13.</b> CPMセンター森先生との共同研究が<b>Journal of Pathology</b>に掲載されました</li></li>
-              <li><b>2024.5.9.</b> 古川さんが第110回日本消化器病学会総会のワークショップで研究成果を発表しました（徳島）</li>
-              <li><b>2024.4.19.</b> 豊原さんが第76回日本産科婦人科学会学術講演会で研究成果を発表し、JSOG Congress Encouragement Awardを受賞しました</li>
-              <li><b>2024.4.9.</b> 佐伯さんが日本乳癌学会班研究の班員に選出されました</li>
-              <li><b>2024.4.9.</b> 佐伯さんが日本乳癌学会研究奨励賞を受賞しました！</li>
-              <li><b>2024.4.6.</b> 前澤さんの研究が<b>Vet Res Commun</b>に掲載されました</li>
-              <li><b>2024.4.1.</b> マハムットさんが自治医科大学腫瘍病理学部門助教に栄転されました</li>
-              <li><b>2024.4.1.</b> 増田さんがメンバーに加わりました</li>
-              <li><b>2024.3.28.</b> 田中さんが第113回日本病理学会総会で成果を発表しました（名古屋）</li>
-              <li><b>2024.3.27.</b> 歓送迎を兼ねて豊洲でBBQパーティーを開催しました（外部のゲストの方にもご参加いただきました）</li></li>
-              <li><b>2024.3.26.</b> 田中さんと京都大学の共同研究が<b>Proc Natl Acad Sci USA</b>に掲載されました！</li></li>
-              <li><b>2024.3.25.</b> 劉さんがメンバーに加わりました</li>
-              <li><b>2024.3.22.</b> 第7回NEXT-GankenプログラムのAdvisory Meetingを開催しました（オンライン）</li>
-              <li><b>2024.3.19.</b> 丸山が第36回iSeminarを主催しました（Web）</li>
-              <li><b>2024.3.7.</b> 丸山がBreast Cancer Expert Seminarにて特別講演を行いました（Web）</li>
-              <li><b>2024.3.4.</b> 田中さんの研究提案がノバルティス科学振興財団の研究奨励金に採択されました</li>
-              <li><b>2024.3.2.</b> 丸山が第18回TRS研究会にて特別講演を行いました（東京）</li>
-              <li><b>2024.3.1.</b> 研究室から5名の科研費が採択されました！（丸山・田中：基盤B、佐伯・柴田・粂川：若手）</li>
-              <li><b>2024.2.9.</b> 田中さんが日本サルコーマ治療研究学会学術集会のシンポジウムで講演しました（名古屋）</li>
-              <li><b>2024.2.8.</b> 楊さん、粂川さんの研究成果が<b>Cancer Gene Therapy</b>にアクセプトされました</li>
-              <li><b>2024.2.4.</b> 田中さんがKeystone Symposia (Epigenetic mechanisms and cancer treatment)でポスター発表を行いました</li>
-              <li><b>2024.2.1.</b> 佐伯さんの研究提案が2023年度がん検診研究助成事業（臨床研究）に採択されました</li>
-              <li><b>2024.1.27.</b> 丸山が2024年がん関連三学会Rising Starネットワーキングにコアメンバーとして参加しました（川崎）</li>
-              <li><b>2024.1.10.</b> 宮田さんとFox Chase Cancer Centerの村山さんらとの共同研究が<b>Cancer Discovery</b>に掲載されました</li>
-              <li><b>2023.12.20.</b> 冬のがん研発表会が開催されました</li>
-              <li><b>2023.12.19.</b> 田中さんの研究提案が高松宮妃癌研究基金研究助成に採択されました</li>
-              <li><b>2023.12.16.</b> 田中さんががんゲノム・エピゲノム・数理統計解析勉強会で講演しました（大分）</li>
-              <li><b>2023.12.8.</b> 家里さん日本甲状腺学会年会に参加しました（金沢）。ロシュ若手奨励賞（YIA）を受賞しました！</li>
-              <li><b>2023.12.1.</b> 八條さんがメンバーに加わりました</li>
-              <li><b>2023.11.30.</b> 田中・宮田・鈴鹿・粂川・楊が第46回日本分子生物学会で成果を発表しました（神戸）</li>
-              <li><b>2023.11.22.</b> 丸山が順天堂大学大学院医学研究科・修士課程の講義（病理腫瘍病態学概論）を行いました（zoom）</li>
-              <li><b>2023.11.9.</b> 家里さんの研究提案が興和生命科学振興財団研究助成に採択されました</li>
-              <li><b>2023.11.16.</b> 宮田さんの前職での研究成果が<b>Int. J. Mol. Sci.</b>にアクセプトされました</li>
-              <li><b>2023.11.9.</b> 家里さんの研究提案ががん集学的治療研究財団一般研究助成（がん薬物療法部門）に採択されました</li>
-              <li><b>2023.11.7.</b> 鈴鹿さんが第45回日本バイオマテリアル学会大会で口頭発表しハイライト講演に選出されました（神戸）</li>
-              <li><b>2023.10.22.</b> 家里さんの研究成果が<b>Breast Cancer</b>にアクセプトされました</li>
-              <li><b>2023.10.21.</b> 丸山が第61回日本癌治療学会学術集会のYoung rising star lectureで講演しました（横浜）</li>
-              <li><b>2023.10.20.</b> 土屋さんがAsian Oncology Society：The 3rd International Congressで口頭発表し、Best Oral Presentationに選ばれました！（横浜）</li>
-              <li><b>2023.10.6.</b> 粂川さんの学位取得のお祝いをしました</li>
-              <li><b>2023.10.6.</b> 粂川さんの研究提案が日本対がん協会RFLJ「プロジェクト未来」研究助成に採択されました</li>
-              <li><b>2023.9.30.</b> 家里さんが「マンスフィールド-PhRMA 研究者プログラム第9期スカラー」として米国研修ツアーに参加しました</li>
-              <li><b>2023.9.29.</b> 第6回NEXT-GankenプログラムのAdvisory Meetingを開催しました（オンライン）</li>
-              <li><b>2023.9.28.</b> 粂川さんが学位を取得しました。おめでとうございます！</li>
-              <li><b>2023.9.25.</b> <a href="https://www.jfcr.or.jp/next-ganken/">NEXT-Gankenのホームページ</a>が少し改訂されました</li>
-              <li><b>2023.9.23.</b> 第82回日本癌学会学術総会で成果を発表しました（横浜）</li>
-              <small><span style="color:brown">　　　　　　田中がシンポジウムの講演、佐伯・粂川・古川・土屋の4名が口頭発表（英語）、鈴鹿が口頭発表（日本語）、宮田・尾辻・丸山の3名がポスター発表を行いました。その他、共同研究7演題（シンポジウムx1、口頭発表x2、ポスターx4）の発表がありました</span></small></li>            
-              <li><b>2023.9.14.</b> 順天堂大学病理・腫瘍学講座の折茂先生、目澤先生との共同研究が<b>Cancer Science</b>に掲載されました</li>
-              <li><b>2023.9.11.</b> 宮田さんの研究提案が持田記念医学薬学振興財団・研究助成金に採択されました</li>
-              <li><b>2022.9.8.</b> 先端モデル動物支援プラットフォーム若手支援技術講習会で田中さんが特別講演を、柴田さん・粂川さんがポスター発表をしました（名古屋）</li>
-              <li><b>2023.8.30.</b> 薬学部3年の学生さんが研究室見学に来てくれました。その熱意に感銘を受け、我々のモチベーションも高まりました！</li>
-              <li><b>2023.8.29.</b> 順天堂大学病理・腫瘍学講座の折茂先生、安川先生との共同研究が<b>Cancer Medicine</b>に掲載されました</li>
-              <li><b>2023.8.1.</b> 細胞老化研究部との共同研究が<b>Proc Natl Acad Sci USA</b>に掲載されました！</li>
-              <li><b>2023.7.31.</b> 宮田さんの研究提案が武田科学振興財団・医学系研究助成に採択されました</li>
-              <li><b>2023.7.25.</b> 田中さんが東京医科歯科大学難治疾患研究所セミナーで講演しました（東京）</li>
-              <li><b>2023.7.24.</b> 丸山が金沢国際がん生物学シンポジウムで講演しました（金沢）</li>
-              <li><b>2023.7.21.</b> 田中さん・宮田さん・佐伯さんがWorkshop on Cancer Research for Well-being 2023で口頭発表しました（熱海）</li>
-              <li><b>2023.7.19.</b> 18,19日の丸2日間、がん研夏の発表会が開催されました。合計83演題の発表があり、丸山研究室からは田中・宮田・柴田・尾辻・家里・鈴鹿・粂川・古川の8名が発表しました。また宮田さんの発表がベスト3の発表に選ばれました！</li>
-              <li><b>2023.7.14.</b> 札幌医大との共同研究が<b>Cell Death and Disease</b>に掲載されました！</li>
-              <li><b>2023.7.1.</b> 宮田さんの研究提案が科研費挑戦的研究(萌芽)に採択されました</li>
-              <li><b>2023.6.29.</b> 尾辻さんが日本乳癌学会年会のシンポジウムで講演しました。佐伯さんが口頭発表、土屋さん、家里さんがポスター発表しました（東京）</li>
-              <li><b>2023.6.19.</b> 田中さん・粂川さんが日本エピジェネティクス研究会年会でポスター発表しました（東京）</li>
-              <li><b>2023.6.6.</b> 田中さんが日本ゲノム編集学会でポスター発表しました（東京）</li>
-              <li><b>2023.5.12.</b> 佐藤さんが仲間に加わりました</li>
-              <li><b>2023.5.10.</b> 丸山が名古屋市立大学大学院薬学研究科・修士課程の講義（創薬生命科学特別講義Ⅱ）を行いました（zoom）</li>
-              <li><b>2023.5.1.</b> 増田さんが仲間に加わりました</li>
-              <li><b>2023.4.28.</b> 粂川さん・楊さんらの研究が<b>Frontiers in Oncology</b>にアクセプトされました</li>
-              <li><b>2023.4.15.</b> 田中さんが日本病理学会総会で口頭発表しました（下関）</li>
-              <li><b>2023.4.14.</b> 田中さんのお仕事が<b>JCI insight</b>にアクセプトされました！</li>
-              <li><b>2023.4.5.</b> がん研究所を背景に集合写真を撮りました</li>
-              <li><b>2023.4.1.</b> 柴田さん・中筋さん・楊さんが仲間に加わりました</li>
-              <li><b>2023.3.31.</b> 佐伯さん・井上さんが博士の学位を取得されました</li>
-              <li><b>2023.3.27.</b> 田中さんの総説が<b>Genes Chromosomes Cancer</b>から出版されました</li>
-              <li><b>2023.3.27.</b> 丸山が第24回iSeminarを主催しました（Web）</li>
-              <li><b>2023.3.20.</b> 丸山が第9回SaiBoHの会で講演しました（札幌）</li>
-              <li><b>2023.3.17.</b> 宮田さん・鈴鹿さんが第1回北海道がん若手研究者交流会で講演しました（札幌）</li>
-              <li><b>2023.3.7.</b> 第5回NEXT-GankenプログラムのAdvisory Meetingを開催しました（オンライン）</li>
-              <li><b>2023.3.5.</b> 田中さんが日本医学会連合基礎部会セミナー「Rising Starリトリート」で講演しました（淡路）</li>
-              <li><b>2023.3.2.</b> 田中さんの前職でのお仕事が<b>Nature Communications</b>にアクセプトされました！</li>
-              <li><b>2023.3.1.</b> 宮田さんの研究提案が第34回加藤記念研究助成金に採択されました</li>
-              <li><b>2023.3.1.</b> 宮田さん・家里さんの科研費が採択されました！</li>
-              <li><b>2023.2.25.</b> 田中さんが第6回日本サルコーマ治療研究学会学術集会で口頭発表し最優秀演題賞に選出されました（神戸）</li>
-              <li><b>2023.2.11.</b> 佐伯さん・粂川さん・洋子さんらの研究が<b>Breast Cancer Research</b>にアクセプトされました！</li>
-              <li><b>2023.2.1.</b> 柴田さんが客員研究員として仲間に加わりました </li>              
-              <li><b>2023.1.28.</b> 田中さんが第13回がんゲノム・エピゲノム、数理統計解析についての勉強会で講演しました（別府）</li>
-              <li><b>2023.1.25.</b> 粂川さん・佐伯さん・洋子さん・楊さんらの研究が<b>British Journal of Cancer</b>にアクセプトされました！</li>
-              <small><span style="color:brown">　　　　　　乳がん臨床検体を用いた研究成果の第二弾です。こちらも初期の頃のラボメンバー全員の努力の賜物です。患者さんのリクルートから検体処理・NGS実験・バイオンフォマティクス解析まで、研究室内の各自の専門性を結集させた研究です。ご協力頂いた研究所内の皆様、病院の皆様、そして患者様に感謝申し上げます。いつか患者さんに成果を返せるように引き続き頑張ります！</span></small></li>              
-              <li><b>2023.1.1.</b> 家里さんがクリニカルリサーチフェローとして仲間に加わりました </li>
-              <li><b>2022.12.10.</b> 佐伯さんが第12回日米癌合同会議でポスター発表しました（ハワイ）</li>
-              <li><b>2022.12.2.</b> 中太さんの研究が<b>Cell Research</b>にアクセプトされました！</li>
-              <li><b>2022.11.30.</b> 田中・宮田・鈴鹿が第45回日本分子生物学会で成果を発表しました（千葉）</li>
-              <small><span style="color:brown">　　　　　　田中がワークショップの講演、宮田がフォーラムでの座長と講演、鈴鹿がポスター発表を行いました</span></small></li>
-              <li><b>2022.11.28.</b> 丸山が第4回がん三次元培養研究会で講演しました（東京）</li>
-              <li><b>2022.11.27.</b> 中太さんの研究が<b>Mol Biol Rep</b>に掲載されました！</li>              
-              <li><b>2022.11.16.</b> 丸山が順天堂大学大学院医学研究科・修士課程の講義（病理腫瘍病態学概論）を行いました（zoom）</li>
-              <li><b>2022.11.01.</b> 岩元さんが特任研究助手として仲間に加わりました</li>
-              <li><b>2022.11.01.</b> 鈴鹿さんが武田科学振興財団・医学系研究助成に採択されました</li>
-              <li><b>2022.10.21.</b> 鈴鹿さんが北海道癌談話会奨励賞を受賞しました</li>
-              <li><b>2022.10.13.</b> 粂川さんが第81回日本癌学会学術総会で若手研究者ポスター賞を受賞しました！</li>
-              <li><b>2022.9.30.</b> 多くのメンバーが第81回日本癌学会学術総会で成果を発表しました（横浜）</li>
-              <small><span style="color:brown">　　　　　　田中がシンポジウムの座長と講演、尾辻・佐伯・粂川・谷本の4名が口頭発表（英語）、鈴鹿がポスター発表を行いました。その他、共同研究5演題の発表がありました</span></small></li>
-              <li><b>2022.9.20.</b>  第4回NEXT-GankenプログラムのAdvisory Meetingを開催しました（オンライン）</li>
-              <li><b>2022.9.16.</b> 宮田さんが日本遺伝学会第94回大会のワークショップで講演しました（札幌）</li>
-              <li><b>2022.9.8.</b> 丸山が東北大学大学院医学系研究科・修士課程の講義（がん生物学）を行いました（zoom）</li>
-              <li><b>2022.9.1.</b> 菖蒲さんが特任研究助手として仲間に加わりました </li>
-              <li><b>2022.8.30.</b> 丸山が先端モデル動物支援プラットフォーム若手支援技術講習会で講演しました（名古屋）</li>
-              <li><b>2022.8.29.</b> 丸山がリプロセル主催Webinar講演で講演しました</li>
-              <li><b>2022.8.23.</b> 丸山がワークショップ「異分野融合研究における細胞ダイバーシティの数理科学的解析に向けて」で講演しました（新潟）</li>
-              <li><b>2022.7.19-20.</b> 毎年恒例の「夏のがん研発表会」が開催されました。</li>
-              <small><span style="color:brown">　　　　　　丸2日間、朝から夜まで、合計91演題の発表がありました。当研究室からは田中・宮田・尾辻・鈴鹿・粂川・佐伯・古川の7名が研究成果を発表しました。お疲れ様でした！</span></small></li>
-              <li><b>2022.7.15.</b> 谷本さんが研究生として仲間に加わりました </li>
-              <li><b>2022.7.8.</b> 田中さんが第31回日本がん転移学会学術集会総会のシンポジウムで講演しました（京都）</li> 
-              <li><b>2022.7.1.</b> 尾辻さん、佐伯さんが第30回日本乳癌学会学術総会で成果を発表しました（横浜）</li>
-              <li><b>2022.7.1.</b> 丸山が第30回日本乳癌学会学術総会のシンポジウムで講演しました（横浜）</li>
-              <li><b>2022.6.30.</b> 丸山が第74回日本細胞生物学会大会のシンポジウムで講演しました（東京）</li>
-              <li><b>2022.6.25.</b> 鈴鹿さんと丸山が第40回札幌国際がんシンポジウムでポスター発表しました（札幌）</li>
-              <li><b>2022.6.20.</b> 丸山さんが研究助手として仲間に加わりました </li>
-              <li><b>2022.6.10.</b> 丸山が「Clinical Science Small Meeting in Hokkaido」で講演しました（札幌）</li>
-              <li><b>2022.6.6-8.</b> 大学院進学を検討している学部学生さんが研究室見学に来てくれました！</li>
-              <li><b>2022.6.8.</b> 粂川さん・洋子さん・佐伯さんの研究が<b>npj Breast Cancer</b>に掲載されました！</li>
-              <small><span style="color:brown">　　　　　　丸山ががん研に着任して、ゼロから体制構築と技術確立を行い、ようやく出てきた成果ということで、自分の中ではとりあえずの「集大成」となるものです。初期の頃のラボメンバー全員の努力があって、ここまで辿り着きました。また本研究にご協力頂いた研究所内の皆様、病院の皆様に感謝申し上げます。これからどんどん成果を出せるように引き続き頑張ります</span></small></li>
-              <li><b>2022.6.1.</b> 有明病院の若手の先生方と丸山研の研究室のメンバーで「シングルセル解析」に関する勉強会をしました</li>
-              <li><b>2022.5.23.</b> バージマンさんが研究助手として仲間に加わりました </li>
-              <li><b>2022.5.21.</b> 鈴鹿さんが高槻中学高等学校のSSセミナーで出張講義を行いました（大阪）</li>
-              <li><b>2022.5.20.</b> 田中さんの研究開発提案が、AMED次世代がん（応用研究フェーズB-1）に採択されました！</li>
-              <small><span style="color:brown">　　　　　　大変素晴らしいです！おめでとうございます！</span></small></li>
-              <li><b>2022.4.28.</b> 東大医科研・山田教授との共同研究の成果が<b>Cell Reports</b>に掲載されました<br>              
-              <li><b>2022.4.27.</b> 丸山が“がん研での持続可能なTRとは？”というテーマの座談会に参加しました。モチベーションの高い有明病院の若手・中堅の先生方とお話ができました<br>
-              <li><b>2022.4.27.</b> 東京ビッグサイトを背景に集合写真を撮りました。メンバー入れ替えに伴い、コンテンツの大幅改訂を実施中です<br>
-              <li><b>2022.4.25.</b> 崎山さんが研究生として仲間に加わりました<br>
-              <li><b>2022.4.23.</b> 田中さんが『がん進展に重要なエンハンサー・遺伝子発現制御機構の研究会』で特別講演を行いました（大分）</li>
-              <li><b>2022.4.16.</b> 田中さんが第111回日本病理学会総会で成果を発表しました（神戸）</li>
-              <li><b>2022.4.1.</b> 田中さん・宮田さん・高原さん・古川さん・土屋さん・堀さんが仲間に加わりました</li>
-              <small><span style="color:brown">　　　　　　宜しくお願いします！</span></small></li>
-              <li><b>2022.3.24.</b>  第3回NEXT-GankenプログラムのAdvisory Meetingを開催しました（オンライン）</li>
-              <li><b>2022.3.14.</b>  丸山が第6回理論免疫学ワークショップで講演しました（オンライン）</li>
-              <li><b>2022.3.11.</b>  丸山が第12回異分野融合研究セミナーを主催し、川内先生にご講演頂きました</li>
-              <li><b>2022.3.1.</b>   中太さん・尾辻さん・鈴鹿さんの３名の科研費が採択されました</li>
-              <li><b>2022.1.21.</b>  中太さんの最終ラボトークを実施しました</li>
-              <li><b>2021.12.27.</b> 鈴鹿さんが上原記念生命科学財団の研究奨励金に採択されました</li> 
-              <li><b>2021.12.23.</b> 鈴鹿さんが『令和3年度フラテ研究奨励賞』を受賞しました</li>  
-              <li><b>2021.12.22.</b> 丸山が毎年恒例のがん研冬の発表会で「この1年の成果と来年の目標」を発表しました</li>
-              <li><b>2021.11.08.</b> 中太さんの海外研究機関との共同研究の成果が<b>eLife</b>に掲載されました</li>  
-              <li><b>2021.10.17.</b> 札幌医大・鈴木教授との共同研究の成果が<b>Scientific Reports</b>に掲載されました</li>
-              <li><b>2021.10.4.</b>  第80回日本癌学会学術総会で当研究室から5演題、共同研究として6演題、成果を発表しました（横浜）</li>
-              <li><b>2021.10.4.</b>  丸山が第80回日本癌学会学術総会のモーニングレクチャーでシングルセル解析について講演しました（横浜）</li>
-              <li><b>2021.9.14.</b>  第3回NEXT-GankenプログラムのAdvisory Meetingを開催しました（オンライン）</li>
-              <li><b>2021.8.24.</b>  豊原さんと堀さんが仲間に加わりました</li>
-              <li><b>2021.8.24.</b>  細胞老化プロジェクト・高橋先生・宮田さんとの共同研究の成果が<b>PNAS</b>に掲載されました</li>
-              <li><b>2021.8.11.</b>  尾辻さんの前職での成果が<b>Pathol Int.</b>に掲載されました</li>
-              <li><b>2021.7.21.</b>  毎年恒例のがん研夏の発表会が丸2日間にわたって開催されました（オンライン）</li>
-              <li><b>2021.7.11.</b>  ホームページを刷新しました</li>
-              <small><span style="color:brown">　　　　　　ホームページ作成にあたり粂川さん、宮田さんに大変お世話になりました</span></small></li>
-              <li><b>以前の近況報告</b>  <a href="https://r-maruyama-lab.github.io/blog.html">（リンク）</a>
-
-              
-
-              
-              
-              
-              
-
-          </ul>
-        </div>
-      </div>
-
-      <!-- END NEWS2 -->
-        
-    </div><!-- container -->
-  </section>
-  <!-- END RECRUITMENT -->
-
-  <div class="joinus-adjust"></div>
-
-  <!--START FOOTER-->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-alt">
-        <p class="text-muted mb-0">Copyright &copy; 2020 Japanese Foundation For Cancer Research. All Rights
+</div>
+</div>
+<!-- END NEWS2 -->
+</div><!-- container -->
+</section>
+<!-- END RECRUITMENT -->
+<div class="joinus-adjust"></div>
+<!--START FOOTER-->
+<footer class="footer">
+<div class="container">
+<div class="footer-alt">
+<p class="text-muted mb-0">Copyright © 2020 Japanese Foundation For Cancer Research. All Rights
           Reserved.
         </p>
-                    <script src="https://www.w3counter.com/tracker.js?id=112712"></script>
-                    <!-- カウンターの設置 -->
-      </div>
-    </div>
-  </footer>
-  <!--END FOOTER-->
-
-  <!-- Back To Top -->
-  <a href="#" class="back_top"> <i class="mdi mdi-chevron-up"> </i> </a>
-
-  <!-- JAVASCRIPTS -->
-  <script src="js/jquery.min.js"></script>
-  <script src="js/bootstrap.bundle.min.js"></script>
-  <!--EASING JS-->
-  <script src="js/jquery.easing.min.js"></script>
-  <script src="js/scrollspy.min.js"></script>
-  <!--PORTFOLIO FILTER JS-->
-  <script src="js/isotope.js"></script>
-  <!-- Magnific Popup Js -->
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <!-- TYPED -->
-  <script src="js/typed.js"></script>
-  <!-- OWL CAROUSEL -->
-  <script src="js/owl.carousel.min.js"></script>
-  <!-- CONTACT JS -->
-  <script src="js/contact.js"></script>
-  <!--CUSTOM JS-->
-  <script src="js/custom.js"></script>
-  <script src="js/fadeIn.js"></script>
-  <script src="js/accordion.js"></script>
+<script src="https://www.w3counter.com/tracker.js?id=112712"></script>
+<!-- カウンターの設置 -->
+</div>
+</div>
+</footer>
+<!--END FOOTER-->
+<!-- Back To Top -->
+<a class="back_top" href="#"> <i class="mdi mdi-chevron-up"> </i> </a>
+<!-- JAVASCRIPTS -->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<!--EASING JS-->
+<script src="js/jquery.easing.min.js"></script>
+<script src="js/scrollspy.min.js"></script>
+<!--PORTFOLIO FILTER JS-->
+<script src="js/isotope.js"></script>
+<!-- Magnific Popup Js -->
+<script src="js/jquery.magnific-popup.min.js"></script>
+<!-- TYPED -->
+<script src="js/typed.js"></script>
+<!-- OWL CAROUSEL -->
+<script src="js/owl.carousel.min.js"></script>
+<!-- CONTACT JS -->
+<script src="js/contact.js"></script>
+<!--CUSTOM JS-->
+<script src="js/custom.js"></script>
+<script src="js/fadeIn.js"></script>
+<script src="js/accordion.js"></script>
 </body>
-
 </html>

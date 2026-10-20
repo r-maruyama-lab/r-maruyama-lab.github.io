@@ -40,6 +40,24 @@
     <link href="css/style.css" rel="stylesheet">
     <link href="css/responsive.css" rel="stylesheet">
     <link href="css/color/blue.css" rel="stylesheet" id="option-color">
+
+    <!-- トップページ LATEST NEWS 用スタイル（追加） -->
+    <style>
+      .news-wrapper .topnews-list { list-style: none; padding-left: 0; margin: 0; }
+      .news-wrapper .topnews-item {
+        padding: 12px 2px; border-bottom: 1px solid #e7ebf0;
+        font-size: .88rem; line-height: 1.75;
+      }
+      .news-wrapper .topnews-item:first-child { border-top: 1px solid #e7ebf0; }
+      .news-wrapper .topnews-date {
+        display: block; font-size: .72rem; font-weight: 600;
+        letter-spacing: .06em; color: #8a94a6; margin-bottom: 1px;
+      }
+      .news-wrapper .topnews-text { color: #4a5566; }
+      .news-wrapper .topnews-text a { color: #8B4513; }
+      .news-wrapper .topnews-text a:hover { text-decoration: underline; }
+      .news-wrapper .topnews-more { margin-top: 18px; text-align: right; font-size: .85rem; }
+    </style>
 </head>
 
 <body>
@@ -191,10 +209,19 @@
                 </div>
                 <div class="col-lg-6 news-wrapper animate slide-from-bottom">
                     <h5 class="text-custom font-weight-bold mb-3 text-center">LATEST NEWS</h5>
-                        <p class="text-muted"><a href="news.html#news" target="_Blank">最近のニュースはこちら</a></p>
-                    <a class="twitter-timeline mt-3" data-height="700" data-dnt="true" data-chrome="noheader"
-                        href="https://twitter.com/LabMaruyama?ref_src=twsrc%5Etfw"></a>
-                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    <!-- news.html から自動で最新 data-count 件を読み込みます。
+                         以下の <li> は読み込みに失敗したときに表示される予備です。 -->
+                    <ul class="topnews-list" id="topNewsList" data-count="8">
+                            <li class="topnews-item"><span class="topnews-date">2026.10.16.</span><span class="topnews-text">前澤さん（現・東京大学）の研究成果が<b>Veterinary Microbiology</b>に掲載されました</span></li>
+                            <li class="topnews-item"><span class="topnews-date">2026.10.15.</span><span class="topnews-text">古川さんの送別会・壮行会を行いました</span></li>
+                            <li class="topnews-item"><span class="topnews-date">2026.10.8.</span><span class="topnews-text">宮田さんの研究成果が<b>Science Advances</b>に掲載されました！<a href="https://www.jfcr.or.jp/laboratory/news/12277.html" rel="noopener" target="_blank">（がん研HP）</a></span></li>
+                            <li class="topnews-item"><span class="topnews-date">2026.10.1.</span><span class="topnews-text">宮田さんと柴田さん（現・東京大学）の研究提案ががん研究フロンティア基⾦の研究助成に採択されました<a href="https://np-foundation.or.jp/information/000424.html" rel="noopener" target="_blank">（財団HP）</a></span></li>
+                            <li class="topnews-item"><span class="topnews-date">2026.9.26.</span><span class="topnews-text">第85回日本癌学会学術総会で成果を発表しました（京都）</span></li>
+                            <li class="topnews-item"><span class="topnews-date">2026.9.26.</span><span class="topnews-text">粂川さんが2026年度日本癌学会奨励賞を受賞しました。おめでとうございます！<a href="https://www.jfcr.or.jp/laboratory/news/12274.html" rel="noopener" target="_blank">（がん研HP）</a></span></li>
+                            <li class="topnews-item"><span class="topnews-date">2026.9.8.</span><span class="topnews-text">名古屋市立大学の川内先生、東京科学大学の上阪先生らとの共同研究が<b>Neuron</b>に掲載されました<a href="https://www.jfcr.or.jp/laboratory/news/12226.html" rel="noopener" target="_blank">（がん研HP）</a></span></li>
+                            <li class="topnews-item"><span class="topnews-date">2026.9.1.</span><span class="topnews-text">丸山が若手支援技術講習会に実行委員として参加しました（長野・蓼科）</span></li>
+                    </ul>
+                    <p class="topnews-more"><a href="news.html#news">すべてのニュースを見る &rsaquo;</a></p>
                 </div>
             </div>
         </div>
@@ -293,6 +320,40 @@
     <!--CUSTOM JS-->
     <script src="js/custom.js"></script>
     <script src="js/fadeIn.js"></script>
-</body>
+    <!-- LATEST NEWS を news.html から読み込む（追加） -->
+    <script>
+      (function () {
+        var box = document.getElementById('topNewsList');
+        if (!box || !window.fetch || !window.DOMParser) return;
+        var max = parseInt(box.getAttribute('data-count'), 10) || 8;
+
+        fetch('news.html', { credentials: 'same-origin' })
+          .then(function (r) { return r.ok ? r.text() : Promise.reject(); })
+          .then(function (html) {
+            var doc = new DOMParser().parseFromString(html, 'text/html');
+            var sec = doc.getElementById('news');
+            if (!sec) return;
+            var lis = sec.getElementsByTagName('li');
+            var out = [], i, j;
+
+            for (i = 0; i < lis.length && out.length < max; i++) {
+              var li = lis[i].cloneNode(true);
+              var sm = li.getElementsByTagName('small');
+              for (j = sm.length - 1; j >= 0; j--) { sm[j].parentNode.removeChild(sm[j]); }
+              var b = li.getElementsByTagName('b')[0];
+              if (!b) continue;
+              var date = (b.textContent || '').trim();
+              if (!/^\d{4}\./.test(date)) continue;
+              b.parentNode.removeChild(b);
+              var body = li.innerHTML.replace(/^(\s|&nbsp;)+/, '');
+              out.push('<li class="topnews-item"><span class="topnews-date">' + date +
+                       '</span><span class="topnews-text">' + body + '</span></li>');
+            }
+            if (out.length) { box.innerHTML = out.join(''); }
+          })
+          .catch(function () { /* 失敗時は予備の内容をそのまま表示 */ });
+      })();
+    </script>
+  </body>
 
 </html>
