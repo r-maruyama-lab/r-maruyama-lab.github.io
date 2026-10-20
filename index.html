@@ -58,6 +58,58 @@
       .news-wrapper .topnews-text a:hover { text-decoration: underline; }
       .news-wrapper .topnews-more { margin-top: 18px; text-align: right; font-size: .85rem; }
     </style>
+
+    <!-- トップページ 研究のアプローチ／集合写真（追加） -->
+    <style>
+      .top-research-lead {
+        max-width: 860px; margin: 0 0 34px;
+        font-size: .95rem; line-height: 2.0; color: #5a6675;
+      }
+      .top-pillars { margin-bottom: 6px; }
+      .top-pillar {
+        display: block; height: 100%;
+        padding: 24px 22px 22px;
+        border: 1px solid #e2e7ee; border-top: 3px solid #37b8df;
+        background: #fff; color: inherit; text-decoration: none;
+        transition: box-shadow .25s ease, transform .25s ease, border-color .25s ease;
+      }
+      .top-pillar:hover {
+        text-decoration: none; color: inherit;
+        box-shadow: 0 10px 26px rgba(25, 45, 70, .09);
+        transform: translateY(-3px);
+      }
+      .top-pillar-num {
+        display: block; font-size: .72rem; font-weight: 700;
+        letter-spacing: .22em; color: #37b8df; margin-bottom: 9px;
+      }
+      .top-pillar-title {
+        display: block; font-size: 1.0rem; font-weight: 700;
+        line-height: 1.6; color: #1b2735; margin-bottom: 10px;
+      }
+      .top-pillar-text {
+        display: block; font-size: .84rem; line-height: 1.85; color: #6e7787;
+      }
+      .top-more { margin-top: 18px; font-size: .88rem; }
+      .top-more a, .top-team-links a { color: #2a9dc4; }
+
+      .top-team { padding-top: 56px; padding-bottom: 56px; }
+      .top-team-photo { display: block; width: 100%; max-width: 1200px; margin: 0 auto; }
+      .top-team-caption {
+        max-width: 860px; margin: 20px auto 0; text-align: center;
+        font-size: .88rem; line-height: 1.95; color: #6e7787;
+      }
+      .top-team-links { margin: 16px 0 0; text-align: center; font-size: .88rem; }
+      .top-team-links a { display: inline-block; margin: 0 16px; }
+
+      @media (max-width: 991px) {
+        .top-pillar { height: auto; }
+      }
+      @media (max-width: 575px) {
+        .top-research-lead { font-size: .88rem; line-height: 1.95; }
+        .top-pillar-title { font-size: .94rem; }
+        .top-team-links a { display: block; margin: 8px 0; }
+      }
+    </style>
 </head>
 
 <body>
@@ -158,6 +210,57 @@
         </div>
     </section>
     <!-- END TOP scroll -->
+
+    <!-- START RESEARCH（新規：研究内容を最初の画面の次に置く） -->
+    <section class="section top-research">
+        <div class="container">
+            <h2 class="text-custom mb-3"><span class="font-weight-bold">Research</span> 研究のアプローチ</h2>
+            <p class="top-research-lead animate slide-from-bottom">
+                ひとつの腫瘍の中には、性質の異なる多様ながん細胞が共存しています（<b>不均一性</b>）。そして個々の細胞は、環境に応じて自らの性質を変える能力を持っています（<b>可塑性</b>）。この二つが、がんが治療や環境の変化に適応し、生き延び、再発する力の源です。<br>
+                私たちは、これらを正確に記述し、その機能的意義を明らかにし、さらにどのような原理で生じるのかを解明することを目指しています。
+            </p>
+            <div class="row top-pillars">
+                <div class="col-lg-4 mb-3 animate slide-from-bottom">
+                    <a class="top-pillar" href="works.html#pillar1">
+                        <span class="top-pillar-num">01</span>
+                        <span class="top-pillar-title">がん細胞の可塑性と不均一性の理解</span>
+                        <span class="top-pillar-text">「正確な記述」「機能的意義の解明」「生成原理の解明」という三つの段階で、多様性そのものに迫ります。</span>
+                    </a>
+                </div>
+                <div class="col-lg-4 mb-3 animate slide-from-bottom">
+                    <a class="top-pillar" href="works.html#pillar2">
+                        <span class="top-pillar-num">02</span>
+                        <span class="top-pillar-title">がんの発生と進展における<br>エピゲノム異常の役割</span>
+                        <span class="top-pillar-text">クロマチン状態の異常が細胞を正常から逸脱させる機構を、ヒト検体と発がんモデルの双方から問います。</span>
+                    </a>
+                </div>
+                <div class="col-lg-4 mb-3 animate slide-from-bottom">
+                    <a class="top-pillar" href="works.html#pillar3">
+                        <span class="top-pillar-num">03</span>
+                        <span class="top-pillar-title">臨床の問いから始まる研究</span>
+                        <span class="top-pillar-text">臨床の現場で実際に問題となっている現象を出発点とし、その背後にある生物学を明らかにします。</span>
+                    </a>
+                </div>
+            </div>
+            <p class="top-more"><a href="works.html#works">研究内容を詳しく見る &rsaquo;</a></p>
+        </div>
+    </section>
+    <!-- END RESEARCH -->
+
+    <!-- START TEAM PHOTO（新規） -->
+    <section class="section top-team bg-light">
+        <div class="container">
+            <img src="images/team-2026.jpg" class="img-fluid top-team-photo" alt="REO MARUYAMA LAB">
+            <p class="top-team-caption">
+                細胞生物学、分子生物学、生化学、情報科学、臨床医学。多様な専門性を持つメンバーが、WETとDRYの両面からがんに向き合っています。
+            </p>
+            <p class="top-team-links">
+                <a href="team.html#team">メンバーを見る</a>
+                <a href="joinus.html#joinus">大学院生・研究員の募集</a>
+            </p>
+        </div>
+    </section>
+    <!-- END TEAM PHOTO -->
 
     <!-- START ABOUT -->
     <section class="section" id="about">
@@ -331,23 +434,15 @@
           .then(function (r) { return r.ok ? r.text() : Promise.reject(); })
           .then(function (html) {
             var doc = new DOMParser().parseFromString(html, 'text/html');
-            var sec = doc.getElementById('news');
-            if (!sec) return;
-            var lis = sec.getElementsByTagName('li');
-            var out = [], i, j;
-
+            var lis = doc.querySelectorAll('#news li.news-item');
+            var out = [], i;
             for (i = 0; i < lis.length && out.length < max; i++) {
-              var li = lis[i].cloneNode(true);
-              var sm = li.getElementsByTagName('small');
-              for (j = sm.length - 1; j >= 0; j--) { sm[j].parentNode.removeChild(sm[j]); }
-              var b = li.getElementsByTagName('b')[0];
-              if (!b) continue;
-              var date = (b.textContent || '').trim();
-              if (!/^\d{4}\./.test(date)) continue;
-              b.parentNode.removeChild(b);
-              var body = li.innerHTML.replace(/^(\s|&nbsp;)+/, '');
-              out.push('<li class="topnews-item"><span class="topnews-date">' + date +
-                       '</span><span class="topnews-text">' + body + '</span></li>');
+              var d = lis[i].querySelector('.news-date');
+              var t = lis[i].querySelector('.news-text');
+              if (!d || !t) continue;
+              out.push('<li class="topnews-item"><span class="topnews-date">' +
+                       d.textContent.trim() +
+                       '</span><span class="topnews-text">' + t.innerHTML + '</span></li>');
             }
             if (out.length) { box.innerHTML = out.join(''); }
           })
