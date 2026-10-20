@@ -38,6 +38,69 @@
   <link href="css/responsive.css" rel="stylesheet">
   <link href="css/color/blue.css" rel="stylesheet" id="option-color">
 
+
+  <!-- 柱見出し・関連リンク用スタイル（追加） -->
+  <style>
+    .works .works-pillar-title {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      font-size: 1.5rem;
+      font-weight: 700;
+      line-height: 1.5;
+      color: #1b2735;
+      margin: 68px 0 16px;
+      padding-bottom: 16px;
+      border-bottom: 2px solid #e4e8ee;
+    }
+    .works .works-pillar-num {
+      flex: 0 0 auto;
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 66px;
+      height: 66px;
+      border-radius: 50%;
+      background: #1f7ae0;
+      color: #fff;
+      margin-right: 20px;   /* gap 未対応ブラウザ向けのフォールバック */
+    }
+    .works .works-pillar-num .t {
+      font-size: .62rem;
+      letter-spacing: .14em;
+      line-height: 1;
+      opacity: .9;
+      margin-bottom: 2px;
+    }
+    .works .works-pillar-num em {
+      font-style: normal;
+      font-size: 1.9rem;
+      font-weight: 700;
+      line-height: 1.02;
+    }
+    .works .works-pillar-name { flex: 1 1 auto; }
+
+    .works .works-article-links {
+      margin: 14px 0 0;
+      font-size: .82rem;
+      letter-spacing: .02em;
+    }
+    .works .works-article-links a {
+      display: inline-block;
+      margin-right: 18px;
+      color: #1f7ae0;
+    }
+    .works .works-article-links a:before { content: "\203A"; margin-right: 6px; }
+
+    @media (max-width: 575px) {
+      .works .works-pillar-title {
+        font-size: 1.12rem; gap: 14px; margin-top: 46px; padding-bottom: 12px;
+      }
+      .works .works-pillar-num { width: 52px; height: 52px; margin-right: 14px; }
+      .works .works-pillar-num em { font-size: 1.45rem; }
+    }
+  </style>
 </head>
 
 
@@ -110,16 +173,18 @@
       <div class="container">
         <div class="works-header-btns">
           <a href="#goal" class="btn btn-custom">目指すところ</a>
-          <a href="#methods" class="btn btn-custom">研究に用いる主な手法</a>
-          <a href="#themes" class="btn btn-custom">追求したい研究テーマ</a>
-          <a href="#colab" class="btn btn-custom">様々な共同研究</a>
+          <a href="#themes" class="btn btn-custom">研究のアプローチ</a>
         </div>
       </div>
     </div>
     <!-- END 目次 -->
 
 
-    <!--  START 目指すところ -->
+    <!-- ==================================================================
+         目指すところ
+         ※ このセクションは未改訂。現行サイトの導入文を暫定的に置いています。
+           後日、あらためて執筆して差し替えてください。
+         ================================================================== -->
     <section class="works-article-wrapper mb-4">
       <div class="container">
         <h3 class="works-article-title animate slide-from-bottom" id="goal">目指すところ</h3>
@@ -127,406 +192,295 @@
           <li class="pb-1">私たちは「がんの多様性と可塑性」に着目し、その本質的な理解を目指して研究を進めています。がん細胞が示す可塑性と多様性は、がんが治療や環境変化に柔軟に適応・進化する力の源であり、再発や治療抵抗性の根本的な要因と考えられています。私たちは、腫瘍内に存在するがん細胞の多様性と可塑性を正確に測定し、それぞれの腫瘍の特性を明らかにすることで、患者間の違いを理解することを目指しています。さらに、こうした多様性や可塑性がどのようなメカニズムで形成され、それがどのような機能的意義を持つのかを、ゲノムおよびエピゲノムの視点から解明することを目標としています。</li>
         </ul>
       </div><!-- container -->
-
-      <div class="works-article-wrapper">
-        <div class="container">
-          <!--  START 研究室のゴール-->
-          <div>
-            <h3 class="works-article-subtitle animate slide-from-bottom" id="singleCell">がん細胞の多様性を理解する</h3>
-            <article class="row">
-              <div class="col-lg-7 text-center works-article__left animate slide-from-left">
-                <img src="images/works/goal2.jpg" class="works-article-pic works-article-pic__singleCell"
-                  alt="シングルセル解析">
-              </div>
-              <div class="col-lg-5 mt-2 works-article__right animate slide-from-right">
-                <p class="text-justify works-article-text">
-                    私たちの研究室では「がん細胞の多様性を理解し、新しい視点からのがん医療を提供する」ことを目標に掲げ研究を行っています。がんは均一なクローンの細胞集団ではなく、実際は多様な細胞から構成されており、治療などの外部の環境変化に対して、細胞集団全体で適応する能力を持っています。この多様性と適応能力が、がんの治療を難しくさせている一因です。私たちはがんに含まれるがん細胞の多様性を正確に評価することで、患者ごとの腫瘍の特徴の違いを理解することを目指しています。さらに、がん細胞が多様であることの機能的意義や、その多様性が生じるメカニズムを明らかにしたいと考えています。<b>この多様性こそががんの本質であり、その理解が全く新しい治療戦略を生み出すカギになる</b>と考えています。
-                </p>
-              </div>
-            </article>
-          </div>
-          <!-- END 研究室のゴール -->
-
-          <!--  START ストラテジー-->
-          <div>
-              <h3 class="works-article-subtitle animate slide-from-bottom" id="organoid">がんの多様性を研究するための研究体制と技術基盤</h3>
-            <article class="row">
-              <div class="col-lg-5 mt-2 works-article__left animate slide-from-left">
-                <p class="text-justify works-article-text">
-                  がんの多様性を深く理解するためには、実際の患者さんの腫瘍を直接かつ精密に調べることが不可欠です。それを実現するための研究体制と技術基盤を整備してきました。従来のアプローチでは、患者さんから取得した検体を凍結保存し、そのあとで病理解析やゲノム解析、RNA解析を行うのが一般的でした。私たちの研究室では、検体を生きた細胞の状態で凍結保存し、それを用いてエピゲノム解析や単一細胞解析を実施する、あるいはそこからオルガノイド培養株を樹立して実験に利用する、といった技術基盤を整えてきました。この基盤を活用して、がんの多様性を理解するための研究を進めています。
-                </p>
-              </div>
-              <div class="col-lg-7 text-center works-article__right animate slide-from-right">
-                <img src="images/works/kiban.jpg" class="works-article-pic works-article-pic__organoid"
-                  alt="臨床検体からのオルガノイド樹立と解析">
-              </div>
-            </article>
-          </div>
-          <!-- END ストラテジー -->
-          <!--  START リバースTRのアプローチ-->
-          <div>
-            <h3 class="works-article-subtitle animate slide-from-bottom" id="singleCell">リバースTRのアプローチ</h3>
-            <article class="row">
-              <div class="col-lg-7 text-center works-article__left animate slide-from-left">
-                <img src="images/works/rTR2.jpg" class="works-article-pic works-article-pic__singleCell"
-                  alt="リバースTRのアプローチ">
-              </div>
-              <div class="col-lg-5 mt-2 works-article__right animate slide-from-right">
-                <p class="text-justify works-article-text">
-                    リバースTRとはTR（Translational Research:橋渡し研究）の逆方向のアプローチです。TRは「Bench to Bedside」で、基礎研究で見出した知見を臨床応用し患者さんに届ける、というものですが、リバースTRとはその逆で、『臨床現場での気付き』を研究の出発点とし、その背後にある病態を追求することによりバイオロジーの真理を見出そうとする、というアプローチです。このリバースTRのアプローチこそが医学・科学の発展に有用であると考えています（そのエピソードはこちら（準備中））。
-                </p>
-              </div>
-            </article>
-          </div>
-          <!-- END リバースTRのアプローチ -->
+    </section>
+    <!-- END 目指すところ -->
 
 
-          <!--  START NEXT-->
-          <div>
-              <h3 class="works-article-subtitle animate slide-from-bottom" id="organoid">基礎と臨床の融合</h3>
-            <article class="row">
-              <div class="col-lg-5 mt-2 works-article__left animate slide-from-left">
-                <p class="text-justify works-article-text">
-                  がん研は、がん患者診療数が日本一のがん研有明病院と、伝統的に基礎研究が強いがん研究所が同じ建物内にあり、両者が一体となった研究を展開しうることが最大の優位性であります。ただ、現在行われている共同研究の多くは、基礎研究者の発想に基づくTR研究であります。<br>丸山の夢は、がん研に真のリバースTR研究を推進できる『場』を作ることです。そのためには基礎と臨床が連携をするのではなく、（作成途中）
-                </p>
-              </div>
-              <div class="col-lg-7 text-center works-article__right animate slide-from-right">
-                <img src="images/works/NEXT.jpg" class="works-article-pic works-article-pic__organoid"
-                  alt="基礎と臨床の融合">
-              </div>
-            </article>
-          </div>
-          <!-- END NEXT -->          
-                
-        </div><!-- container -->
-      </div><!-- works-article-wrapper -->
-    </section><!--  END めざすところ -->
-      
-      
-      
-    <!--  START 研究に用いる主な手法 -->
+
+
+    <!-- ==================================================================
+         研究のアプローチ（柱1〜柱3）
+         ================================================================== -->
     <section class="works-article-wrapper mb-4">
       <div class="container">
-        <h3 class="works-article-title animate slide-from-bottom" id="methods">研究に用いる主な手法</h3>
+        <h3 class="works-article-title animate slide-from-bottom link-adjust" id="themes">研究のアプローチ</h3>
         <ul class="animate slide-from-bottom">
-          <li class="pb-1">NGS解析 (主にNextSeqを使用, ATAC-seq, ChIP-seq, Cut&Tag, RNA-seq, targeted-resequencing, CNV解析, exome, WGS, hybridization capture)</li>
-          <li class="pb-1">細胞や組織からのシングルセル解析 (dscATAC-seq(ddSEQ), dsciATAC-seq(ddSEQ+combinatorial
-            indexing), scRNA-seq(Rhapsody / Chromium), scRamDA-seq(CellenONE))</li>
-          <li class="pb-1">臨床検体からのオルガノイド樹立と解析（薬剤試験、遺伝子導入、イメージング）</li>
-          <li class="pb-1">患者由来オルガノイドのマウスへの同所移植（fat pad, 膵臓）</li>
-          <li class="pb-1">データマイニング, bioinformatics</li>
-          <li class="pb-1">分子生物学的解析 (核酸やタンパク抽出・定量、遺伝子導入、knockdown, ゲノム編集、エピゲノム編集)</li>
-          <li class="pb-1">細胞生物学的解析 (flow cytometryによる分析、セルソーティング、シングルセルクローニング、各種kitを用いたアッセイ)</li>
-          <li class="pb-1">免疫組織染色、蛍光免疫染色、イメージング</li>
-          <li class="pb-1">細胞バーコーディング技術を用いた細胞系譜解析、その他バーコードを利用した独自の解析</li>
-          <li class="pb-1">細胞外小胞に関する各種解析</li>
+          <li class="pb-1">目標へ到達するための道筋として、私たちは三つの柱を立てています。がん細胞の可塑性と不均一性そのものを理解する研究を中心に据え、エピゲノム異常が発がんと進展に果たす役割を問う研究、そして臨床の現場で生じた問いを出発点とする研究を、あわせて展開しています。個別の研究テーマではなく、問いに迫るための戦略としてお読みください。</li>
         </ul>
       </div><!-- container -->
 
+
+      <!-- ========== 柱1 ========== -->
       <div class="works-article-wrapper">
         <div class="container">
-          <!--  START シングルセル解析-->
-          <div>
-            <h3 class="works-article-subtitle animate slide-from-bottom" id="singleCell">シングルセル解析</h3>
-            <article class="row">
-              <div class="col-lg-6 mt-2 works-article__left animate slide-from-left">
-                <p class="text-justify works-article-text">
-                  がんを単なる塊ではなく「多様な細胞の集合体」として捉えます。腫瘍を構成する細胞ひとつひとつの「個性」を理解し、さらには細胞間で交わされる「会話」やそれらが作り出す「社会」の成り立ちを理解することによって、がんの本質に迫りたいと考えています。この研究の基盤となるのが、微量で貴重ながん検体を単一細胞レベルで詳細に解析する技術です。<br>これまで各種シングルセルオミックス解析技術の確立を試みてきました。ddSEQを用いたdroplet-baseのscATAC-seqやRhapsodyを用いたmicrowell-baseのscRNA-seq、CellenONEシングルセル分注機を用いたscRNA-seq等をルーチンで実施しています。combinatorial
-                  indexingとdropletを組み合わせたdsciATAC-seqも順調に稼働しています。また現在、scATAC-seqとscRNA-seqを単一細胞から同時に実施する手法や、single-cellのChIP-seq、単一細胞のlineage
-                  tracingなど最先端の高度な技術の確立にも挑戦しています。<br>ライブラリ作成からデータ解析まで全てラボ内で完結します。WET実験を行う人、DRY解析を行う人、その両方を一人で行う人がいますが、メンバー全員で情報やノウハウを共有し、皆がそのどちらも理解できることを目指しています。両者を深く理解することが、実験や解析の品質の向上や研究の深みにつながるからです。WETとDRYの連携ではなく、WETとDRYが真に融合した研究を目指しています。
-                </p>
-              </div>
-              <div class="col-lg-6 text-center works-article__right animate slide-from-right">
-                <img src="images/works/single_cell.jpg" class="works-article-pic works-article-pic__singleCell"
-                  alt="シングルセル解析">
-              </div>
-            </article>
-          </div>
-          <!-- END シングルセル解析 -->
-          <!--  START 臨床検体からのオルガノイド樹立と解析-->
-          <div>
-            <h3 class="works-article-subtitle animate slide-from-bottom" id="organoid">臨床検体からのオルガノイド樹立と解析</h3>
-            <article class="row">
-              <div class="col-lg-6 text-center works-article__left animate slide-from-left">
-                <img src="images/works/work2.png" class="works-article-pic works-article-pic__organoid"
-                  alt="臨床検体からのオルガノイド樹立と解析">
-              </div>
-              <div class="col-lg-6 mt-2 works-article__right animate slide-from-right">
-                <p class="text-justify works-article-text">
-                  腫瘍内の細胞の多様性を維持したまま培養するオルガノイド培養技術の確立を目指しています。患者さんの腫瘍の特徴を保ったままお皿の中で培養できるオルガノイド培養は、薬剤投与や遺伝子操作とシングルセル解析を組み合わせることで、さらに深い情報を得ることができます。この患者さん由来のモデルを深く解析していくことで、再発や転移において鍵となる分子や細胞を同定できると考えています。また、臨床的には、実際の患者さんのがんに対して、どの抗がん剤が効くかということを、患者さんが治療を始める前に、あるいは並行して、解析することが可能になることを意味します。すなわち、より高度な近未来のプレシジョン医療を実現するために、このオルガノイド培養技術の確立は必須であると考えます。<br>
-                  1年くらいの時間を要しましたが、がん研究所細胞生物部八尾先生らのご指導と、大学院生佐伯さんの並並ならぬ努力の甲斐があり、乳がん患者由来のオルガノイド培養の技術が確立しつつあります。現在では試薬や培地の調整、バンキングなど基盤体制が整っており、誰もがオルガノイド培養に挑戦できるような環境になっています。また大学院生古川さんの尽力により膵がん患者さんからのオルガノイド樹立も可能となっています。
-                </p>
-              </div>
-            </article>
-          </div>
-          <!-- END 臨床検体からのオルガノイド樹立と解析 -->
-        </div><!-- container -->
-      </div><!-- works-article-wrapper -->
-    </section><!--  END 研究に用いる主な手法 -->
-
-    <!--  START 追求したい研究テーマ -->
-    <section class="works-article-wrapper mb-4">
-      <div class="container">
-        <h3 class="works-article-title animate slide-from-bottom link-adjust" id="themes">研究テーマの紹介</h3>
-      </div><!-- container -->
-
-      <!--  START 研究テーマ①-->
-      <div class="works-article-wrapper">
-        <div class="container">
-          <h3 class="works-article-subtitle animate slide-from-bottom" id="singleCell">
-            【研究テーマ①】<br>乳がんエピゲノムの症例間での多様性</h3>
+          <h3 class="works-pillar-title animate slide-from-bottom" id="pillar1">
+            <span class="works-pillar-num"><span class="t">柱</span><em>1</em></span>
+            <span class="works-pillar-name">がん細胞の可塑性と不均一性の理解</span></h3>
           <article class="row">
-            <div class="col-lg-5 mt-2 works-article__left animate slide-from-left">
+            <!-- 図（後日追加予定） -->
+            <div class="col-12 mt-2 animate slide-from-bottom">
               <p class="text-justify works-article-text">
-                こちらは、エストロゲン受容体ER陽性乳がんの患者さんの生きた細胞を用いてエピゲノム解析を行った結果です。クロマチン情報に基づく層別化の結果、３つのグループに分かれましたが、この違いを解析してみると、ERシグナルの効き具合が違うことが分かりました。興味深いことに、免疫染色による臨床病理データでは、A群とB群のER発現量に差は認められず、これらの症例は通常の検査では区別できない一群であることが分かりました。
-              </p>
-            </div>
-            <div class="col-lg-7 text-center works-article__right animate slide-from-right">
-              <img src="images/works/research1.jpg" class="works-article-pic works-article-pic__themes1" alt="研究テーマ①">
-            </div>
-          </article>
-        </div><!-- container -->
-      </div><!-- works-article-wrapper -->
-      <!-- END 研究テーマ① -->
-
-      <!--  START 研究テーマ②-->
-      <div class="works-article-wrapper">
-        <div class="container">
-          <h3 class="works-article-subtitle animate slide-from-bottom" id="organoid">
-            【研究テーマ②】<br>乳がんの腫瘍内のエピゲノム不均一性</h3>
-          <article class="row">
-            <div class="col-lg-7 text-center works-article__left animate slide-from-left">
-              <img src="images/works/research2.jpg" class="works-article-pic works-article-pic__themes2" alt="研究テーマ②">
-            </div>
-            <div class="col-lg-5 mt-2 works-article__right animate slide-from-right">
-              <p class="text-justify works-article-text">
-                さらにこれを単一細胞レベルで評価するために、シングルセルATAC-seq解析を実施しました。詳細は省略しますが、一部の症例では、がん細胞が明確に二つのグループに分かれており、これらの違いを解析すると、やはり、ERシグナルの効き具合が異なっていました。つまり、この症例では、一つの腫瘍内に、ERシグナルが効いているがん細胞と効いていないがん細胞が共存しています。このことがホルモン治療の抵抗性と関係している可能性も考えられましたが、これはあくまで推測であり、ここで認められる不均一性にどのような意義があるかは、分かりません。スナップショットの解析には限界があり、イベントの前後での比較をする必要があります。
+                ひとつの腫瘍は、均一な細胞の集まりではありません。同じ時点において異なる性質を持つ細胞が共存しており（不均一性）、また個々の細胞は環境に応じて自らの性質を変える能力を持っています（可塑性）。この二つは別個の現象でありながら互いを生み出す関係にあり、がんが治療や環境の変化に適応する力の基盤をなしています。私たちは、この二つを正確に記述し、その機能的意義を明らかにし、さらにそれらがどのような原理で生じるのかを解明することを目指しています。
               </p>
             </div>
           </article>
         </div><!-- container -->
-      </div><!-- works-article-wrapper -->
-      <!-- END 研究テーマ② -->
+      </div>
 
-      <!--  START 研究テーマ③-->
+      <!-- 1-1 -->
       <div class="works-article-wrapper">
         <div class="container">
-          <h3 class="works-article-subtitle animate slide-from-bottom" id="singleCell">
-            【研究テーマ③】<br>生体内での乳がん細胞の適応と進化</h3>
+          <h3 class="works-article-subtitle animate slide-from-bottom" id="theme1-1">
+            1-1　可塑性と不均一性の正確な記述</h3>
           <article class="row">
-            <div class="col-lg-5 mt-2 works-article__left animate slide-from-left">
+            <!-- 図（後日追加予定） -->
+            <div class="col-12 mt-2 animate slide-from-bottom">
               <p class="text-justify works-article-text">
-                それを実現できた例をお示しします。こちらは初診時すでに遠隔転移のある患者さんで、各種治療が行われましたが原発巣は増大し、原発巣と転移巣の２回、手術を受けられています。幸運なことに、私たちはこの３回の検体を解析する機会を頂きました。それらのシングルセル解析を実施すると、この患者さんの中で、乳がん細胞がどのように治療に適応し進化していったか、という様子が綺麗に見えてきました。本症例は初診時の段階で、強い腫瘍内不均一性を示していましたが、様々な解析により、ここに示すごく一部の細胞集団が治療に抵抗し生き残ったものと思われました。また腹膜転移の起源になったと思われる細胞も同定できました。治療前後の経時的な検体解析により、このように非常に貴重な情報を得ることができます。このような研究は、検体を提供してくださる患者さんのご協力があってこそ実現するものです。私たちは、患者さんやご家族のご協力に心から感謝するとともに、そのお気持ちを絶対に無駄にしないという強い想いを持って研究を進めています。
- </p>
-            </div>
-            <div class="col-lg-7 text-center works-article__right animate slide-from-right">
-              <img src="images/works/research3.jpg" class="works-article-pic works-article-pic__themes1" alt="研究テーマ①">
+                不均一性と可塑性は「ある／ない」として語られることが多いものの、本来は量として扱われるべき性質です。腫瘍の中にどれだけ異なる状態の細胞が存在するのか、個々の細胞がどの程度まで状態を変えうるのか。これらを再現性のある形で定量し、条件間・症例間で比較可能にすることが、記述という作業の内実です。<br>
+                <br>
+                この段階が決定的に重要である理由は三つあります。第一に、観測の解像度が現象の見え方を規定します。集団平均を見る解析では、不均一性も可塑性も平均化されて消失します。第二に、どの分子階層を観測するかによって得られる答えが異なります。転写産物のレベルでは均一に見える集団が、クロマチン状態やゲノムのコピー数では明確に分かれることがあり、その逆も起こります。したがって、単一の階層の解析から不均一性の有無を結論することはできません。第三に、可塑性は原理的にスナップショットでは観測できません。ある時点で多様な細胞が存在するという観察からは、もともと異なる細胞が混在していたのか、同一の細胞が状態を変えたのかを区別できないためです。<br>
+                <br>
+                そして、ここを定量的に押さえておかなければ、後に続く二つの問いは成立しません。不均一性の機能を問うにも、その生成原理を問うにも、「どれだけ不均一なのか」「条件によってそれがどう変化したのか」を測定できることが前提となるからです。<br>
+                <br>
+                私たちは、遺伝子発現・クロマチン状態・ゲノムコピー数という複数の分子階層を単一細胞レベルで解析し、それらを統合して記述しています。組織構造の情報を保持したまま解析する空間トランスクリプトーム解析も併用しています。スナップショットの限界を越えるためには、細胞バーコーディングによる系譜追跡と、同一の患者さんにおける経時的な検体解析が有効であり、これらによって細胞の現在の状態をその履歴とともに記述することが可能になります。あわせて、技術的変動と生物学的変動をいかに区別するか、連続的に分布する細胞状態をどこで区切るかといった、記述の精度そのものを左右する解析手法の開発にも取り組んでいます。
+              </p>
             </div>
           </article>
+          <!-- ▼ 将来ここに個別テーマ・研究成果へのリンクを置く（コメントを外して使用）
+          <p class="works-article-links">
+            <a href="#">関連する研究成果</a>
+            <a href="public.html#public">関連論文</a>
+          </p>
+          -->
         </div><!-- container -->
-      </div><!-- works-article-wrapper -->
-      <!-- END 研究テーマ③ -->
+      </div>
 
-
-      <!--  START 研究テーマ④-->
+      <!-- 1-2 -->
       <div class="works-article-wrapper">
         <div class="container">
-          <h3 class="works-article-subtitle animate slide-from-bottom" id="organoid">
-            【研究テーマ④】<br>乳がん患者由来オルガノイドの腫瘍内不均一性</h3>
+          <h3 class="works-article-subtitle animate slide-from-bottom" id="theme1-2">
+            1-2　可塑性と不均一性の機能的意義の解明</h3>
           <article class="row">
-            <div class="col-lg-7 text-center works-article__left animate slide-from-left">
-              <img src="images/works/research4.jpg" class="works-article-pic works-article-pic__themes2" alt="研究テーマ②">
-            </div>
-            <div class="col-lg-5 mt-2 works-article__right animate slide-from-right">
+            <!-- 図（後日追加予定） -->
+            <div class="col-12 mt-2 animate slide-from-bottom">
               <p class="text-justify works-article-text">
-                上記のような研究では多くの情報が得られますが、あくまで推測でしかありません。不均一性の意義を検証するためには、その不均一性をある程度保持した実験モデルの構築が必要です。そこで、私たちは、患者さんから得た生きたがん細胞を使用してオルガノイド株を樹立し、各種実験に利用できる技術を確立しました。各オルガノイドは、3から6種類の異なる細胞集団から構成され、腫瘍内不均一性を認めました。この細胞集団の特徴を解析すると、オルガノイド間で共通の特徴を示す細胞集団が見られる一方で、特定のオルガノイドに固有の特徴を示す細胞集団も同定できました。興味深いことに、進行乳がん患者さんに由来するオルガノイド株には、このような機能がよく分からないその株に固有の細胞集団が認められました。
+                観測された不均一性や可塑性が、がんの振る舞いに実際に寄与しているのかを明らかにする段階です。細胞間に差異が存在することと、その差異が意味を持つこととは、別の事柄です。生物学的な変動の多くは、腫瘍の運命に影響を与えません。<br>
+                <br>
+                機能的意義は、細胞集団が置かれる状況に依存して現れます。平穏な条件下では何の差も生まない違いが、薬剤曝露や転移先の微小環境といった選択圧のもとでは生存を左右します。したがって、ある不均一性に意味があるという主張は、常に特定の状況とともにしか成立しません。記述から機能の解明へ進むことが難しいのは、測定することに比べて、意味が現れる状況を設定することが格段に困難であるためです。<br>
+                <br>
+                また、不均一性と可塑性は、適応において異なる役割を担っている可能性があります。不均一性は、あらかじめ多様な選択肢を用意しておくことで集団としての生存確率を高める仕組みに対応し、可塑性は、個々の細胞が状況に応じて自らの状態を変える仕組みに対応します。両者はいずれも治療抵抗性をもたらしうるものの、その機構は異なり、したがって有効な介入の方法も異なります。この区別をつけることは、治療戦略を構想する上で本質的な意味を持ちます。<br>
+                <br>
+                機能を問うためには、状況を制御しうる実験系が必要です。私たちは、患者さんの検体から樹立したオルガノイド、マウスへの同所移植モデル、不均一性を保持した細胞株クローンパネルを用い、薬剤曝露などの選択圧を加えたときに何が起こるかを解析しています。その際に鍵となるのは、生き残った細胞がもともとどのような状態にあったのかを遡って同定することであり、細胞バーコーディングと単一細胞解析を組み合わせることで、結果と初期状態を対応づけることが可能になります。さらに、治療前後、あるいは原発巣と転移巣といった、患者さんの体内で実際に働いた選択圧のもとでの解析も併せて行い、実験系で得られた知見が臨床においても成立するかを検証しています。
+              </p>
+            </div>
+          </article>
+          <!-- ▼ 将来ここに個別テーマ・研究成果へのリンクを置く（コメントを外して使用）
+          <p class="works-article-links">
+            <a href="#">関連する研究成果</a>
+            <a href="public.html#public">関連論文</a>
+          </p>
+          -->
+        </div><!-- container -->
+      </div>
+
+      <!-- 1-3 -->
+      <div class="works-article-wrapper">
+        <div class="container">
+          <h3 class="works-article-subtitle animate slide-from-bottom" id="theme1-3">
+            1-3　可塑性と不均一性の生成原理の解明</h3>
+          <article class="row">
+            <!-- 図（後日追加予定） -->
+            <div class="col-12 mt-2 animate slide-from-bottom">
+              <p class="text-justify works-article-text">
+                不均一性と可塑性が、どのような過程を経て生じ、維持されるのかを明らかにする段階です。<br>
+                <br>
+                生成の原理が理解できれば、不均一性を事後的に観察するのではなく、それが形成される前に介入しうる可能性が開けます。治療抵抗性は多くの場合、治療によって選び出された細胞集団によってもたらされます。その素地が作られる過程を理解できれば、抵抗性が顕在化する前に手を打つという発想が成り立ちます。<br>
+                <br>
+                この段階における最大の問いは、多様性が確率的に生じるものなのか、それとも調節されうるものなのか、という点にあります。分裂のたびに生じる分配や維持の誤差が蓄積した結果として多様性が生まれるのであれば、生き残った細胞は偶然のばらつきの中から選択されたことになります。一方、細胞が環境や内部状態の変化に応じて多様性の生じ方そのものを変化させるのであれば、多様性は選択に先立って形成されていたことになります。この二つは、ある時点における観察からは区別することができません。<br>
+                <br>
+                多様性が生まれる場は、分子階層によって異なります。ゲノムの側では、細胞分裂に際してDNAが娘細胞へ分配される過程が多様性の源となります。とくに染色体外DNAはセントロメアを持たないため、分裂のたびにコピー数のばらつきを生じ、この過程を定量的に追跡する上で格好の対象となります。エピゲノムの側では、DNA複製後にクロマチン状態がどこまで忠実に復元されるか、また転写制御ネットワークがどの程度安定に状態を保持するかが問題となります。私たちは、この両者を並行して解析しています。<br>
+                <br>
+                確率的な過程と調節的な過程を区別するためには、何を入力として与えたかを明示した上で、その強度や持続時間を変化させたときに多様性の分布がどのように推移するかを測定する必要があります。また、がんにおいて高頻度に機能喪失型変異が認められるエピゲノム調節因子を人為的に抑制し、多様性の生じ方が変化するかを検証することも有効な手立てとなります。これらの解析においては、確率的な過程を記述する数理モデルとの比較が不可欠であり、数理科学分野との共同研究を進めています。<br>
+                <br>
+                もしこれらの過程が調節されうるものであるならば、それはがんが新たに獲得した能力ではなく、細胞が本来備えている環境応答の仕組みが、制御の緩和によって顕在化したものである可能性があります。がん細胞の多様性を、無秩序の表れとしてではなく、生物が備える適応機構の一形態として理解すること。それが私たちの最終的な目標です。
+              </p>
+            </div>
+          </article>
+          <!-- ▼ 将来ここに個別テーマ・研究成果へのリンクを置く（コメントを外して使用）
+          <p class="works-article-links">
+            <a href="#">関連する研究成果</a>
+            <a href="public.html#public">関連論文</a>
+          </p>
+          -->
+        </div><!-- container -->
+      </div>
+
+
+      <!-- ========== 柱2 ========== -->
+      <div class="works-article-wrapper">
+        <div class="container">
+          <h3 class="works-pillar-title animate slide-from-bottom" id="pillar2">
+            <span class="works-pillar-num"><span class="t">柱</span><em>2</em></span>
+            <span class="works-pillar-name">がんの発生と進展におけるエピゲノム異常の役割</span></h3>
+          <article class="row">
+            <!-- 図（後日追加予定） -->
+            <div class="col-12 mt-2 animate slide-from-bottom">
+              <p class="text-justify works-article-text">
+                がんは、ゲノムに生じた変異だけでは説明がつきません。細胞が「何者であるか」を規定しているのは、どの遺伝子を発現しうる状態にあるかというクロマチンの状態であり、その状態の異常は、変異と同等かそれ以上に、細胞を正常から逸脱させる力を持ちます。実際、エピゲノム制御因子はがんにおいて最も高頻度に変異が認められる遺伝子群のひとつです。私たちは、こうしたエピゲノムの異常が、がんの発生と進展においてどのような役割を果たしているのかを明らかにすることを目指しています。<br>
+                <br>
+                この問いが重要である理由は、いくつかの点にあります。第一に、エピゲノム制御因子に生じる変異の多くは機能喪失型であり、それ自体が増殖上の利点をもたらすとは考えにくいにもかかわらず、強く選択されています。この一見した矛盾は、これらの因子の喪失が細胞に何をもたらすのかが十分に理解されていないことを示しています。第二に、変異の数が極めて少ないにもかかわらず悪性度の高い腫瘍が存在し、とりわけ小児がんにおいてその傾向が顕著です。こうした腫瘍では、説明の重心はエピゲノムの側に移ります。第三に、エピゲノムの状態は原理的に可逆であり、遺伝子変異とは異なり介入の対象となりえます。エピゲノム異常の役割を理解することは、そのまま治療法の開発につながります。
               </p>
             </div>
           </article>
         </div><!-- container -->
-      </div><!-- works-article-wrapper -->
-      <!-- END 研究テーマ④ -->
+      </div>
 
-    </section><!--  END 追求したい研究テーマ -->
+      <!-- 2-1 -->
+      <div class="works-article-wrapper">
+        <div class="container">
+          <h3 class="works-article-subtitle animate slide-from-bottom" id="theme2-1">
+            2-1　ヒトのがんに生じているエピゲノム異常を記述する</h3>
+          <article class="row">
+            <!-- 図（後日追加予定） -->
+            <div class="col-12 mt-2 animate slide-from-bottom">
+              <p class="text-justify works-article-text">
+                まず必要となるのは、実際の患者さんの腫瘍において、どのようなエピゲノムの変化が生じているのかを明らかにすることです。私たちは乳がんを主な対象として、臨床検体のクロマチン状態を解析し、遺伝子発現を駆動している調節領域の使われ方が症例間でどのように異なるのかを調べてきました。その過程で、細胞系譜を規定する転写因子の組み合わせがサブタイプの境界を作っていること、また従来の病理学的分類では同一とされる症例の間にも、転写調節の様式に明瞭な違いが存在することが見えてきています。
+              </p>
+            </div>
+          </article>
+          <!-- ▼ 将来ここに個別テーマ・研究成果へのリンクを置く（コメントを外して使用）
+          <p class="works-article-links">
+            <a href="#">関連する研究成果</a>
+            <a href="public.html#public">関連論文</a>
+          </p>
+          -->
+        </div><!-- container -->
+      </div>
 
-    <!--  START その他、現在進行中の研究テーマ-->
-    <section class="works-article-wrapper mb-4">
-      <div class="container">
-        <h3 class="works-article-title animate slide-from-bottom" id="colab">現在進行中の研究テーマ（順次紹介していきます）</h3>
-        <ul class="animate slide-from-bottom">
-          <li class="pb-1">乳がん患者由来オルガノイドを用いた炎症性乳がんの分子メカニズムの解明</li>
-          <li class="pb-1">ハイドロゲル培養法を利用した乳がん細胞が潜在的に有する脱分化能の評価</li>
-          <li class="pb-1">転移性乳がんのマウスモデル作製と転移メカニズムの解析</li>
-          <li class="pb-1">長期的なエストロゲン暴露が正常乳腺細胞に与える影響の解析</li>
-          <li class="pb-1">膵がん患者由来オルガノイドの樹立とマウスモデルの作製</li>
-          <li class="pb-1">エピゲノム制御機構の破綻に起因するがん細胞の多様性獲得機序の解明</li>
-          <li class="pb-1">腫瘍内不均一性の形成過程における染色体外DNAの果たす役割の解明</li>
-          <li class="pb-1">がん細胞とリンパ管内皮細胞との細胞間相互作用の多様性</li>
-          <li class="pb-1">膵がんにおけるがん関連線維芽細胞の役割の理解</li>
-          <li class="pb-1">多種臨床情報に基づく転移再発乳がんの層別化</li>
-          <li class="pb-1">婦人科がんにおけるエピジェネティック制御機構の異常</li>
-          <li class="pb-1">骨軟部肉腫におけるゲノム異常とエピゲノム異常の関連</li>
-       </ul>
-      </div><!-- container -->
-    </section><!-- works-article-wrapper -->
-    <!-- END その他、現在進行中の研究テーマ -->
+      <!-- 2-2 -->
+      <div class="works-article-wrapper">
+        <div class="container">
+          <h3 class="works-article-subtitle animate slide-from-bottom" id="theme2-2">
+            2-2　発がんモデルを用いて因果を検証する</h3>
+          <article class="row">
+            <!-- 図（後日追加予定） -->
+            <div class="col-12 mt-2 animate slide-from-bottom">
+              <p class="text-justify works-article-text">
+                ヒト検体の解析は、腫瘍が完成した後の姿を捉えるものです。エピゲノムの異常が発がんの原因であるのか、結果として生じた随伴現象であるのかを区別するためには、正常な組織に定義された遺伝子改変を導入し、腫瘍が形成されていく過程を時間に沿って追跡する必要があります。<br>
+                <br>
+                私たちは共同研究として、小児脳腫瘍をはじめとする発がんモデルを対象に、この解析を行っています。これらのモデルは、発生の文脈のなかで起こる発がんを扱える点で特別な意味を持ちます。本来は発生過程で一時的に使われるはずの調節領域が、腫瘍において持続的に利用されるようになる現象や、クロマチン修飾を担う因子の喪失が腫瘍の進展を促す機構が、単一細胞レベルの解析によって明らかになりつつあります。また、こうしたモデルは、腫瘍が置かれた組織環境との相互作用を解析する場としても機能します。
+              </p>
+            </div>
+          </article>
+          <!-- ▼ 将来ここに個別テーマ・研究成果へのリンクを置く（コメントを外して使用）
+          <p class="works-article-links">
+            <a href="#">関連する研究成果</a>
+            <a href="public.html#public">関連論文</a>
+          </p>
+          -->
+        </div><!-- container -->
+      </div>
 
-        
-        
-    </section><!--  END 追求したい研究テーマ -->
+      <!-- 2-3 -->
+      <div class="works-article-wrapper">
+        <div class="container">
+          <h3 class="works-article-subtitle animate slide-from-bottom" id="theme2-3">
+            2-3　エピゲノム制御を標的とした治療への展開</h3>
+          <article class="row">
+            <!-- 図（後日追加予定） -->
+            <div class="col-12 mt-2 animate slide-from-bottom">
+              <p class="text-justify works-article-text">
+                エピゲノムの異常が腫瘍の性質を規定しているのであれば、その制御機構を標的とすることで腫瘍の振る舞いを変えられるはずです。私たちは共同研究として、ヒストン修飾酵素の阻害剤が腫瘍細胞にもたらす作用を、血液腫瘍、乳がん、婦人科がんなど複数のがん種において解析しています。これらの解析からは、阻害剤が単に標的遺伝子の発現を変化させるだけでなく、細胞の状態そのものを作り変え、免疫応答の惹起など当初は予期されなかった作用をもたらすことが見えてきています。<br>
+                <br>
+                なお、この柱は柱1と無関係ではありません。エピゲノム制御因子は、細胞の状態がどれだけ安定に保たれるかを決めている因子でもあります。その機能が失われたときに何が起こるのかという問いは、発がんの機構の問いであると同時に、多様性がどのように生み出されるのかという問いでもあります。
+              </p>
+            </div>
+          </article>
+          <!-- ▼ 将来ここに個別テーマ・研究成果へのリンクを置く（コメントを外して使用）
+          <p class="works-article-links">
+            <a href="#">関連する研究成果</a>
+            <a href="public.html#public">関連論文</a>
+          </p>
+          -->
+        </div><!-- container -->
+      </div>
 
-    <!--  START 様々な共同研究-->
-    <section class="works-article-wrapper mb-4">
-      <div class="container">
-        <h3 class="works-article-title animate slide-from-bottom" id="colab">様々な共同研究</h3>
-        <ul class="animate slide-from-bottom">
-          <b><u>がん研究会内の共同研究<br></b></u>
-          <li class="pb-1">がん研究所・細胞生物部 (大腸がん患者由来オルガノイドのエピゲノム解析・シングルセル解析)</li>
-          <li class="pb-1">CPMセンター・次世代がん研究シーズ育成プロジェクト (新規解析アルゴリズムの開発、婦人科がんのエピゲノム解析)</li>
-          <li class="pb-1">がん研究所・細胞老化プロジェクト (サテライトRNAの解析)</li>
-          <li class="pb-1">がん研究所・がん生物部 (lncRNA調節領域の解析)</li>
-          <li class="pb-1">がん研究所・分子標的病理プロジェクト (芽球性形質細胞様樹状細胞腫瘍や唾液腺腫瘍の解析)</li>
-          <li class="pb-1">がん研究所・実験病理部 (がん幹細胞のゲノム異常)</li>
-          <li class="pb-1">がん化学療法センター・基礎研究部 (エピゲノム解析)</li>
-          <b><u>がん研究会外の共同研究<br></b></u>
-          <li class="pb-1">東京大学産婦人科・曾根献文講師 (婦人科がんにおけるヒストン修飾酵素阻害剤の機能的解析)</li>
-          <li class="pb-1">札幌医科大学分子生物学講座・鈴木拓教授 (乳がん、血液腫瘍におけるヒストン修飾酵素阻害剤の機能的解析、胃がんのlncRNA)</li>
-          <li class="pb-1">順天堂大学分子病理病態学・折茂彰教授 (CAFのエピゲノム解析・シングルセル解析)</li>
-          <li class="pb-1">北海道大学腫瘍病理学・田中伸哉教授 (バイオマテリアルを用いたがん研究と臨床応用)</li>
-          <li class="pb-1">国立精神神経医療研究センター病態生化学研究部・川内大輔室長 (小児脳腫瘍の発がんマウスモデルのエピゲノム解析・シングルセル解析)</li>
-          <li class="pb-1">名古屋大学腫瘍生物学・近藤豊教授 (膵がんCAFのシングルセルエピゲノム解析)</li>
-          <li class="pb-1">東京医科大学・医学総合研究所・実験病理学部門・中村卓郎特任教授 (肉腫発がんモデルのエピゲノム解析・シングルセル解析)</li>
 
-        </ul>
-      </div><!-- container -->
-    </section><!-- works-article-wrapper -->
-    <!-- END 様々な共同研究 -->
+      <!-- ========== 柱3 ========== -->
+      <div class="works-article-wrapper">
+        <div class="container">
+          <h3 class="works-pillar-title animate slide-from-bottom" id="pillar3">
+            <span class="works-pillar-num"><span class="t">柱</span><em>3</em></span>
+            <span class="works-pillar-name">臨床の問いから始まる研究</span></h3>
+          <article class="row">
+            <!-- 図（後日追加予定）: images/works/rTR2.jpg -->
+            <div class="col-12 mt-2 animate slide-from-bottom">
+              <p class="text-justify works-article-text">
+                基礎研究の多くは、実験室で生まれた仮説から出発します。これに対して私たちが重視しているのは、臨床の現場で実際に問題となっている現象を出発点とし、その背後にある生物学を明らかにしていくという進め方です。トランスレーショナルリサーチが「基礎から臨床へ」の方向を指すのに対し、その逆向きの流れであることから、私たちはこれを<b>リバースTR</b>と呼んでいます。<br>
+                <br>
+                この進め方には、方法論上の明確な利点があります。臨床で患者さんの予後を左右することが分かっている現象は、その時点ですでに機能的な重要性が保証されています。基礎研究において最も難しいのは、観察された現象に意味があるのかを示すことですが、臨床から出発する場合、その問いの一部はあらかじめ解かれています。他方で、こうした現象の多くは、機構が未解明のまま臨床的事実として扱われ続けてきたものです。説明が与えられていない重要な現象が、臨床の現場には数多く存在します。<br>
+                <br>
+                もうひとつの利点は、材料にあります。これらの問いに取り組むためには、新鮮な臨床検体、経時的に採取された検体、あるいは症例数の限られる希少な腫瘍の検体が必要となります。これらは、診療の現場と研究の現場が近接していなければ扱うことができません。
+              </p>
+            </div>
+          </article>
+        </div><!-- container -->
+      </div>
 
-    <!--  START 研究費-->
-    <section class="works-article-wrapper mb-4">
-      <div class="container">
-        <h3 class="works-article-title animate slide-from-bottom" id="colab">研究費</h3>
-        <ul class="animate slide-from-bottom">
-          
-<b><u>2025年度（公的研究費）</b></u><br>
-丸山	科研費基盤研究B	代表<br>
-丸山	AMED次世代がん医療創製研究事業	代表<br>
-丸山	科研費基盤研究S	分担（代表：田中伸哉）<br>
-丸山	科研費基盤研究A	分担（代表：川内大輔）<br>
-丸山	科研費基盤研究B	分担（代表：八尾良司）<br>
-丸山	科研費基盤研究B	分担（代表：秋吉高志）<br>
-丸山	科研費基盤研究C	分担（代表：後藤理）<br>
-丸山	科研費基盤研究C	分担（代表：小林隆之）<br>
-丸山	科研費基盤研究C	分担（代表：山口智弘）<br>
-丸山	AMED次世代がん医療創製研究事業	分担（代表：田中伸哉）<br>
-丸山	AMED次世代がん医療創製研究事業	分担（代表：川内大輔）<br>
-丸山	AMED次世代がん医療創製研究事業	分担（代表：上阪直史）<br>
-丸山	AMED橋渡し研究プログラム	分担（代表：清水寛和）<br>
-田中	科研費基盤研究B	代表<br>
-田中	AMED次世代がん医療創製研究事業	代表<br>
-田中	AMED創薬支援推進事業	分担（代表：中村卓郎）<br>
-田中	AMED次世代がん医療創製研究事業	分担（代表：新井田 厚司）<br>
-宮田	科研費基盤研究B	代表<br>
-宮田	科研費挑戦的研究（萌芽）	代表<br>
-宮田	AMED次世代がん医療創製研究事業	分担（代表：野田哲生）<br>
-宮田	AMED革新的がん医療実用化研究事業	分担（代表：中山淳）<br>
-柴田	科研費若手研究	代表<br>
-柴田	科研費特別研究員奨励費	代表<br>
-柴田	JCA-KFCR若手研究助	代表<br>
-尾辻	科研費若手研究	代表<br>
-家里	科研費若手研究	代表<br>
-佐伯	科研費若手研究	代表<br>
-粂川	科研費若手研究	代表<br>
-粂川	科研費基盤研究C	分担（代表：若槻尊）<br>
-呉	科研費若手研究	代表<br>
-<br>
+      <!-- 3-1 -->
+      <div class="works-article-wrapper">
+        <div class="container">
+          <h3 class="works-article-subtitle animate slide-from-bottom" id="theme3-1">
+            3-1　臨床で問題となる現象を再現するモデルを構築する</h3>
+          <article class="row">
+            <!-- 図（後日追加予定） -->
+            <div class="col-12 mt-2 animate slide-from-bottom">
+              <p class="text-justify works-article-text">
+                臨床現象の機構を解析するためには、その現象を実験系の中で再現する必要があります。たとえば膵がんにおける腹膜播種は、治療の成否を大きく左右するにもかかわらず、解析可能なモデルが限られてきました。私たちは、患者さん由来のオルガノイドをマウスの膵臓に同所移植することで、臨床で観察されるものと同様の播種を生じるモデルを構築し、この過程に関与する分子の探索を進めています。
+              </p>
+            </div>
+          </article>
+          <!-- ▼ 将来ここに個別テーマ・研究成果へのリンクを置く（コメントを外して使用）
+          <p class="works-article-links">
+            <a href="#">関連する研究成果</a>
+            <a href="public.html#public">関連論文</a>
+          </p>
+          -->
+        </div><!-- container -->
+      </div>
 
-<b><u>民間財団</b></u><br>
-2025年度	家里	がん研究フロンティア基⾦研究助成	代表<br>
-2025年度	家里	ヤマサ基礎医学研究助成	代表<br>
-2025年度	柴田	JCA-KFCR若手研究助成	代表<br>
-2025年度	田中	金沢大学がん進展制御研究所共同研究助成	代表<br>
-2024年度	丸山	高松宮妃癌研究基金研究助成	代表<br>
-2024年度	家里	中外創薬科学財団 特別研究助成金SRG2023	代表<br>
-2024年度	宮田	上原記念生命科学財団 研究奨励金	代表<br>
-2024年度	田中	アステラス病態代謝研究会研究助成金	代表<br>
-2024年度	田中	プロジェクト未来研究助成	代表<br>
-2024年度	粂川	安田記念医学財団若手癌研究助成金	代表<br>
-2024年度	粂川	持田記念医学薬学振興財団研究助成金	代表<br>
-2024年度	田中	ノバルティス科学振興財団研究奨励金	代表<br>
-2024年度	田中	金沢大学がん進展制御研究所共同研究助成	代表<br>
-2024年度	田中	ゴールドリボン研究助成	代表<br>
-2024年度	田中	日本がん転移学会女性研究者グラント賞	代表<br>
-2024年度	劉      SPRING-GX   代表<br>
-2023年度	田中	高松宮妃癌研究基金研究助成	代表<br>
-2023年度	宮田	武田科学振興財団医学系研究助成	代表<br>
-2023年度	宮田	持田記念医学薬学振興財団研究助成金	代表<br>
-2023年度	宮田	加藤記念バイオサイエンス振興財団	代表<br>
-2023年度	家里	がん集学的治療研究財団一般研究助成	代表<br>
-2023年度	家里	興和生命科学振興財団研究助成	代表<br>
-2023年度	粂川	プロジェクト未来研究助成	代表<br>
-2023年度	佐伯	がん検診研究助成事業（臨床研究）	代表<br>
-2022年度	鈴鹿	武田科学振興財団医学系研究助成	代表<br>
-2022年度	鈴鹿	上原記念生命科学財団がん研究奨励金	代表<br>
-2022年度	家里	日本対がん協会	代表<br>
-2022年度	家里	金原一郎記念医学医療振興財団	代表<br>
-<br>         
-<b><u>2024年度（公的研究費）</b></u><br>
-丸山	科研費基盤研究B	代表<br>
-丸山	AMED次世代がん医療創製研究事業	代表<br>
-丸山	科研費基盤研究S	分担（代表：田中伸哉）<br>
-丸山	科研費基盤研究A	分担（代表：川内大輔）<br>
-丸山	科研費基盤研究B	分担（代表：八尾良司）<br>
-丸山	科研費基盤研究C	分担（代表：後藤理）<br>
-丸山	科研費基盤研究C	分担（代表：小林隆之）<br>
-丸山	AMED次世代がん医療創製研究事業	分担（代表：田中伸哉）<br>
-丸山	AMED次世代がん医療創製研究事業	分担（代表：川内大輔）<br>
-丸山	AMED次世代がん医療創製研究事業	分担（代表：上阪直史）<br>
-丸山	AMED次世代がん医療創製研究事業	分担（代表：八尾良司）<br>
-丸山	AMED次世代がん医療創製研究事業	分担（代表：森誠一）<br>
-田中	科研費基盤研究B	代表<br>
-田中	AMED次世代がん医療創製研究事業	代表<br>
-田中	AMED創薬支援推進事業	分担（代表：中村卓郎）<br>
-宮田	科研費基盤研究B	代表<br>
-宮田	科研費挑戦的研究（萌芽）	代表<br>
-宮田	AMED次世代がん医療創製研究事業	分担（代表：野田哲生）<br>
-宮田	AMED革新的がん医療実用化研究事業	分担（代表：中山淳）<br>
-柴田	科研費若手研究	代表<br>
-柴田	科研費特別研究員奨励費	代表<br>
-尾辻	科研費若手研究	代表<br>
-鈴鹿	科研費若手研究	代表<br>
-家里	科研費若手研究	代表<br>
-佐伯	科研費若手研究	代表<br>
-粂川	科研費若手研究	代表<br>
-中太	科研費基盤研究C	代表<br>
-<br>
-<b><u>2023年度</b></u><br>
-丸山	AMED肝炎等克服緊急対策研究事業	分担（代表：大塚基之）<br>
-丸山	AMED次世代がん医療創製研究事業	分担（代表：川内大輔）<br>
-丸山	AMED次世代がん医療創製研究事業	分担（代表：上阪直史）<br>
-丸山	AMED次世代がん医療創製研究事業	分担（代表：田中伸哉）<br>
-丸山	AMED次世代がん医療創製研究事業	分担（代表：八尾良司）<br>
-丸山	AMED次世代がん医療創製研究事業	分担（代表：森誠一）<br>
-丸山	科研費基盤研究A	分担（代表：川内大輔）<br>
-丸山	科研費基盤研究B	分担（代表：大塚基之）<br>
-丸山	科研費基盤研究C	分担（代表：後藤理）<br>
-田中	AMED次世代がん医療創製研究事業	代表<br>
-田中	AMED創薬支援推進事業	分担（代表：中村卓郎）<br>
-宮田	科研費基盤研究B	代表<br>
-宮田	科研費挑戦的研究（萌芽）	代表<br>
-宮田	AMED次世代がん医療創製研究事業	分担（代表：野田哲生）<br>
-柴田	科研費特別研究員奨励費	代表<br>
-中太	科研費基盤研究C	代表<br>
-尾辻	科研費若手研究	代表<br>
-鈴鹿	科研費若手研究	代表<br>
-家里	科研費若手研究	代表<br>
-家里	科研費研究活動スタート支援	代表<br>
+      <!-- 3-2 -->
+      <div class="works-article-wrapper">
+        <div class="container">
+          <h3 class="works-article-subtitle animate slide-from-bottom" id="theme3-2">
+            3-2　臨床所見の背後にある細胞の性質を明らかにする</h3>
+          <article class="row">
+            <!-- 図（後日追加予定） -->
+            <div class="col-12 mt-2 animate slide-from-bottom">
+              <p class="text-justify works-article-text">
+                臨床で日常的に評価されている所見の中にも、その成り立ちが分かっていないものがあります。たとえば乳がんにおけるリンパ管侵襲は、予後因子として確立していますが、なぜある患者さんでは生じ、別の患者さんでは生じないのかは明らかではありません。私たちは、患者さんの組織からリンパ管内皮細胞を直接分離・培養し、リンパ管侵襲の有無によってその性質がどのように異なるのかを解析しています。がん細胞の側だけでなく、受け手となる組織の側に着目するという視点です。<br>
+                <br>
+                希少がんもまた、この柱の対象となります。症例数が限られるために大規模な解析が成立しない腫瘍については、個々の症例を深く解析することが、むしろ現実的かつ有効な手立てとなります。<br>
+                <br>
+                これらの研究は、臨床医が自らの診療領域で抱いた問いを研究室に持ち込み、基礎研究の手法を用いて自ら解いていくという形で進んでいます。問いの出どころが多様であるために、対象となる臓器も現象も一様ではありませんが、それは診療の広がりがそのまま研究の広がりになっているということでもあります。
+              </p>
+            </div>
+          </article>
+          <!-- ▼ 将来ここに個別テーマ・研究成果へのリンクを置く（コメントを外して使用）
+          <p class="works-article-links">
+            <a href="#">関連する研究成果</a>
+            <a href="public.html#public">関連論文</a>
+          </p>
+          -->
+        </div><!-- container -->
+      </div>
 
-        </ul>
-      </div><!-- container -->
-    </section><!-- works-article-wrapper -->
-    <!-- END 様々な共同研究 -->
-    
+    </section>
+    <!-- END 研究のアプローチ -->
+
+
+
+
   </section>
   <!-- END WORKS -->
 
