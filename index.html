@@ -93,13 +93,42 @@
       .top-more a, .top-team-links a { color: #2a9dc4; }
 
       .top-team { padding-top: 56px; padding-bottom: 56px; }
-      .top-team-photo { display: block; width: 100%; max-width: 1200px; margin: 0 auto; }
+
+      /* 写真のスライドショー（数秒ごとにフェードで切り替え） */
+      .top-photos {
+        position: relative; width: 100%; max-width: 1200px;
+        margin: 0 auto; overflow: hidden;
+      }
+      .top-photos::before { content: ""; display: block; padding-top: 42%; } /* 504 / 1200 */
+      .top-photos img {
+        position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+        object-fit: cover; opacity: 0; z-index: 1;
+        transition: opacity 1.1s ease-in-out;
+      }
+      .top-photos img.is-active { opacity: 1; z-index: 2; }
+      .top-photos img:hover { transform: none; }  /* 既存テンプレートの拡大効果を無効化 */
+      .top-photos-dots {
+        position: absolute; left: 0; right: 0; bottom: 12px; z-index: 3;
+        text-align: center; line-height: 1;
+      }
+      .top-photos-dots span {
+        display: inline-block; width: 7px; height: 7px; margin: 0 4px;
+        border-radius: 50%; background: rgba(255,255,255,.55);
+        box-shadow: 0 0 3px rgba(0,0,0,.35); cursor: pointer;
+        transition: background .3s;
+      }
+      .top-photos-dots span.is-active { background: #fff; }
+
       .top-team-caption {
         max-width: 860px; margin: 20px auto 0; text-align: center;
         font-size: .88rem; line-height: 1.95; color: #6e7787;
       }
       .top-team-links { margin: 16px 0 0; text-align: center; font-size: .88rem; }
       .top-team-links a { display: inline-block; margin: 0 16px; }
+
+      .footer .footer-org {
+        font-size: .78rem; line-height: 1.85; letter-spacing: .02em;
+      }
 
       @media (max-width: 991px) {
         .top-pillar { height: auto; }
@@ -250,7 +279,19 @@
     <!-- START TEAM PHOTO（新規） -->
     <section class="section top-team bg-light">
         <div class="container">
-            <img src="images/team-2026.jpg" class="img-fluid top-team-photo" alt="REO MARUYAMA LAB">
+            <!-- 写真を増やしたいときは <img> を1行足すだけ。先頭の1枚だけ class="is-active" を付けておく。
+                 推奨サイズ：横1200px / 縦504px（横:縦 ＝ 1 : 0.42）。 -->
+            <div class="top-photos" id="topPhotos" data-interval="4500">
+                <img src="images/top-photo-01.jpg" class="is-active" alt="REO MARUYAMA LAB"><!-- 集：公式集合写真 -->
+                <img src="images/top-photo-02.jpg" alt="REO MARUYAMA LAB"><!-- 他：有明の風景 -->
+                <img src="images/top-photo-03.jpg" alt="REO MARUYAMA LAB"><!-- 集：ラボにて -->
+                <img src="images/top-photo-04.jpg" alt="REO MARUYAMA LAB"><!-- 他：クリスマス会 -->
+                <img src="images/top-photo-05.jpg" alt="REO MARUYAMA LAB"><!-- 集：送別会 -->
+                <img src="images/top-photo-06.jpg" alt="REO MARUYAMA LAB"><!-- 他：食事会 -->
+                <img src="images/top-photo-07.jpg" alt="REO MARUYAMA LAB"><!-- 集：懇親会 -->
+                <img src="images/top-photo-08.jpg" alt="REO MARUYAMA LAB"><!-- 他：差し入れ -->
+                <div class="top-photos-dots" id="topPhotosDots"></div>
+            </div>
             <p class="top-team-caption">
                 細胞生物学、分子生物学、生化学、情報科学、臨床医学。多様な専門性を持つメンバーが、WETとDRYの両面からがんに向き合っています。
             </p>
@@ -270,21 +311,12 @@
                 <div class="col-lg-6 about-section">
                     <div class="about-section__left animate slide-from-left">
                         <h2 class="text-muted">公益財団法人がん研究会<br>丸山玲緒 研究室</h2>
-                        <p class="text-muted"><a
-                                href="https://www.jfcr.or.jp/laboratory/department/epigenome/index.html">がん研究所・がんエピゲノム研究部</a>
-                        </p>
-                        <p class="text-muted"><a
-                                href="https://www.jfcr.or.jp/next-ganken/index.html">NEXT-Gankenプログラム・がん細胞多様性解明プロジェクト</a>
-                        </p>
-                        <p class="text-muted"><a
-                                href="https://www.jfcr.or.jp/next-ganken/index.html">NEXT-Gankenプログラム・コア解析基盤プロジェクト</a>
-                        </p>
+                        <h4 class="text-muted mt-4">Diving Deep into Cancer Cell Diversity:</h4>
+                        <h6 class="text-muted public-descript">Unraveling the Essence of Tumors for Patient Care</h6>
                     </div>
                 </div>
                 <div class="col-lg-6 about-section">
                     <div class="about-section__right animate slide-from-right">
-                            <h4 class="text-muted">Diving Deep into Cancer Cell Diversity: <br></h4>
-                            <h6 class="text-muted public-descript">Unraveling the Essence of Tumors for Patient Care</h6>
                         <img src="images/maruyamalab.png" alt="" class="about-picture img-fluid mx-auto">
                     </div>
                 </div>
@@ -390,6 +422,10 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-alt">
+                <p class="footer-org text-muted mb-2">
+                    公益財団法人がん研究会　がん研究所・がんエピゲノム研究部<br>
+                    NEXT-Gankenプログラム　がん細胞多様性解明プロジェクト／コア解析基盤プロジェクト
+                </p>
                 <p class="text-muted mb-0">Copyright &copy; 2020 Japanese Foundation For Cancer Research. All Rights
                     Reserved.
                 </p>
@@ -447,6 +483,49 @@
             if (out.length) { box.innerHTML = out.join(''); }
           })
           .catch(function () { /* 失敗時は予備の内容をそのまま表示 */ });
+      })();
+    </script>
+
+    <!-- トップページ写真スライドショー -->
+    <script>
+      (function () {
+        var box = document.getElementById('topPhotos');
+        if (!box) return;
+        var imgs = box.querySelectorAll('img');
+        if (imgs.length < 2) return;
+
+        var dotsBox = document.getElementById('topPhotosDots');
+        var interval = parseInt(box.getAttribute('data-interval'), 10) || 5000;
+        var cur = 0, timer = null;
+        var reduce = window.matchMedia &&
+                     window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        var dots = [];
+        if (dotsBox) {
+          for (var i = 0; i < imgs.length; i++) {
+            var s = document.createElement('span');
+            if (i === 0) s.className = 'is-active';
+            (function (n) {
+              s.addEventListener('click', function () { show(n); restart(); });
+            })(i);
+            dotsBox.appendChild(s);
+            dots.push(s);
+          }
+        }
+
+        function show(n) {
+          imgs[cur].classList.remove('is-active');
+          if (dots[cur]) dots[cur].classList.remove('is-active');
+          cur = (n + imgs.length) % imgs.length;
+          imgs[cur].classList.add('is-active');
+          if (dots[cur]) dots[cur].classList.add('is-active');
+        }
+        function restart() {
+          if (reduce) return;
+          clearInterval(timer);
+          timer = setInterval(function () { show(cur + 1); }, interval);
+        }
+        restart();
       })();
     </script>
   </body>
