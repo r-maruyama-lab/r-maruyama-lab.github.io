@@ -49,7 +49,7 @@
       font-weight: 700;
       line-height: 1.5;
       color: #1b2735;
-      margin: 68px 0 16px;
+      margin: 18px 0 12px;
       padding-bottom: 16px;
       border-bottom: 2px solid #e4e8ee;
     }
@@ -95,11 +95,163 @@
 
     @media (max-width: 575px) {
       .works .works-pillar-title {
-        font-size: 1.12rem; gap: 14px; margin-top: 46px; padding-bottom: 12px;
+        font-size: 1.12rem; gap: 14px; margin-top: 14px; padding-bottom: 12px;
       }
       .works .works-pillar-num { width: 52px; height: 52px; margin-right: 14px; }
       .works .works-pillar-num em { font-size: 1.45rem; }
     }
+
+    /* ===== 技術基盤 / リソース のカード ===== */
+    .works .wk-group-label {
+      margin: 34px 0 14px; padding-left: 12px;
+      font-size: .78rem; font-weight: 700; letter-spacing: .14em;
+      line-height: 1.6; color: #6e7787; border-left: 3px solid #1f7ae0;
+    }
+    .works .wk-grid {
+      display: flex; flex-wrap: wrap;
+      margin: 0 -10px 4px;
+    }
+    .works .wk-card {
+      flex: 1 1 calc(50% - 20px); min-width: 260px;
+      margin: 0 10px 20px; padding: 24px 26px 20px;
+      background: #fff; border: 1px solid #e2e8f0; border-radius: 6px;
+      border-top: 3px solid #1f7ae0;
+    }
+    .works .wk-card-title {
+      margin: 0 0 10px; font-size: 1.02rem; font-weight: 700;
+      line-height: 1.5; color: #1b2735;
+    }
+    .works .wk-card-lead {
+      margin: 0 0 14px; font-size: .85rem; line-height: 1.95; color: #4a5565;
+    }
+    .works .wk-card-list { margin: 0; padding: 0; list-style: none; }
+    .works .wk-card-list li {
+      position: relative; padding: 4px 0 4px 15px;
+      font-size: .8rem; line-height: 1.75; color: #5d6775;
+      border-top: 1px solid #f0f3f7;
+    }
+    .works .wk-card-list li:before {
+      content: ""; position: absolute; left: 0; top: 13px;
+      width: 5px; height: 5px; border-radius: 50%; background: #c2d2e4;
+    }
+    /* 基盤カードは軸カードより一段控えめに */
+    .works .wk-card-base {
+      background: #f7f9fb; border-color: #e7edf3; border-top-color: #aebdcd;
+    }
+    .works .wk-card-base .wk-card-list li { border-top-color: #e8edf3; }
+
+    .works .wk-closing {
+      margin: 10px 0 0; padding: 18px 22px;
+      background: #f2f7fd; border-left: 3px solid #1f7ae0;
+      font-size: .88rem; line-height: 1.95; color: #2f3b4a;
+    }
+
+    @media (max-width: 767px) {
+      .works .wk-card { flex: 1 1 100%; padding: 20px 20px 16px; }
+    }
+
+    /* ===== 小項目（1-1 など）の折りたたみ ===== */
+    .works details.works-theme { margin-bottom: 10px; }
+    .works details.works-theme > summary {
+      position: relative; cursor: pointer; list-style: none;
+      padding-right: 46px; margin: 0;
+      transition: background-color .15s;
+    }
+    .works details.works-theme > summary::-webkit-details-marker { display: none; }
+    .works details.works-theme > summary:hover { background-color: #e7eef6; }
+    .works details.works-theme > summary::after {
+      content: ""; position: absolute; right: 18px; top: 50%;
+      width: 10px; height: 10px; margin-top: -8px;
+      border-right: 2px solid #1f7ae0; border-bottom: 2px solid #1f7ae0;
+      transform: rotate(45deg); transition: transform .2s, margin-top .2s;
+    }
+    .works details.works-theme[open] > summary {
+      background-color: #e7eef6;
+      box-shadow: inset 3px 0 0 #1f7ae0;
+    }
+    .works details.works-theme[open] > summary::after {
+      transform: rotate(-135deg); margin-top: -3px;
+    }
+    .works .works-theme-body { padding-top: 6px; }
+    .works details.works-theme[open] { scroll-margin-top: 90px; }
+
+    /* すべて開く／閉じる */
+    .works .works-expand-bar {
+      display: flex; justify-content: flex-end; margin: 6px 0 14px;
+    }
+    .works .works-expand-btn {
+      padding: 5px 15px; border: 1px solid #c6d5e6; border-radius: 999px;
+      background: #fff; color: #1f7ae0;
+      font-size: .76rem; letter-spacing: .06em; line-height: 1.6; cursor: pointer;
+      transition: background-color .15s, border-color .15s;
+    }
+    .works .works-expand-btn:hover { background: #f2f7fd; border-color: #1f7ae0; }
+
+
+    /* ===== v10: 技術基盤・リソースを本文と同じ文字サイズの見出し型レイアウトに ===== */
+    .works .wk-grid.wk-tech-grid,
+    .works .wk-grid.wk-resource-grid {
+      display: block;
+      margin: 8px 0 8px;
+    }
+    .works .wk-tech-grid .wk-card,
+    .works .wk-resource-grid .wk-card {
+      display: block;
+      width: 100%; min-width: 0;
+      margin: 0; padding: 26px 0 22px;
+      background: transparent; border: 0; border-radius: 0;
+      border-top: 1px solid #dfe6ed;
+    }
+    .works .wk-tech-grid .wk-card:first-child,
+    .works .wk-resource-grid .wk-card:first-child { border-top: 0; }
+    .works .wk-tech-grid .wk-card-title,
+    .works .wk-resource-grid .wk-card-title {
+      font-size: 1.14rem; line-height: 1.6;
+      margin: 0 0 12px;
+    }
+    .works .wk-tech-grid .wk-card-lead,
+    .works .wk-resource-grid .wk-card-lead {
+      font-size: 1rem; line-height: 1.9;
+      color: #3f4b58; margin: 0 0 11px;
+    }
+    .works .wk-tech-grid .wk-card-list li,
+    .works .wk-resource-grid .wk-card-list li {
+      border-top: 0; font-size: .96rem; line-height: 1.85;
+      padding: 4px 0 4px 18px; color: #4e5b69;
+    }
+    .works .wk-tech-grid .wk-card-list li:before,
+    .works .wk-resource-grid .wk-card-list li:before { top: 16px; }
+    @media (max-width: 575px) {
+      .works .wk-tech-grid .wk-card,
+      .works .wk-resource-grid .wk-card { padding: 22px 0 18px; }
+      .works .wk-tech-grid .wk-card-lead,
+      .works .wk-resource-grid .wk-card-lead { line-height: 1.85; }
+    }
+
+    /* ===== v11: 具体的な技術名のみ折りたたむ ===== */
+    .works .wk-tech-grid .wk-tech-details { margin-top: 12px; }
+    .works .wk-tech-grid .wk-tech-details > summary {
+      display: inline-flex; align-items: center; gap: 9px;
+      cursor: pointer; list-style: none;
+      font-size: .95rem; line-height: 1.8;
+      color: #1f6fc6; font-weight: 600;
+      padding: 2px 0;
+    }
+    .works .wk-tech-grid .wk-tech-details > summary::-webkit-details-marker { display: none; }
+    .works .wk-tech-grid .wk-tech-details > summary::after {
+      content: ''; width: 7px; height: 7px;
+      border-right: 1.7px solid currentColor;
+      border-bottom: 1.7px solid currentColor;
+      transform: rotate(45deg); margin: -3px 2px 0 2px;
+      transition: transform .2s;
+    }
+    .works .wk-tech-grid .wk-tech-details[open] > summary::after {
+      transform: rotate(-135deg); margin-top: 4px;
+    }
+    .works .wk-tech-grid .wk-tech-details > summary:focus-visible {
+      outline: 2px solid #1f7ae0; outline-offset: 4px; border-radius: 2px;
+    }
+    .works .wk-tech-grid .wk-tech-details .wk-card-list { margin-top: 8px; }
   </style>
 </head>
 
@@ -174,6 +326,8 @@
         <div class="works-header-btns">
           <a href="#goal" class="btn btn-custom">目指すところ</a>
           <a href="#themes" class="btn btn-custom">研究のアプローチ</a>
+          <a href="#tech" class="btn btn-custom">技術基盤</a>
+          <a href="#resource" class="btn btn-custom">リソース</a>
         </div>
       </div>
     </div>
@@ -189,7 +343,7 @@
       <div class="container">
         <h3 class="works-article-title animate slide-from-bottom" id="goal">目指すところ</h3>
         <ul class="animate slide-from-bottom">
-          <li class="pb-1">私たちは「がんの多様性と可塑性」に着目し、その本質的な理解を目指して研究を進めています。がん細胞が示す可塑性と多様性は、がんが治療や環境変化に柔軟に適応・進化する力の源であり、再発や治療抵抗性の根本的な要因と考えられています。私たちは、腫瘍内に存在するがん細胞の多様性と可塑性を正確に測定し、それぞれの腫瘍の特性を明らかにすることで、患者間の違いを理解することを目指しています。さらに、こうした多様性や可塑性がどのようなメカニズムで形成され、それがどのような機能的意義を持つのかを、ゲノムおよびエピゲノムの視点から解明することを目標としています。</li>
+          <li class="pb-1">私たちは、がんの本質を理解する鍵は、がん細胞の「多様性と可塑性」にあると考えています。一つの腫瘍の中にも異なる性質を持つがん細胞が共存し、環境の変化や治療に応じてその状態を変化させます。こうした性質は、がんの進化や治療抵抗性、再発を支える重要な要因と考えられています。私たちは、がん細胞の多様性と可塑性を精緻に捉え、それぞれの腫瘍の特性を明らかにするとともに、それらを生み出すゲノム・エピゲノム機構の解明を目指しています。がんという生命現象の本質に迫ることは、がんの克服やがんとの共存への道を拓くとともに、「生命とは何か」という根源的な問いを探究することにもつながると信じています。</li>
         </ul>
       </div><!-- container -->
     </section>
@@ -205,8 +359,11 @@
       <div class="container">
         <h3 class="works-article-title animate slide-from-bottom link-adjust" id="themes">研究のアプローチ</h3>
         <ul class="animate slide-from-bottom">
-          <li class="pb-1">目標へ到達するための道筋として、私たちは三つの柱を立てています。がん細胞の可塑性と不均一性そのものを理解する研究を中心に据え、エピゲノム異常が発がんと進展に果たす役割を問う研究、そして臨床の現場で生じた問いを出発点とする研究を、あわせて展開しています。個別の研究テーマではなく、問いに迫るための戦略としてお読みください。</li>
+          <li class="pb-1">がん細胞の可塑性と不均一性そのものを理解する研究を中心に据え、エピゲノム異常が発がんと進展に果たす役割を問う研究、そして臨床の現場で生じた問いを出発点とする研究を、あわせて展開しています。</li>
         </ul>
+        <div class="works-expand-bar animate slide-from-bottom">
+          <button type="button" class="works-expand-btn" id="worksExpandAll">すべて開く</button>
+        </div>
       </div><!-- container -->
 
 
@@ -230,88 +387,97 @@
       <!-- 1-1 -->
       <div class="works-article-wrapper">
         <div class="container">
-          <h3 class="works-article-subtitle animate slide-from-bottom" id="theme1-1">
-            1-1　可塑性と不均一性の正確な記述</h3>
-          <article class="row">
-            <!-- 図（後日追加予定） -->
-            <div class="col-12 mt-2 animate slide-from-bottom">
-              <p class="text-justify works-article-text">
-                不均一性と可塑性は「ある／ない」として語られることが多いものの、本来は量として扱われるべき性質です。腫瘍の中にどれだけ異なる状態の細胞が存在するのか、個々の細胞がどの程度まで状態を変えうるのか。これらを再現性のある形で定量し、条件間・症例間で比較可能にすることが、記述という作業の内実です。<br>
-                <br>
-                この段階が決定的に重要である理由は三つあります。第一に、観測の解像度が現象の見え方を規定します。集団平均を見る解析では、不均一性も可塑性も平均化されて消失します。第二に、どの分子階層を観測するかによって得られる答えが異なります。転写産物のレベルでは均一に見える集団が、クロマチン状態やゲノムのコピー数では明確に分かれることがあり、その逆も起こります。したがって、単一の階層の解析から不均一性の有無を結論することはできません。第三に、可塑性は原理的にスナップショットでは観測できません。ある時点で多様な細胞が存在するという観察からは、もともと異なる細胞が混在していたのか、同一の細胞が状態を変えたのかを区別できないためです。<br>
-                <br>
-                そして、ここを定量的に押さえておかなければ、後に続く二つの問いは成立しません。不均一性の機能を問うにも、その生成原理を問うにも、「どれだけ不均一なのか」「条件によってそれがどう変化したのか」を測定できることが前提となるからです。<br>
-                <br>
-                私たちは、遺伝子発現・クロマチン状態・ゲノムコピー数という複数の分子階層を単一細胞レベルで解析し、それらを統合して記述しています。組織構造の情報を保持したまま解析する空間トランスクリプトーム解析も併用しています。スナップショットの限界を越えるためには、細胞バーコーディングによる系譜追跡と、同一の患者さんにおける経時的な検体解析が有効であり、これらによって細胞の現在の状態をその履歴とともに記述することが可能になります。あわせて、技術的変動と生物学的変動をいかに区別するか、連続的に分布する細胞状態をどこで区切るかといった、記述の精度そのものを左右する解析手法の開発にも取り組んでいます。
-              </p>
+          <details class="works-theme animate slide-from-bottom" id="theme1-1">
+            <summary class="works-article-subtitle">1-1　可塑性と不均一性の正確な記述</summary>
+            <div class="works-theme-body">
+            <article class="row">
+              <!-- 図（後日追加予定） -->
+              <div class="col-12 mt-2 animate slide-from-bottom">
+                <p class="text-justify works-article-text">
+                  不均一性と可塑性は「ある／ない」として語られるのではなく、本来は量として扱われるべき性質です。腫瘍の中にどれだけ異なる状態の細胞が存在するのか、個々の細胞がどの程度まで状態を変えうるのか。これらを再現性のある形で定量し、条件間・症例間で比較可能にすることを目指しています。<br>
+                  <br>
+                  この段階が決定的に重要である理由は三つあります。第一に、観測の解像度が現象の見え方を規定します。集団平均を見る解析では、不均一性も可塑性も平均化されて消失します。第二に、どの分子階層を観測するかによって得られる答えが異なります。転写産物のレベルでは均一に見える集団が、クロマチン状態やゲノムのコピー数では明確に分かれることがあり、その逆も起こります。したがって、単一の階層の解析から不均一性の有無を結論することはできません。第三に、可塑性は原理的にスナップショットでは観測できません。ある時点で多様な細胞が存在するという観察からは、もともと異なる細胞が混在していたのか、同一の細胞が状態を変えたのかを区別できないためです。<br>
+                  <br>
+                  そして、ここを定量的に押さえておかなければ、後に続く二つの問いは成立しません。不均一性の機能を問うにも、その生成原理を問うにも、「どれだけ不均一なのか」「条件によってそれがどう変化したのか」を測定できることが前提となるからです。<br>
+                  <br>
+                  私たちは、遺伝子発現・クロマチン状態・ゲノムコピー数という複数の分子階層を単一細胞レベルで解析し、それらを統合して記述しています。組織構造の情報を保持したまま解析する空間トランスクリプトーム解析も併用しています。スナップショットの限界を越えるためには、細胞バーコーディングによる系譜追跡と、同一の患者さんにおける経時的な検体解析が有効であり、これらによって細胞の現在の状態をその履歴とともに記述することが可能になります。あわせて、技術的変動と生物学的変動をいかに区別するか、連続的に分布する細胞状態をどこで区切るかといった、記述の精度そのものを左右する解析手法の開発にも取り組んでいます。
+                </p>
+              </div>
+            </article>
+            <!-- ▼ 将来ここに個別テーマ・研究成果へのリンクを置く（コメントを外して使用）
+            <p class="works-article-links">
+              <a href="#">関連する研究成果</a>
+              <a href="public.html#public">関連論文</a>
+            </p>
+            -->
             </div>
-          </article>
-          <!-- ▼ 将来ここに個別テーマ・研究成果へのリンクを置く（コメントを外して使用）
-          <p class="works-article-links">
-            <a href="#">関連する研究成果</a>
-            <a href="public.html#public">関連論文</a>
-          </p>
-          -->
+          </details>
         </div><!-- container -->
       </div>
 
       <!-- 1-2 -->
       <div class="works-article-wrapper">
         <div class="container">
-          <h3 class="works-article-subtitle animate slide-from-bottom" id="theme1-2">
-            1-2　可塑性と不均一性の機能的意義の解明</h3>
-          <article class="row">
-            <!-- 図（後日追加予定） -->
-            <div class="col-12 mt-2 animate slide-from-bottom">
-              <p class="text-justify works-article-text">
-                観測された不均一性や可塑性が、がんの振る舞いに実際に寄与しているのかを明らかにする段階です。細胞間に差異が存在することと、その差異が意味を持つこととは、別の事柄です。生物学的な変動の多くは、腫瘍の運命に影響を与えません。<br>
-                <br>
-                機能的意義は、細胞集団が置かれる状況に依存して現れます。平穏な条件下では何の差も生まない違いが、薬剤曝露や転移先の微小環境といった選択圧のもとでは生存を左右します。したがって、ある不均一性に意味があるという主張は、常に特定の状況とともにしか成立しません。記述から機能の解明へ進むことが難しいのは、測定することに比べて、意味が現れる状況を設定することが格段に困難であるためです。<br>
-                <br>
-                また、不均一性と可塑性は、適応において異なる役割を担っている可能性があります。不均一性は、あらかじめ多様な選択肢を用意しておくことで集団としての生存確率を高める仕組みに対応し、可塑性は、個々の細胞が状況に応じて自らの状態を変える仕組みに対応します。両者はいずれも治療抵抗性をもたらしうるものの、その機構は異なり、したがって有効な介入の方法も異なります。この区別をつけることは、治療戦略を構想する上で本質的な意味を持ちます。<br>
-                <br>
-                機能を問うためには、状況を制御しうる実験系が必要です。私たちは、患者さんの検体から樹立したオルガノイド、マウスへの同所移植モデル、不均一性を保持した細胞株クローンパネルを用い、薬剤曝露などの選択圧を加えたときに何が起こるかを解析しています。その際に鍵となるのは、生き残った細胞がもともとどのような状態にあったのかを遡って同定することであり、細胞バーコーディングと単一細胞解析を組み合わせることで、結果と初期状態を対応づけることが可能になります。さらに、治療前後、あるいは原発巣と転移巣といった、患者さんの体内で実際に働いた選択圧のもとでの解析も併せて行い、実験系で得られた知見が臨床においても成立するかを検証しています。
-              </p>
+          <details class="works-theme animate slide-from-bottom" id="theme1-2">
+            <summary class="works-article-subtitle">1-2　可塑性と不均一性の機能的意義の解明</summary>
+            <div class="works-theme-body">
+            <article class="row">
+              <!-- 図（後日追加予定） -->
+              <div class="col-12 mt-2 animate slide-from-bottom">
+                <p class="text-justify works-article-text">
+                  観測された不均一性や可塑性が、がんの振る舞いに実際に寄与しているのかを明らかにする段階です。細胞間に差異が存在することと、その差異が意味を持つこととは、別の事柄です。生物学的な変動の多くは、腫瘍の運命に影響を与えません。<br>
+                  <br>
+                  機能的意義は、細胞集団が置かれる状況に依存して現れます。平穏な条件下では何の差も生まない違いが、薬剤曝露や転移先の微小環境といった選択圧のもとでは生存を左右します。したがって、ある不均一性に意味があるという主張は、常に特定の状況とともにしか成立しません。記述から機能の解明へ進むことが難しいのは、測定することに比べて、意味が現れる状況を設定することが格段に困難であるためです。<br>
+                  <br>
+                  また、不均一性と可塑性は、適応において異なる役割を担っている可能性があります。不均一性は、あらかじめ多様な選択肢を用意しておくことで集団としての生存確率を高める仕組みに対応し、可塑性は、個々の細胞が状況に応じて自らの状態を変える仕組みに対応します。両者はいずれも治療抵抗性をもたらしうるものの、その機構は異なり、したがって有効な介入の方法も異なります。この区別をつけることは、治療戦略を構想する上で本質的な意味を持ちます。<br>
+                  <br>
+                  機能を問うためには、状況を制御しうる実験系が必要です。私たちは、患者さんの検体から樹立したオルガノイド、マウスへの同所移植モデル、不均一性を保持した細胞株クローンパネルを用い、薬剤曝露などの選択圧を加えたときに何が起こるかを解析しています。その際に鍵となるのは、生き残った細胞がもともとどのような状態にあったのかを遡って同定することであり、細胞バーコーディングと単一細胞解析を組み合わせることで、結果と初期状態を対応づけることが可能になります。さらに、治療前後、あるいは原発巣と転移巣といった、患者さんの体内で実際に働いた選択圧のもとでの解析も併せて行い、実験系で得られた知見が臨床においても成立するかを検証しています。
+                </p>
+              </div>
+            </article>
+            <!-- ▼ 将来ここに個別テーマ・研究成果へのリンクを置く（コメントを外して使用）
+            <p class="works-article-links">
+              <a href="#">関連する研究成果</a>
+              <a href="public.html#public">関連論文</a>
+            </p>
+            -->
             </div>
-          </article>
-          <!-- ▼ 将来ここに個別テーマ・研究成果へのリンクを置く（コメントを外して使用）
-          <p class="works-article-links">
-            <a href="#">関連する研究成果</a>
-            <a href="public.html#public">関連論文</a>
-          </p>
-          -->
+          </details>
         </div><!-- container -->
       </div>
 
       <!-- 1-3 -->
       <div class="works-article-wrapper">
         <div class="container">
-          <h3 class="works-article-subtitle animate slide-from-bottom" id="theme1-3">
-            1-3　可塑性と不均一性の生成原理の解明</h3>
-          <article class="row">
-            <!-- 図（後日追加予定） -->
-            <div class="col-12 mt-2 animate slide-from-bottom">
-              <p class="text-justify works-article-text">
-                不均一性と可塑性が、どのような過程を経て生じ、維持されるのかを明らかにする段階です。<br>
-                <br>
-                生成の原理が理解できれば、不均一性を事後的に観察するのではなく、それが形成される前に介入しうる可能性が開けます。治療抵抗性は多くの場合、治療によって選び出された細胞集団によってもたらされます。その素地が作られる過程を理解できれば、抵抗性が顕在化する前に手を打つという発想が成り立ちます。<br>
-                <br>
-                この段階における最大の問いは、多様性が確率的に生じるものなのか、それとも調節されうるものなのか、という点にあります。分裂のたびに生じる分配や維持の誤差が蓄積した結果として多様性が生まれるのであれば、生き残った細胞は偶然のばらつきの中から選択されたことになります。一方、細胞が環境や内部状態の変化に応じて多様性の生じ方そのものを変化させるのであれば、多様性は選択に先立って形成されていたことになります。この二つは、ある時点における観察からは区別することができません。<br>
-                <br>
-                多様性が生まれる場は、分子階層によって異なります。ゲノムの側では、細胞分裂に際してDNAが娘細胞へ分配される過程が多様性の源となります。とくに染色体外DNAはセントロメアを持たないため、分裂のたびにコピー数のばらつきを生じ、この過程を定量的に追跡する上で格好の対象となります。エピゲノムの側では、DNA複製後にクロマチン状態がどこまで忠実に復元されるか、また転写制御ネットワークがどの程度安定に状態を保持するかが問題となります。私たちは、この両者を並行して解析しています。<br>
-                <br>
-                確率的な過程と調節的な過程を区別するためには、何を入力として与えたかを明示した上で、その強度や持続時間を変化させたときに多様性の分布がどのように推移するかを測定する必要があります。また、がんにおいて高頻度に機能喪失型変異が認められるエピゲノム調節因子を人為的に抑制し、多様性の生じ方が変化するかを検証することも有効な手立てとなります。これらの解析においては、確率的な過程を記述する数理モデルとの比較が不可欠であり、数理科学分野との共同研究を進めています。<br>
-                <br>
-                もしこれらの過程が調節されうるものであるならば、それはがんが新たに獲得した能力ではなく、細胞が本来備えている環境応答の仕組みが、制御の緩和によって顕在化したものである可能性があります。がん細胞の多様性を、無秩序の表れとしてではなく、生物が備える適応機構の一形態として理解すること。それが私たちの最終的な目標です。
-              </p>
+          <details class="works-theme animate slide-from-bottom" id="theme1-3">
+            <summary class="works-article-subtitle">1-3　可塑性と不均一性の生成原理の解明</summary>
+            <div class="works-theme-body">
+            <article class="row">
+              <!-- 図（後日追加予定） -->
+              <div class="col-12 mt-2 animate slide-from-bottom">
+                <p class="text-justify works-article-text">
+                  不均一性と可塑性が、どのような過程を経て生じ、維持されるのかを明らかにする段階です。<br>
+                  <br>
+                  生成の原理が理解できれば、不均一性を事後的に観察するのではなく、それが形成される前に介入しうる可能性が開けます。治療抵抗性は多くの場合、治療によって選び出された細胞集団によってもたらされます。その素地が作られる過程を理解できれば、抵抗性が顕在化する前に手を打つという発想が成り立ちます。<br>
+                  <br>
+                  この段階における最大の問いは、多様性が確率的に生じるものなのか、それとも調節されうるものなのか、という点にあります。分裂のたびに生じる分配や維持の誤差が蓄積した結果として多様性が生まれるのであれば、生き残った細胞は偶然のばらつきの中から選択されたことになります。一方、細胞が環境や内部状態の変化に応じて多様性の生じ方そのものを変化させるのであれば、多様性は選択に先立って形成されていたことになります。この二つは、ある時点における観察からは区別することができません。<br>
+                  <br>
+                  多様性が生まれる場は、分子階層によって異なります。ゲノムの側では、細胞分裂に際してDNAが娘細胞へ分配される過程が多様性の源となります。とくに染色体外DNAはセントロメアを持たないため、分裂のたびにコピー数のばらつきを生じ、この過程を定量的に追跡する上で格好の対象となります。エピゲノムの側では、DNA複製後にクロマチン状態がどこまで忠実に復元されるか、また転写制御ネットワークがどの程度安定に状態を保持するかが問題となります。私たちは、この両者を並行して解析しています。<br>
+                  <br>
+                  確率的な過程と調節的な過程を区別するためには、何を入力として与えたかを明示した上で、その強度や持続時間を変化させたときに多様性の分布がどのように推移するかを測定する必要があります。また、がんにおいて高頻度に機能喪失型変異が認められるエピゲノム調節因子を人為的に抑制し、多様性の生じ方が変化するかを検証することも有効な手立てとなります。これらの解析においては、確率的な過程を記述する数理モデルとの比較が不可欠であり、数理科学分野との共同研究を進めています。<br>
+                  <br>
+                  もしこれらの過程が調節されうるものであるならば、それはがんが新たに獲得した能力ではなく、細胞が本来備えている環境応答の仕組みが、制御の緩和によって顕在化したものである可能性があります。がん細胞の多様性を、無秩序の表れとしてではなく、生物が備える適応機構の一形態として理解すること。それが私たちの最終的な目標です。
+                </p>
+              </div>
+            </article>
+            <!-- ▼ 将来ここに個別テーマ・研究成果へのリンクを置く（コメントを外して使用）
+            <p class="works-article-links">
+              <a href="#">関連する研究成果</a>
+              <a href="public.html#public">関連論文</a>
+            </p>
+            -->
             </div>
-          </article>
-          <!-- ▼ 将来ここに個別テーマ・研究成果へのリンクを置く（コメントを外して使用）
-          <p class="works-article-links">
-            <a href="#">関連する研究成果</a>
-            <a href="public.html#public">関連論文</a>
-          </p>
-          -->
+          </details>
         </div><!-- container -->
       </div>
 
@@ -338,70 +504,79 @@
       <!-- 2-1 -->
       <div class="works-article-wrapper">
         <div class="container">
-          <h3 class="works-article-subtitle animate slide-from-bottom" id="theme2-1">
-            2-1　ヒトのがんに生じているエピゲノム異常を記述する</h3>
-          <article class="row">
-            <!-- 図（後日追加予定） -->
-            <div class="col-12 mt-2 animate slide-from-bottom">
-              <p class="text-justify works-article-text">
-                まず必要となるのは、実際の患者さんの腫瘍において、どのようなエピゲノムの変化が生じているのかを明らかにすることです。私たちは乳がんを主な対象として、臨床検体のクロマチン状態を解析し、遺伝子発現を駆動している調節領域の使われ方が症例間でどのように異なるのかを調べてきました。その過程で、細胞系譜を規定する転写因子の組み合わせがサブタイプの境界を作っていること、また従来の病理学的分類では同一とされる症例の間にも、転写調節の様式に明瞭な違いが存在することが見えてきています。
-              </p>
+          <details class="works-theme animate slide-from-bottom" id="theme2-1">
+            <summary class="works-article-subtitle">2-1　ヒトのがんに生じているエピゲノム異常を記述する</summary>
+            <div class="works-theme-body">
+            <article class="row">
+              <!-- 図（後日追加予定） -->
+              <div class="col-12 mt-2 animate slide-from-bottom">
+                <p class="text-justify works-article-text">
+                  まず必要となるのは、実際の患者さんの腫瘍において、どのようなエピゲノムの変化が生じているのかを明らかにすることです。私たちは乳がんを主な対象として、臨床検体のクロマチン状態を解析し、遺伝子発現を駆動している調節領域の使われ方が症例間でどのように異なるのかを調べてきました。その過程で、細胞系譜を規定する転写因子の組み合わせがサブタイプの境界を作っていること、また従来の病理学的分類では同一とされる症例の間にも、転写調節の様式に明瞭な違いが存在することが見えてきています。
+                </p>
+              </div>
+            </article>
+            <!-- ▼ 将来ここに個別テーマ・研究成果へのリンクを置く（コメントを外して使用）
+            <p class="works-article-links">
+              <a href="#">関連する研究成果</a>
+              <a href="public.html#public">関連論文</a>
+            </p>
+            -->
             </div>
-          </article>
-          <!-- ▼ 将来ここに個別テーマ・研究成果へのリンクを置く（コメントを外して使用）
-          <p class="works-article-links">
-            <a href="#">関連する研究成果</a>
-            <a href="public.html#public">関連論文</a>
-          </p>
-          -->
+          </details>
         </div><!-- container -->
       </div>
 
       <!-- 2-2 -->
       <div class="works-article-wrapper">
         <div class="container">
-          <h3 class="works-article-subtitle animate slide-from-bottom" id="theme2-2">
-            2-2　発がんモデルを用いて因果を検証する</h3>
-          <article class="row">
-            <!-- 図（後日追加予定） -->
-            <div class="col-12 mt-2 animate slide-from-bottom">
-              <p class="text-justify works-article-text">
-                ヒト検体の解析は、腫瘍が完成した後の姿を捉えるものです。エピゲノムの異常が発がんの原因であるのか、結果として生じた随伴現象であるのかを区別するためには、正常な組織に定義された遺伝子改変を導入し、腫瘍が形成されていく過程を時間に沿って追跡する必要があります。<br>
-                <br>
-                私たちは共同研究として、小児脳腫瘍をはじめとする発がんモデルを対象に、この解析を行っています。これらのモデルは、発生の文脈のなかで起こる発がんを扱える点で特別な意味を持ちます。本来は発生過程で一時的に使われるはずの調節領域が、腫瘍において持続的に利用されるようになる現象や、クロマチン修飾を担う因子の喪失が腫瘍の進展を促す機構が、単一細胞レベルの解析によって明らかになりつつあります。また、こうしたモデルは、腫瘍が置かれた組織環境との相互作用を解析する場としても機能します。
-              </p>
+          <details class="works-theme animate slide-from-bottom" id="theme2-2">
+            <summary class="works-article-subtitle">2-2　発がんモデルを用いて因果を検証する</summary>
+            <div class="works-theme-body">
+            <article class="row">
+              <!-- 図（後日追加予定） -->
+              <div class="col-12 mt-2 animate slide-from-bottom">
+                <p class="text-justify works-article-text">
+                  ヒト検体の解析は、腫瘍が完成した後の姿を捉えるものです。エピゲノムの異常が発がんの原因であるのか、結果として生じた随伴現象であるのかを区別するためには、正常な組織に定義された遺伝子改変を導入し、腫瘍が形成されていく過程を時間に沿って追跡する必要があります。<br>
+                  <br>
+                  私たちは共同研究として、小児脳腫瘍をはじめとする発がんモデルを対象に、この解析を行っています。これらのモデルは、発生の文脈のなかで起こる発がんを扱える点で特別な意味を持ちます。本来は発生過程で一時的に使われるはずの調節領域が、腫瘍において持続的に利用されるようになる現象や、クロマチン修飾を担う因子の喪失が腫瘍の進展を促す機構が、単一細胞レベルの解析によって明らかになりつつあります。また、こうしたモデルは、腫瘍が置かれた組織環境との相互作用を解析する場としても機能します。
+                </p>
+              </div>
+            </article>
+            <!-- ▼ 将来ここに個別テーマ・研究成果へのリンクを置く（コメントを外して使用）
+            <p class="works-article-links">
+              <a href="#">関連する研究成果</a>
+              <a href="public.html#public">関連論文</a>
+            </p>
+            -->
             </div>
-          </article>
-          <!-- ▼ 将来ここに個別テーマ・研究成果へのリンクを置く（コメントを外して使用）
-          <p class="works-article-links">
-            <a href="#">関連する研究成果</a>
-            <a href="public.html#public">関連論文</a>
-          </p>
-          -->
+          </details>
         </div><!-- container -->
       </div>
 
       <!-- 2-3 -->
       <div class="works-article-wrapper">
         <div class="container">
-          <h3 class="works-article-subtitle animate slide-from-bottom" id="theme2-3">
-            2-3　エピゲノム制御を標的とした治療への展開</h3>
-          <article class="row">
-            <!-- 図（後日追加予定） -->
-            <div class="col-12 mt-2 animate slide-from-bottom">
-              <p class="text-justify works-article-text">
-                エピゲノムの異常が腫瘍の性質を規定しているのであれば、その制御機構を標的とすることで腫瘍の振る舞いを変えられるはずです。私たちは共同研究として、ヒストン修飾酵素の阻害剤が腫瘍細胞にもたらす作用を、血液腫瘍、乳がん、婦人科がんなど複数のがん種において解析しています。これらの解析からは、阻害剤が単に標的遺伝子の発現を変化させるだけでなく、細胞の状態そのものを作り変え、免疫応答の惹起など当初は予期されなかった作用をもたらすことが見えてきています。<br>
-                <br>
-                なお、この柱は柱1と無関係ではありません。エピゲノム制御因子は、細胞の状態がどれだけ安定に保たれるかを決めている因子でもあります。その機能が失われたときに何が起こるのかという問いは、発がんの機構の問いであると同時に、多様性がどのように生み出されるのかという問いでもあります。
-              </p>
+          <details class="works-theme animate slide-from-bottom" id="theme2-3">
+            <summary class="works-article-subtitle">2-3　エピゲノム制御を標的とした治療への展開</summary>
+            <div class="works-theme-body">
+            <article class="row">
+              <!-- 図（後日追加予定） -->
+              <div class="col-12 mt-2 animate slide-from-bottom">
+                <p class="text-justify works-article-text">
+                  エピゲノムの異常が腫瘍の性質を規定しているのであれば、その制御機構を標的とすることで腫瘍の振る舞いを変えられるはずです。私たちは共同研究として、ヒストン修飾酵素の阻害剤が腫瘍細胞にもたらす作用を、血液腫瘍、乳がん、婦人科がんなど複数のがん種において解析しています。これらの解析からは、阻害剤が単に標的遺伝子の発現を変化させるだけでなく、細胞の状態そのものを作り変え、免疫応答の惹起など当初は予期されなかった作用をもたらすことが見えてきています。<br>
+                  <br>
+                  なお、この柱は柱1と無関係ではありません。エピゲノム制御因子は、細胞の状態がどれだけ安定に保たれるかを決めている因子でもあります。その機能が失われたときに何が起こるのかという問いは、発がんの機構の問いであると同時に、多様性がどのように生み出されるのかという問いでもあります。
+                </p>
+              </div>
+            </article>
+            <!-- ▼ 将来ここに個別テーマ・研究成果へのリンクを置く（コメントを外して使用）
+            <p class="works-article-links">
+              <a href="#">関連する研究成果</a>
+              <a href="public.html#public">関連論文</a>
+            </p>
+            -->
             </div>
-          </article>
-          <!-- ▼ 将来ここに個別テーマ・研究成果へのリンクを置く（コメントを外して使用）
-          <p class="works-article-links">
-            <a href="#">関連する研究成果</a>
-            <a href="public.html#public">関連論文</a>
-          </p>
-          -->
+          </details>
         </div><!-- container -->
       </div>
 
@@ -430,53 +605,169 @@
       <!-- 3-1 -->
       <div class="works-article-wrapper">
         <div class="container">
-          <h3 class="works-article-subtitle animate slide-from-bottom" id="theme3-1">
-            3-1　臨床で問題となる現象を再現するモデルを構築する</h3>
-          <article class="row">
-            <!-- 図（後日追加予定） -->
-            <div class="col-12 mt-2 animate slide-from-bottom">
-              <p class="text-justify works-article-text">
-                臨床現象の機構を解析するためには、その現象を実験系の中で再現する必要があります。たとえば膵がんにおける腹膜播種は、治療の成否を大きく左右するにもかかわらず、解析可能なモデルが限られてきました。私たちは、患者さん由来のオルガノイドをマウスの膵臓に同所移植することで、臨床で観察されるものと同様の播種を生じるモデルを構築し、この過程に関与する分子の探索を進めています。
-              </p>
+          <details class="works-theme animate slide-from-bottom" id="theme3-1">
+            <summary class="works-article-subtitle">3-1　臨床で問題となる現象を再現するモデルを構築する</summary>
+            <div class="works-theme-body">
+            <article class="row">
+              <!-- 図（後日追加予定） -->
+              <div class="col-12 mt-2 animate slide-from-bottom">
+                <p class="text-justify works-article-text">
+                  臨床現象の機構を解析するためには、その現象を実験系の中で再現する必要があります。たとえば膵がんにおける腹膜播種は、治療の成否を大きく左右するにもかかわらず、解析可能なモデルが限られてきました。私たちは、患者さん由来のオルガノイドをマウスの膵臓に同所移植することで、臨床で観察されるものと同様の播種を生じるモデルを構築し、この過程に関与する分子の探索を進めています。
+                </p>
+              </div>
+            </article>
+            <!-- ▼ 将来ここに個別テーマ・研究成果へのリンクを置く（コメントを外して使用）
+            <p class="works-article-links">
+              <a href="#">関連する研究成果</a>
+              <a href="public.html#public">関連論文</a>
+            </p>
+            -->
             </div>
-          </article>
-          <!-- ▼ 将来ここに個別テーマ・研究成果へのリンクを置く（コメントを外して使用）
-          <p class="works-article-links">
-            <a href="#">関連する研究成果</a>
-            <a href="public.html#public">関連論文</a>
-          </p>
-          -->
+          </details>
         </div><!-- container -->
       </div>
 
       <!-- 3-2 -->
       <div class="works-article-wrapper">
         <div class="container">
-          <h3 class="works-article-subtitle animate slide-from-bottom" id="theme3-2">
-            3-2　臨床所見の背後にある細胞の性質を明らかにする</h3>
-          <article class="row">
-            <!-- 図（後日追加予定） -->
-            <div class="col-12 mt-2 animate slide-from-bottom">
-              <p class="text-justify works-article-text">
-                臨床で日常的に評価されている所見の中にも、その成り立ちが分かっていないものがあります。たとえば乳がんにおけるリンパ管侵襲は、予後因子として確立していますが、なぜある患者さんでは生じ、別の患者さんでは生じないのかは明らかではありません。私たちは、患者さんの組織からリンパ管内皮細胞を直接分離・培養し、リンパ管侵襲の有無によってその性質がどのように異なるのかを解析しています。がん細胞の側だけでなく、受け手となる組織の側に着目するという視点です。<br>
-                <br>
-                希少がんもまた、この柱の対象となります。症例数が限られるために大規模な解析が成立しない腫瘍については、個々の症例を深く解析することが、むしろ現実的かつ有効な手立てとなります。<br>
-                <br>
-                これらの研究は、臨床医が自らの診療領域で抱いた問いを研究室に持ち込み、基礎研究の手法を用いて自ら解いていくという形で進んでいます。問いの出どころが多様であるために、対象となる臓器も現象も一様ではありませんが、それは診療の広がりがそのまま研究の広がりになっているということでもあります。
-              </p>
+          <details class="works-theme animate slide-from-bottom" id="theme3-2">
+            <summary class="works-article-subtitle">3-2　臨床所見の背後にある細胞の性質を明らかにする</summary>
+            <div class="works-theme-body">
+            <article class="row">
+              <!-- 図（後日追加予定） -->
+              <div class="col-12 mt-2 animate slide-from-bottom">
+                <p class="text-justify works-article-text">
+                  臨床で日常的に評価されている所見の中にも、その成り立ちが分かっていないものがあります。たとえば乳がんにおけるリンパ管侵襲は、予後因子として確立していますが、なぜある患者さんでは生じ、別の患者さんでは生じないのかは明らかではありません。私たちは、患者さんの組織からリンパ管内皮細胞を直接分離・培養し、リンパ管侵襲の有無によってその性質がどのように異なるのかを解析しています。がん細胞の側だけでなく、受け手となる組織の側に着目するという視点です。<br>
+                  <br>
+                  希少がんもまた、この柱の対象となります。症例数が限られるために大規模な解析が成立しない腫瘍については、個々の症例を深く解析することが、むしろ現実的かつ有効な手立てとなります。<br>
+                  <br>
+                  これらの研究は、臨床医が自らの診療領域で抱いた問いを研究室に持ち込み、基礎研究の手法を用いて自ら解いていくという形で進んでいます。問いの出どころが多様であるために、対象となる臓器も現象も一様ではありませんが、それは診療の広がりがそのまま研究の広がりになっているということでもあります。
+                </p>
+              </div>
+            </article>
+            <!-- ▼ 将来ここに個別テーマ・研究成果へのリンクを置く（コメントを外して使用）
+            <p class="works-article-links">
+              <a href="#">関連する研究成果</a>
+              <a href="public.html#public">関連論文</a>
+            </p>
+            -->
             </div>
-          </article>
-          <!-- ▼ 将来ここに個別テーマ・研究成果へのリンクを置く（コメントを外して使用）
-          <p class="works-article-links">
-            <a href="#">関連する研究成果</a>
-            <a href="public.html#public">関連論文</a>
-          </p>
-          -->
+          </details>
         </div><!-- container -->
       </div>
 
     </section>
     <!-- END 研究のアプローチ -->
+
+
+
+    <!-- ==================================================================
+         技術基盤
+         ================================================================== -->
+    <section class="works-article-wrapper mb-4">
+      <div class="container">
+        <h3 class="works-article-title animate slide-from-bottom link-adjust" id="tech">技術基盤</h3>
+        <ul class="animate slide-from-bottom">
+          <li class="pb-1">がん細胞の不均一性と可塑性を理解するためには、個々の細胞の分子状態を捉えるだけでなく、細胞の空間的な配置や時間的な変化を調べ、さらに機能的な介入によってその役割を検証する必要があります。私たちは、これらの異なる情報を取得・統合するための実験技術と情報解析技術を研究室内に整備し、研究課題に応じて組み合わせています。</li>
+        </ul>
+        <div class="wk-grid wk-tech-grid animate slide-from-bottom">
+        <div class="wk-card ">
+          <h4 class="wk-card-title">分子状態を捉える</h4>
+          <p class="wk-card-lead">個々の細胞の遺伝子発現、クロマチン状態、ゲノムの変異やコピー数、タンパク質発現などを解析し、細胞集団の分子レベルでの不均一性を明らかにします。複数の分子階層を比較・統合するほか、scRNA-seqとscATAC-seqを同一細胞で取得するマルチオーム解析も行っています。</p>
+          <details class="wk-tech-details">
+            <summary>具体的な技術・解析例</summary>
+            <ul class="wk-card-list">
+              <li>ゲノム解析：WES、WGS、scDNA-seq（Mission Bio Tapestri）</li>
+              <li>エピゲノム解析：ATAC-seq、scATAC-seq、ChIP-seq、CUT&amp;Tag</li>
+              <li>トランスクリプトーム解析：RNA-seq、scRNA-seq</li>
+              <li>タンパク質・細胞表現型解析：フローサイトメトリー</li>
+            </ul>
+          </details>
+        </div>
+        <div class="wk-card ">
+          <h4 class="wk-card-title">組織・細胞内の空間情報を捉える</h4>
+          <p class="wk-card-lead">組織内での細胞の配置や周囲の細胞との位置関係に加え、細胞内での分子の局在を調べています。組織形態、タンパク質やDNAの局在、空間的な遺伝子発現をそれぞれの手法に応じた解像度で解析し、分子情報と空間情報を対応づけます。</p>
+          <details class="wk-tech-details">
+            <summary>具体的な技術・解析例</summary>
+            <ul class="wk-card-list">
+              <li>組織形態・病理学的評価：HE染色</li>
+              <li>タンパク質の発現・局在：免疫組織化学（IHC）、免疫蛍光染色（IF）</li>
+              <li>DNAの局在・コピー数：FISH、免疫染色とFISHの組み合わせ（IHC＋FISH、IF＋FISH）</li>
+              <li>空間トランスクリプトーム解析：Visium、Xenium</li>
+            </ul>
+          </details>
+        </div>
+        <div class="wk-card ">
+          <h4 class="wk-card-title">時間的変化と細胞系譜を追う</h4>
+          <p class="wk-card-lead">ある時点での観察だけでは、細胞状態の変化と、特定の細胞・クローンの増殖や生存による選択を区別できません。細胞バーコーディングと単一細胞解析を組み合わせ、クローンごとの状態や集団構成の推移を調べるとともに、ライブセルイメージングによって細胞・分子の動態を直接観察します。</p>
+          <details class="wk-tech-details">
+            <summary>具体的な技術・解析例</summary>
+            <ul class="wk-card-list">
+              <li>細胞バーコーディングによるクローン識別・系譜追跡</li>
+              <li>バーコードとscRNA-seq／scATAC-seq／scDNA-seqの統合解析</li>
+              <li>バーコード標識クローンのプール解析：in vitro薬剤応答、in vivo増殖・転移など</li>
+              <li>ライブセルイメージング：細胞形態・挙動、蛍光標識タンパク質の動態・分配、ノックインレポーター、共培養下での細胞間相互作用</li>
+            </ul>
+          </details>
+        </div>
+        <div class="wk-card ">
+          <h4 class="wk-card-title">介入して機能を検証する</h4>
+          <p class="wk-card-lead">観察された分子状態や遺伝子発現の違いが、細胞の性質や振る舞いにどのように関与するかを調べるため、遺伝子操作や薬剤処理などの機能的な介入を行います。個別の因子を対象とする検証からプール型スクリーニングまで、研究目的に応じて実験系を使い分けています。</p>
+          <details class="wk-tech-details">
+            <summary>具体的な技術・解析例</summary>
+            <ul class="wk-card-list">
+              <li>個別遺伝子の機能操作：CRISPR/Cas9によるノックアウト・ノックイン、dCas9系による発現制御、遺伝子導入・ノックダウン</li>
+              <li>遺伝子機能スクリーニング：CRISPR/sgRNAを用いたプール型スクリーニング</li>
+              <li>薬理学的・環境的介入：薬剤処理、共培養、培養条件の変更</li>
+            </ul>
+          </details>
+        </div>
+        <div class="wk-card wk-card-informatics">
+          <h4 class="wk-card-title">データ解析と解析手法の開発</h4>
+          <p class="wk-card-lead">実験によるデータ取得と情報解析を一体として進めています。既存の解析手法を適用するだけでなく、研究上の問いに応じて解析方法を設計・改良し、必要に応じて新たなアルゴリズムを開発しています。また、数理科学分野との共同研究を通じて、観察結果を定量的なモデルに基づいて解釈することも重視しています。</p>
+          <details class="wk-tech-details">
+            <summary>具体的な技術・解析例</summary>
+            <ul class="wk-card-list">
+              <li>単一細胞・マルチオミックス解析：細胞状態・エピゲノム制御の解析、分子階層間の統合解析</li>
+              <li>空間・画像データ解析：空間トランスクリプトーム解析、顕微鏡画像・ハイコンテントイメージングデータの定量解析</li>
+              <li>系譜・時系列データ解析：バーコード情報と単一細胞データの統合、クローン動態や細胞状態変化の定量</li>
+            </ul>
+          </details>
+        </div>
+        </div>
+        <p class="wk-closing animate slide-from-bottom">これらの技術を研究室内で密接に連携させ、実験結果に基づいて新たな仮説を立て、必要な測定や機能的検証につなげられることが、私たちの研究基盤の特徴です。ウェット実験と情報解析を相互に行き来することで、観察された現象の記述にとどまらず、その背景にある仕組みの解明を目指しています。</p>
+      </div><!-- container -->
+    </section>
+    <!-- END 技術基盤 -->
+
+
+
+    <!-- ==================================================================
+         リソース
+         ================================================================== -->
+    <section class="works-article-wrapper mb-4">
+      <div class="container">
+        <h3 class="works-article-title animate slide-from-bottom link-adjust" id="resource">リソース</h3>
+        <ul class="animate slide-from-bottom">
+          <li class="pb-1">私たちは、臨床検体、患者由来の培養・移植モデル、バーコード標識クローンコレクションなどを研究資源として整備しています。これらを組み合わせ、患者腫瘍で観察された現象の解析から、その機能的な検証までを進めています。</li>
+        </ul>
+        <div class="wk-grid wk-resource-grid animate slide-from-bottom">
+        <div class="wk-card wk-res">
+          <h4 class="wk-card-title">臨床検体</h4>
+          <p class="wk-card-lead">がん研有明病院と同一法人の研究所に所属しており、乳腺外科、肝胆膵内科、消化器外科、病理部との連携のもとで手術検体・内視鏡検体を解析に用いています。乳腺外科医と肝胆膵内科医が常勤の研究員として在籍しているため、臨床の文脈を踏まえて検体の選択と実験計画を組み立てられます。</p>
+        </div>
+        <div class="wk-card wk-res">
+          <h4 class="wk-card-title">患者由来オルガノイド・移植モデル（PDO / PDX / PDOX）</h4>
+          <p class="wk-card-lead">乳がんや膵がんなどの患者検体から樹立したオルガノイドを継続的に蓄積しています。薬剤処理、遺伝子導入、イメージングなどに利用するとともに、患者腫瘍組織や患者由来オルガノイドをマウスに移植したモデル（PDX / PDOX）も整備しています。乳腺脂肪体や膵臓への同所移植モデルを用い、膵がんの腹膜播種など、培養系だけでは評価が難しい腫瘍の進展過程を解析しています。</p>
+        </div>
+        <div class="wk-card wk-res">
+          <h4 class="wk-card-title">バーコード標識クローン株コレクション</h4>
+          <p class="wk-card-lead">細胞バーコーディングによって個々のクローンを識別できる状態にした細胞株・オルガノイドを蓄積しています。同一の出発集団に対して条件を変えた実験を行い、クローン単位で運命を比較できるため、可塑性と不均一性を扱う研究の出発点になります。他所から入手できる性質のものではなく、継続的に作り続けてきたことによって初めて成立している資源です。</p>
+        </div>
+        </div>
+      </div><!-- container -->
+    </section>
+    <!-- END リソース -->
 
 
 
@@ -518,6 +809,52 @@
   <!--CUSTOM JS-->
   <script src="js/custom.js"></script>
   <script src="js/fadeIn.js"></script>
+
+  <!-- 小項目の折りたたみ制御 -->
+  <script>
+    (function () {
+      var items = document.querySelectorAll('details.works-theme');
+      if (!items.length) return;
+
+      /* URL に #theme1-1 などが付いていたら、その項目を開いて表示位置を合わせる */
+      function openFromHash() {
+        var id = location.hash.replace('#', '');
+        if (!id) return;
+        var el = document.getElementById(id);
+        if (el && el.tagName.toLowerCase() === 'details') {
+          el.open = true;
+          el.scrollIntoView({ block: 'start' });
+        }
+      }
+      openFromHash();
+      window.addEventListener('hashchange', openFromHash);
+
+      /* 同じページ内のリンクから開く場合にも対応 */
+      document.addEventListener('click', function (e) {
+        var a = e.target.closest ? e.target.closest('a[href^="#"]') : null;
+        if (!a) return;
+        var t = document.getElementById(a.getAttribute('href').slice(1));
+        if (t && t.tagName.toLowerCase() === 'details') t.open = true;
+      });
+
+      /* すべて開く／すべて閉じる */
+      var btn = document.getElementById('worksExpandAll');
+      if (!btn) return;
+      function sync() {
+        var allOpen = true;
+        for (var i = 0; i < items.length; i++) { if (!items[i].open) { allOpen = false; break; } }
+        btn.textContent = allOpen ? '\u3059\u3079\u3066\u9589\u3058\u308b' : '\u3059\u3079\u3066\u958b\u304f';
+      }
+      btn.addEventListener('click', function () {
+        var allOpen = true;
+        for (var i = 0; i < items.length; i++) { if (!items[i].open) { allOpen = false; break; } }
+        for (var j = 0; j < items.length; j++) { items[j].open = !allOpen; }
+        sync();
+      });
+      for (var k = 0; k < items.length; k++) items[k].addEventListener('toggle', sync);
+      sync();
+    })();
+  </script>
 </body>
 
 </html>
