@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="乳癌の患者内不均一性と進化を、シングルセル解析、空間オミクス、ゲノム情報の統合から解明する研究を紹介します。">
+  <meta name="author" content="Kazutaka Otsuji">
+  <title>研究紹介 | Kazutaka Otsuji</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400..700&amp;display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- 丸山研トップへ戻るバー（ラボ側で追加） -->
+  <style>
+    .lab-bar { background: var(--ink, #172637); color: #fff; font-size: .82rem; }
+    .lab-bar > .layout { display: flex; align-items: center; gap: .9rem; padding-block: .5rem; }
+    .lab-bar a { color: #fff; font-weight: 700; letter-spacing: .06em; text-decoration: none; }
+    .lab-bar a:hover, .lab-bar a:focus { text-decoration: underline; }
+    .lab-bar span { color: #c3ced8; }
+    @media (max-width: 40rem) { .lab-bar span { display: none; } }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">研究内容へ移動</a>
+  <!-- 丸山研トップへ戻るバー（ラボ側で追加） -->
+  <div class="lab-bar">
+    <div class="layout">
+      <a href="https://r-maruyama-lab.github.io/">&#8592;&nbsp;REO MARUYAMA LAB</a>
+      <span>がん研究会 がんエピゲノム研究部</span>
+    </div>
+  </div>
+
+
+  <!-- Section navigation -->
+  <header class="site-header" id="top">
+    <nav class="site-nav layout" aria-label="研究セクション">
+      <a class="site-name" href="#vision">K. Otsuji | Research</a>
+      <ul>
+        <li><a href="#vision">研究ビジョン</a></li>
+        <li><a href="#philosophy">研究理念</a></li>
+        <li><a href="#themes">研究テーマ</a></li>
+        <li><a href="#future-directions">今後の展望</a></li>
+      </ul>
+      <div class="language-switcher" role="group" aria-label="表示言語">
+        <span lang="ja" aria-current="page">日本語</span>
+        <span aria-hidden="true">|</span>
+        <a href="index.html" hreflang="en" lang="en">English</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="layout" id="main">
+    <!-- A. Research Vision -->
+    <section class="vision" id="vision" aria-labelledby="vision-title">
+      <p class="section-label">研究ビジョン</p>
+      <h1 id="vision-title">乳癌の患者内不均一性と進化の解明</h1>
+      <div class="research-layout research-layout--equal">
+        <div class="research-description">
+          <p class="subtitle">一人の患者の癌を深く理解する</p>
+          <p class="section-copy">乳癌の不均一性は、患者間だけでなく、同一患者の腫瘍内の領域間、解剖学的部位間、さらには時間の経過に伴っても認められます。私たちは、個々の臨床症例を詳細に調べ、シングルセルレベルの転写解析、空間オミクス、ゲノム情報を統合することで、この多様性の解明を目指します。</p>
+        </div>
+        <figure class="research-figure">
+          <img src="images/research-overview.png?v=babcf231342655b4" width="3641" height="2327" alt="乳癌患者を中心に、腫瘍内不均一性、癌の時空間的進化、腫瘍の空間的組織化、計算解析手法の4つの研究テーマを示した概要図。">
+        </figure>
+      </div>
+    </section>
+
+    <!-- B. Research Philosophy -->
+    <section class="philosophy section" id="philosophy" aria-labelledby="philosophy-title">
+      <h2 id="philosophy-title">研究理念</h2>
+      <div class="principles">
+        <section>
+          <h3>患者内で深く追究する</h3>
+          <p class="section-copy">私たちは患者一人ひとりを詳細に調べ、腫瘍の分子、細胞、空間、時間の各側面における多様性を追究します。複数の検体、領域、分子データを統合することで、従来のコホート単位の解析では見落とされうる生物学的特徴を明らかにすることを目指します。</p>
+        </section>
+        <section>
+          <h3>患者間で検証する</h3>
+          <p class="section-copy">個々の症例を詳しく調べて得られた知見は、より広い生物学的研究の出発点となりえます。独立した臨床検体や公開データセットでこれらの観察結果を検証し、個々の患者に固有の現象と、他の患者にも当てはまる可能性のある生物学的原理を見極めます。</p>
+        </section>
+      </div>
+    </section>
+
+    <!-- Research theme navigation -->
+    <nav class="theme-index section" id="themes" aria-labelledby="themes-title">
+      <h2 id="themes-title">研究テーマ</h2>
+      <ol>
+        <li><a href="#intratumoral-heterogeneity">腫瘍内不均一性</a></li>
+        <li><a href="#cancer-evolution">癌の時空間的進化</a></li>
+        <li><a href="#spatial-organization">腫瘍の空間的組織化</a></li>
+        <li><a href="#computational-methods">シングルセル・空間オミクスのための計算解析手法</a></li>
+      </ol>
+    </nav>
+
+    <!-- C. Research Theme 01 -->
+    <section class="section" id="intratumoral-heterogeneity" aria-labelledby="intratumoral-heterogeneity-title">
+      <p class="section-label">研究テーマ 01</p>
+      <h2 id="intratumoral-heterogeneity-title">腫瘍内不均一性</h2>
+      <p class="subtitle">ひとつの腫瘍内に存在する多様性</p>
+      <div class="research-layout">
+        <!-- Edit the research description here. -->
+        <div class="research-description">
+          <p class="section-copy">個々の乳腫瘍には、ゲノムや転写の特徴が異なる癌細胞集団が存在します。こうした不均一性は、コピー数異常、遺伝子発現プログラム、細胞状態、さらにエストロゲン受容体（ER）やHER2などの臨床的に重要なマーカーの違いとして現れることがあります。</p>
+          <p class="section-copy">シングルセルRNAシーケンスと空間トランスクリプトーム解析を用いて、異なる癌細胞集団が同じ腫瘍内でどのように共存し、それぞれの分子特性が互いにどう関連するかを調べます。</p>
+          <p class="section-copy">従来の腫瘍分類の枠を越え、個々の腫瘍がもつ生物学的な複雑さに着目して、腫瘍内の多様性を明らかにすることを目指します。</p>
+        </div>
+        <figure class="research-figure">
+          <a href="images/theme1.png?v=75ced6a04314d2a2">
+            <img src="images/theme1.png?v=75ced6a04314d2a2" width="1280" height="720" alt="ひとつの乳腫瘍に含まれる癌細胞集団のゲノムおよび転写の多様性を示す研究概要図。">
+          </a>
+          <figcaption class="publication-reference">
+            <a href="https://www.nature.com/articles/s41698-024-00723-6" target="_blank" rel="noopener">NPJ Precis Oncol. 2024</a>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- D. Research Theme 02 -->
+    <section class="section" id="cancer-evolution" aria-labelledby="cancer-evolution-title">
+      <p class="section-label">研究テーマ 02</p>
+      <h2 id="cancer-evolution-title">癌の時空間的進化</h2>
+      <p class="subtitle">癌は部位や時間によってどのように変化するのか</p>
+      <div class="research-layout research-layout--figure-first">
+        <!-- Edit the research description here. -->
+        <div class="research-description">
+          <p class="section-copy">癌は、病態の進行、環境条件、治療による選択圧の影響を受けて進化します。同一患者の複数の病変や時点の検体を比較することで、癌細胞集団が時間の経過や解剖学的部位の違いに伴ってどのように変化するかを調べることができます。</p>
+          <p class="section-copy">原発腫瘍と再発腫瘍のペアに加え、経時的に採取した検体や転移巣の検体を、ゲノム解析、シングルセル解析、空間トランスクリプトーム解析を組み合わせて解析します。</p>
+          <p class="section-copy">とくに、先在する少数のサブクローンが治療抵抗性や再発に関与する可能性に注目し、ゲノムレベルのクローン進化と転写状態の変化を区別して検討します。</p>
+          <p class="section-copy">癌の進行や治療の過程で、患者内不均一性がどのように変化するかを理解することが目的です。</p>
+        </div>
+        <figure class="research-figure">
+          <a href="images/theme2.png?v=94edf27d2ab0c88b">
+            <img src="images/theme2.png?v=94edf27d2ab0c88b" width="4134" height="1890" alt="同一患者の乳癌細胞集団が、解剖学的部位や時間の経過に伴ってどのように変化するかを示す研究概要図。">
+          </a>
+          <figcaption class="publication-reference">
+            <a href="https://www.nature.com/articles/s41698-024-00723-6" target="_blank" rel="noopener">NPJ Precis Oncol. 2024</a>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- E. Research Theme 03 -->
+    <section class="section" id="spatial-organization" aria-labelledby="spatial-organization-title">
+      <p class="section-label">研究テーマ 03</p>
+      <h2 id="spatial-organization-title">腫瘍の空間的組織化</h2>
+      <p class="subtitle">腫瘍の組織構造を理解する</p>
+      <div class="research-layout">
+        <!-- Edit the research description here. -->
+        <div class="research-description">
+          <p class="section-copy">腫瘍の生物学的性質は、構成細胞の種類や分子状態に加え、細胞が組織内でどのように配置されているかにも左右されます。</p>
+          <p class="section-copy">XeniumやVisiumなどの高解像度の空間トランスクリプトーム解析技術を用いて、癌細胞集団の空間分布、腫瘍と間質の境界、腫瘍の層状構造、壊死領域に関連する細胞状態を調べます。</p>
+          <p class="section-copy">細胞を離散的なクラスターに分類するだけでなく、空間的に連続する転写の変化や、局所で生じる癌細胞の状態間の移行を捉えることを目指します。</p>
+          <p class="section-copy">これらの解析を通じて、癌の不均一性が組織内でどのような空間構造をとり、その構造が腫瘍の生物学的性質とどう関係するかを明らかにすることを目指します。</p>
+        </div>
+        <figure class="research-figure">
+          <a href="images/theme3.png?v=2a20e03c6f4e73e8">
+            <img src="images/theme3.png?v=2a20e03c6f4e73e8" width="947" height="536" alt="腫瘍組織内における乳癌細胞集団の空間配置を示す研究概要図。">
+          </a>
+        </figure>
+      </div>
+    </section>
+
+    <!-- F. Research Theme 04 -->
+    <section class="section" id="computational-methods" aria-labelledby="computational-methods-title">
+      <p class="section-label">研究テーマ 04</p>
+      <h2 id="computational-methods-title">シングルセル・空間オミクスのための計算解析手法</h2>
+      <p class="subtitle">癌の不均一性を解明するための解析技術開発</p>
+      <div class="research-layout research-layout--figure-first">
+        <!-- Edit the research description here. -->
+        <div class="research-description">
+          <p class="section-copy">シングルセル・空間オミクス技術の進展により、細胞の多様性をかつてない解像度で調べられるようになりました。一方、こうした複雑なデータの解釈には依然として課題があり、とくに標的遺伝子パネルを用いる場合や、不均一性の高い腫瘍組織を解析する場合には困難が伴います。</p>
+          <p class="section-copy">臨床検体を用いた癌研究から生じる実際の解析課題に対応するため、細胞種のアノテーション、組織の空間解析、ゲノムの不均一性の評価に向けた計算解析手法を開発しています。</p>
+          <p class="section-copy">現在、マーカーに基づく細胞アノテーションのためのHiSCATとPanelScope、組織の空間構造を解析するSpArchii、コピー数に基づいて癌細胞集団間の関係を調べるCNVTracerの開発を進めています。</p>
+          <p class="section-copy">これらのツールを通じて、シングルセル・空間オミクスデータの解釈を容易にし、生物学的に意味のあるパターンの発見につなげることを目指します。</p>
+        </div>
+        <figure class="research-figure">
+          <a href="images/theme4.png?v=2b942d794ecb4a56">
+            <img src="images/theme4.png?v=2b942d794ecb4a56" width="1468" height="575" alt="シングルセル・空間オミクスデータから細胞の多様性を解析する計算解析手法の概要図。">
+          </a>
+        </figure>
+      </div>
+    </section>
+
+    <!-- G. Future Directions -->
+    <section class="section" id="future-directions" aria-labelledby="future-title">
+      <p class="section-label">今後の展望</p>
+      <h2 id="future-title">個々の腫瘍の理解から普遍的な生物学的原理の解明へ</h2>
+      <div class="research-layout research-layout--equal">
+        <!-- Edit the research description here. -->
+        <div class="research-description">
+          <p class="section-copy">今後は、個々の患者について、ゲノム上のクローン構造、細胞の転写状態、組織の空間構造、経時的変化を統合して解析することを目指します。</p>
+          <p class="section-copy">これらの相補的な側面を結びつけることで、癌の不均一性がどのように生じ、維持され、病態の進行や治療抵抗性に関与するかを調べます。</p>
+          <p class="section-copy">また、詳細に解析した個々の症例から得られた知見を独立した患者コホートで検討し、患者ごとに異なる複雑な病態の経過を捉えながら、腫瘍間で共有されうる生物学的原理を明らかにすることを目指します。</p>
+        </div>
+        <figure class="research-figure">
+          <a href="images/future.png?v=e30db25c37379c12">
+            <img src="images/future.png?v=e30db25c37379c12" width="4872" height="2197" alt="患者内のゲノム上のクローン構造、細胞の転写状態、組織の空間構造、経時的変化を統合する今後の研究の概要図。">
+          </a>
+        </figure>
+      </div>
+      <p class="section-copy closing-statement">患者内で深く追究し、患者間で検証する。</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="layout footer-content">
+      <div class="footer-identity">
+        <p>© 2026 Kazutaka Otsuji, NEXT-Ganken Program, Japanese Foundation for Cancer Research</p>
+        <a href="https://researchmap.jp/kotsuji-tky" target="_blank" rel="noopener">researchmap</a>
+      </div>
+      <a class="back-to-top" href="#top">ページ上部へ ↑</a>
+    </div>
+  </footer>
+</body>
+</html>

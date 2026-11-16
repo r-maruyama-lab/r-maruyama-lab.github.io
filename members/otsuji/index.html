@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A research overview of intrapatient heterogeneity and evolution in breast cancer.">
+  <meta name="author" content="Kazutaka Otsuji">
+  <title>Research | Kazutaka Otsuji</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400..700;1,700&amp;display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- 丸山研トップへ戻るバー（ラボ側で追加） -->
+  <style>
+    .lab-bar { background: var(--ink, #172637); color: #fff; font-size: .82rem; }
+    .lab-bar > .layout { display: flex; align-items: center; gap: .9rem; padding-block: .5rem; }
+    .lab-bar a { color: #fff; font-weight: 700; letter-spacing: .06em; text-decoration: none; }
+    .lab-bar a:hover, .lab-bar a:focus { text-decoration: underline; }
+    .lab-bar span { color: #c3ced8; }
+    @media (max-width: 40rem) { .lab-bar span { display: none; } }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to research</a>
+  <!-- 丸山研トップへ戻るバー（ラボ側で追加） -->
+  <div class="lab-bar">
+    <div class="layout">
+      <a href="https://r-maruyama-lab.github.io/">&#8592;&nbsp;REO MARUYAMA LAB</a>
+      <span>Cancer Epigenome Research, JFCR</span>
+    </div>
+  </div>
+
+
+  <!-- Section navigation -->
+  <header class="site-header" id="top">
+    <nav class="site-nav layout" aria-label="Research sections">
+      <a class="site-name" href="#vision">K. Otsuji | Research</a>
+      <ul>
+        <li><a href="#vision">Vision</a></li>
+        <li><a href="#philosophy">Philosophy</a></li>
+        <li><a href="#themes">Themes</a></li>
+        <li><a href="#future-directions">Future Directions</a></li>
+      </ul>
+      <div class="language-switcher" role="group" aria-label="Language">
+        <a href="index-ja.html" hreflang="ja" lang="ja">日本語</a>
+        <span aria-hidden="true">|</span>
+        <span lang="en" aria-current="page">English</span>
+      </div>
+    </nav>
+  </header>
+
+  <main class="layout" id="main">
+    <!-- A. Research Vision -->
+    <section class="vision" id="vision" aria-labelledby="vision-title">
+      <p class="section-label">Research Vision</p>
+      <h1 id="vision-title">Deciphering Intrapatient Heterogeneity and Evolution in Breast Cancer</h1>
+      <div class="research-layout research-layout--equal">
+        <div class="research-description">
+          <p class="subtitle">Understanding Cancer, One Patient at a Time.</p>
+          <p class="section-copy">Breast cancer heterogeneity exists not only between patients but also within an individual patient, across tumor regions, anatomical sites, and time. Our research seeks to understand this diversity through detailed investigations of individual clinical cases, integrating single-cell transcriptomics, spatial omics, and genomic information.</p>
+        </div>
+        <figure class="research-figure">
+          <img src="images/research-overview.png?v=babcf231342655b4" width="3641" height="2327" alt="Overview of four research themes surrounding a patient with breast cancer: intratumoral heterogeneity, spatiotemporal cancer evolution, spatial organization of tumors, and computational methods.">
+        </figure>
+      </div>
+    </section>
+
+    <!-- B. Research Philosophy -->
+    <section class="philosophy section" id="philosophy" aria-labelledby="philosophy-title">
+      <h2 id="philosophy-title">Research Philosophy</h2>
+      <div class="principles">
+        <section>
+          <h3>Depth within patients</h3>
+          <p class="section-copy">We prioritize in-depth investigation of individual patients, examining the molecular, cellular, spatial, and temporal diversity of their tumors. By integrating multiple samples, regions, and molecular modalities, we aim to uncover biological features that may be overlooked by conventional cohort-level analyses.</p>
+        </section>
+        <section>
+          <h3>Validation across patients</h3>
+          <p class="section-copy">Insights derived from detailed individual cases can provide starting points for broader biological investigations. We seek to evaluate these observations in independent clinical samples and publicly available datasets, distinguishing patient-specific phenomena from potentially generalizable biological principles.</p>
+        </section>
+      </div>
+    </section>
+
+    <!-- Research theme navigation -->
+    <nav class="theme-index section" id="themes" aria-labelledby="themes-title">
+      <h2 id="themes-title">Research Themes</h2>
+      <ol>
+        <li><a href="#intratumoral-heterogeneity">Intratumoral Heterogeneity</a></li>
+        <li><a href="#cancer-evolution">Spatiotemporal Cancer Evolution</a></li>
+        <li><a href="#spatial-organization">Spatial Organization of Tumors</a></li>
+        <li><a href="#computational-methods">Computational Methods for Single-Cell and Spatial Omics</a></li>
+      </ol>
+    </nav>
+
+    <!-- C. Research Theme 01 -->
+    <section class="section" id="intratumoral-heterogeneity" aria-labelledby="intratumoral-heterogeneity-title">
+      <p class="section-label">Research Theme 01</p>
+      <h2 id="intratumoral-heterogeneity-title">Intratumoral Heterogeneity</h2>
+      <p class="subtitle">Diversity Within a Single Tumor</p>
+      <div class="research-layout">
+        <!-- Edit the research description here. -->
+        <div class="research-description">
+          <p class="section-copy">Individual breast tumors contain cancer cell populations with diverse genomic and transcriptional characteristics. Such heterogeneity may involve differences in copy-number alterations, gene expression programs, cellular states, and clinically relevant markers such as estrogen receptor (ER) and HER2.</p>
+          <p class="section-copy">Using single-cell RNA sequencing and spatial transcriptomics, we investigate how distinct cancer cell populations coexist within individual tumors and how their molecular properties relate to one another.</p>
+          <p class="section-copy">Our goal is to characterize intratumoral diversity beyond conventional tumor classifications, focusing on the biological complexity of each individual tumor.</p>
+        </div>
+        <figure class="research-figure">
+          <a href="images/theme1.png?v=75ced6a04314d2a2">
+            <img src="images/theme1.png?v=75ced6a04314d2a2" width="1280" height="720" alt="Graphical abstract on genomic and transcriptional diversity among cancer cell populations within a single breast tumor.">
+          </a>
+          <figcaption class="publication-reference">
+            <a href="https://www.nature.com/articles/s41698-024-00723-6" target="_blank" rel="noopener">NPJ Precis Oncol. 2024</a>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- D. Research Theme 02 -->
+    <section class="section" id="cancer-evolution" aria-labelledby="cancer-evolution-title">
+      <p class="section-label">Research Theme 02</p>
+      <h2 id="cancer-evolution-title">Spatiotemporal Cancer Evolution</h2>
+      <p class="subtitle">How Cancer Changes Across Sites and Time</p>
+      <div class="research-layout research-layout--figure-first">
+        <!-- Edit the research description here. -->
+        <div class="research-description">
+          <p class="section-copy">Cancer evolves under the influence of disease progression, environmental conditions, and therapeutic selection pressures. Comparing multiple lesions and time points from the same patient offers an opportunity to investigate how cancer cell populations change over time and across anatomical sites.</p>
+          <p class="section-copy">We analyze paired primary and recurrent tumors, as well as longitudinal and metastatic specimens, using integrated genomic, single-cell, and spatial transcriptomic approaches.</p>
+          <p class="section-copy">Particular attention is given to the possibility that pre-existing minor subclones contribute to treatment resistance and recurrence, and to the distinction between genomic clonal evolution and transcriptional state changes.</p>
+          <p class="section-copy">Our objective is to understand how intrapatient heterogeneity evolves during cancer progression and treatment.</p>
+        </div>
+        <figure class="research-figure">
+          <a href="images/theme2.png?v=94edf27d2ab0c88b">
+            <img src="images/theme2.png?v=94edf27d2ab0c88b" width="4134" height="1890" alt="Graphical abstract on how breast cancer cell populations change across anatomical sites and over time within a patient.">
+          </a>
+          <figcaption class="publication-reference">
+            <a href="https://www.nature.com/articles/s41698-024-00723-6" target="_blank" rel="noopener">NPJ Precis Oncol. 2024</a>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- E. Research Theme 03 -->
+    <section class="section" id="spatial-organization" aria-labelledby="spatial-organization-title">
+      <p class="section-label">Research Theme 03</p>
+      <h2 id="spatial-organization-title">Spatial Organization of Tumors</h2>
+      <p class="subtitle">Understanding Tumor Architecture</p>
+      <div class="research-layout">
+        <!-- Edit the research description here. -->
+        <div class="research-description">
+          <p class="section-copy">The biological properties of a tumor depend not only on the identities and molecular states of its cells, but also on how these cells are spatially organized within tissue.</p>
+          <p class="section-copy">Using high-resolution spatial transcriptomic technologies, including Xenium and Visium, we investigate the spatial distribution of cancer cell populations, tumor–stroma interfaces, layered tumor architectures, and cellular states associated with necrotic regions.</p>
+          <p class="section-copy">Beyond discrete cell clustering, we aim to characterize spatially continuous transcriptional changes and localized transitions between cancer cell states.</p>
+          <p class="section-copy">Through these analyses, we seek to understand how cancer heterogeneity is organized within tissue and how spatial architecture relates to tumor biology.</p>
+        </div>
+        <figure class="research-figure">
+          <a href="images/theme3.png?v=2a20e03c6f4e73e8">
+            <img src="images/theme3.png?v=2a20e03c6f4e73e8" width="947" height="536" alt="Graphical abstract on the spatial arrangement of breast cancer cell populations within tumor tissue.">
+          </a>
+        </figure>
+      </div>
+    </section>
+
+    <!-- F. Research Theme 04 -->
+    <section class="section" id="computational-methods" aria-labelledby="computational-methods-title">
+      <p class="section-label">Research Theme 04</p>
+      <h2 id="computational-methods-title">Computational Methods for Single-Cell and Spatial Omics</h2>
+      <p class="subtitle">Developing Tools to Explore Cancer Heterogeneity</p>
+      <div class="research-layout research-layout--figure-first">
+        <!-- Edit the research description here. -->
+        <div class="research-description">
+          <p class="section-copy">Single-cell and spatial omics technologies have made it possible to investigate cellular diversity at unprecedented resolution. However, interpreting these complex datasets remains challenging, particularly when using targeted gene panels or analyzing highly heterogeneous tumor tissues.</p>
+          <p class="section-copy">To address practical analytical challenges arising from clinical cancer research, we develop computational methods for cell-type annotation, spatial tissue analysis, and the investigation of genomic heterogeneity.</p>
+          <p class="section-copy">Our ongoing methodological work includes HiSCAT and PanelScope for marker-based cell annotation, SpArchii for spatial tissue architecture analysis, and CNVTracer for investigating copy-number-based relationships among cancer cell populations.</p>
+          <p class="section-copy">These tools are intended to improve the interpretability of single-cell and spatial omics data and facilitate the discovery of biologically meaningful patterns.</p>
+        </div>
+        <figure class="research-figure">
+          <a href="images/theme4.png?v=2b942d794ecb4a56">
+            <img src="images/theme4.png?v=2b942d794ecb4a56" width="1468" height="575" alt="Graphical abstract on computational methods for analyzing cellular diversity in single-cell and spatial omics data.">
+          </a>
+        </figure>
+      </div>
+    </section>
+
+    <!-- G. Future Directions -->
+    <section class="section" id="future-directions" aria-labelledby="future-title">
+      <p class="section-label">Future Directions</p>
+      <h2 id="future-title">From Individual Tumors to Generalizable Biological Principles</h2>
+      <div class="research-layout research-layout--equal">
+        <!-- Edit the research description here. -->
+        <div class="research-description">
+          <p class="section-copy">Our future research aims to integrate genomic clonal structure, transcriptional cell states, spatial tissue architecture, and longitudinal changes within individual patients.</p>
+          <p class="section-copy">By connecting these complementary dimensions, we seek to investigate how cancer heterogeneity arises, persists, and contributes to disease progression and therapeutic resistance.</p>
+          <p class="section-copy">We also aim to extend findings from deeply characterized individual cases to independent patient cohorts, identifying biological principles that may be shared across tumors while preserving the complexity of individual disease trajectories.</p>
+        </div>
+        <figure class="research-figure">
+          <a href="images/future.png?v=e30db25c37379c12">
+            <img src="images/future.png?v=e30db25c37379c12" width="4872" height="2197" alt="Future research directions integrating genomic clonal structure, transcriptional cell states, spatial tissue architecture, and changes over time within patients.">
+          </a>
+        </figure>
+      </div>
+      <p class="section-copy closing-statement">Depth within patients. Validation across patients.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="layout footer-content">
+      <div class="footer-identity">
+        <p>© 2026 Kazutaka Otsuji, NEXT-Ganken Program, Japanese Foundation for Cancer Research</p>
+        <a href="https://researchmap.jp/kotsuji-tky" target="_blank" rel="noopener">researchmap</a>
+      </div>
+      <a class="back-to-top" href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+</body>
+</html>

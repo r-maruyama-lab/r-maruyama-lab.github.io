@@ -131,6 +131,21 @@
         .person-field { display: block; }
         .person-field-label { line-height: 1.6; margin: 0 0 1px; display: block; }
       }
+    
+      /* ===== 顔写真（名前の下） ===== */
+      .person-photo {
+        margin: 14px 0 0 17px;      /* .person-name の padding-left(14px)+border(3px) に揃える */
+        width: 140px; max-width: 100%;
+      }
+      .person-photo img {
+        display: block; width: 100%; aspect-ratio: 1 / 1;
+        object-fit: cover; object-position: center 28%;
+        border-radius: 4px;
+      }
+      .person-photo img:hover { transform: none; }   /* 既存テンプレートの拡大効果を無効化 */
+      @media (max-width: 767px) {
+        .person-photo { margin-top: 12px; width: 120px; }
+      }
     </style>
 </head>
 
@@ -308,6 +323,11 @@
                     <p class="person-name-ja">丸山 玲緒</p>
                     <p class="person-name-en">Reo MARUYAMA</p>
                 </div>
+                <!-- 顔写真。他の方に付ける場合はこの figure を複製し、src を images/people/ 内の
+                     ファイル名に差し替えてください。不要ならこの figure ごと削除で元に戻ります。 -->
+                <figure class="person-photo">
+                    <img src="images/people/maruyama_2026.jpg" alt="">
+                </figure>
             </div>
             <div class="col-lg-9 col-sm-8 col-xs-12">
                 <div class="person-fields">
@@ -333,7 +353,7 @@
                     </div>
                     <div class="person-field">
                         <span class="person-field-label">リンク</span>
-                        <p class="person-field-body"><a href="https://researchmap.jp/reo/">(researchmap)</a> <a href="pdf/aisatsu_ganken.pdf">(就任時挨拶)</a></p>
+                        <p class="person-field-body"><a href="https://researchmap.jp/reo/" target="_blank" rel="noopener">(researchmap)</a> <a href="pdf/aisatsu_ganken.pdf" target="_blank" rel="noopener">(就任時挨拶)</a></p>
                     </div>
                 </div>
             </div>
@@ -366,7 +386,7 @@
                     </div>
                     <div class="person-field">
                         <span class="person-field-label">リンク</span>
-                        <p class="person-field-body"><a href="https://researchmap.jp/ken1miyata/" target="_blank" rel="noopener">researchmap</a></p>
+                        <p class="person-field-body"><a href="https://researchmap.jp/ken1miyata/" target="_blank" rel="noopener">(researchmap)</a></p>
                     </div>
                 </div>
             </div>
@@ -399,7 +419,7 @@
                     </div>
                     <div class="person-field">
                         <span class="person-field-label">リンク</span>
-                        <p class="person-field-body"><a href="https://researchmap.jp/koheikumegawa/">(researchmap) </a> <a href="https://github.com/KoheiKumegawa?tab=repositories">(github)</a></p>
+                        <p class="person-field-body"><a href="https://researchmap.jp/koheikumegawa/" target="_blank" rel="noopener">(researchmap)</a> <a href="https://github.com/KoheiKumegawa?tab=repositories" target="_blank" rel="noopener">(github)</a></p>
                     </div>
                 </div>
             </div>
@@ -435,7 +455,7 @@
                     </div>
                     <div class="person-field">
                         <span class="person-field-label">リンク</span>
-                        <p class="person-field-body"><a href="https://researchmap.jp/asumiieasto/" target="_blank" rel="noopener">researchmap</a></p>
+                        <p class="person-field-body"><a href="https://researchmap.jp/asumiieasto/" target="_blank" rel="noopener">(researchmap)</a></p>
                     </div>
                 </div>
             </div>
@@ -468,7 +488,7 @@
                     </div>
                     <div class="person-field">
                         <span class="person-field-label">リンク</span>
-                        <p class="person-field-body"><a href="https://researchmap.jp/kotsuji-tky/" target="_blank" rel="noopener">researchmap</a></p>
+                        <p class="person-field-body"><a href="https://researchmap.jp/kotsuji-tky/" target="_blank" rel="noopener">(researchmap)</a> <a href="members/otsuji/index-ja.html" target="_blank" rel="noopener">(研究紹介)</a></p>
                     </div>
                 </div>
             </div>
@@ -503,7 +523,7 @@
                     <!-- researchmap などがある方は、下の4行のコメントを外してURLを入れてください
                     <div class="person-field">
                         <span class="person-field-label">リンク</span>
-                        <p class="person-field-body"><a href="https://researchmap.jp/XXXX/">researchmap</a></p>
+                        <p class="person-field-body"><a href="https://researchmap.jp/XXXX/" target="_blank" rel="noopener">(researchmap)</a></p>
                     </div>
                     -->
                 </div>
@@ -539,7 +559,7 @@
                     <!-- researchmap などがある方は、下の4行のコメントを外してURLを入れてください
                     <div class="person-field">
                         <span class="person-field-label">リンク</span>
-                        <p class="person-field-body"><a href="https://researchmap.jp/XXXX/">researchmap</a></p>
+                        <p class="person-field-body"><a href="https://researchmap.jp/XXXX/" target="_blank" rel="noopener">(researchmap)</a></p>
                     </div>
                     -->
                 </div>
@@ -574,7 +594,7 @@
                     <!-- researchmap などがある方は、下の4行のコメントを外してURLを入れてください
                     <div class="person-field">
                         <span class="person-field-label">リンク</span>
-                        <p class="person-field-body"><a href="https://researchmap.jp/XXXX/">researchmap</a></p>
+                        <p class="person-field-body"><a href="https://researchmap.jp/XXXX/" target="_blank" rel="noopener">(researchmap)</a></p>
                     </div>
                     -->
                 </div>
@@ -609,7 +629,7 @@
                     <!-- researchmap などがある方は、下の4行のコメントを外してURLを入れてください
                     <div class="person-field">
                         <span class="person-field-label">リンク</span>
-                        <p class="person-field-body"><a href="https://researchmap.jp/XXXX/">researchmap</a></p>
+                        <p class="person-field-body"><a href="https://researchmap.jp/XXXX/" target="_blank" rel="noopener">(researchmap)</a></p>
                     </div>
                     -->
                 </div>
@@ -645,7 +665,7 @@
                     <!-- researchmap などがある方は、下の4行のコメントを外してURLを入れてください
                     <div class="person-field">
                         <span class="person-field-label">リンク</span>
-                        <p class="person-field-body"><a href="https://researchmap.jp/XXXX/">researchmap</a></p>
+                        <p class="person-field-body"><a href="https://researchmap.jp/XXXX/" target="_blank" rel="noopener">(researchmap)</a></p>
                     </div>
                     -->
                 </div>
@@ -680,7 +700,7 @@
                     <!-- researchmap などがある方は、下の4行のコメントを外してURLを入れてください
                     <div class="person-field">
                         <span class="person-field-label">リンク</span>
-                        <p class="person-field-body"><a href="https://researchmap.jp/XXXX/">researchmap</a></p>
+                        <p class="person-field-body"><a href="https://researchmap.jp/XXXX/" target="_blank" rel="noopener">(researchmap)</a></p>
                     </div>
                     -->
                 </div>
@@ -716,7 +736,7 @@
                     <!-- researchmap などがある方は、下の4行のコメントを外してURLを入れてください
                     <div class="person-field">
                         <span class="person-field-label">リンク</span>
-                        <p class="person-field-body"><a href="https://researchmap.jp/XXXX/">researchmap</a></p>
+                        <p class="person-field-body"><a href="https://researchmap.jp/XXXX/" target="_blank" rel="noopener">(researchmap)</a></p>
                     </div>
                     -->
                 </div>
@@ -751,7 +771,7 @@
                     <!-- researchmap などがある方は、下の4行のコメントを外してURLを入れてください
                     <div class="person-field">
                         <span class="person-field-label">リンク</span>
-                        <p class="person-field-body"><a href="https://researchmap.jp/XXXX/">researchmap</a></p>
+                        <p class="person-field-body"><a href="https://researchmap.jp/XXXX/" target="_blank" rel="noopener">(researchmap)</a></p>
                     </div>
                     -->
                 </div>
@@ -785,7 +805,7 @@
                     </div>
                     <div class="person-field">
                         <span class="person-field-label">リンク</span>
-                        <p class="person-field-body"><a href="https://researchmap.jp/yuta-u_20010111/" target="_blank" rel="noopener">researchmap</a></p>
+                        <p class="person-field-body"><a href="https://researchmap.jp/yuta-u_20010111/" target="_blank" rel="noopener">(researchmap)</a></p>
                     </div>
                 </div>
             </div>
@@ -820,7 +840,7 @@
                     <!-- researchmap などがある方は、下の4行のコメントを外してURLを入れてください
                     <div class="person-field">
                         <span class="person-field-label">リンク</span>
-                        <p class="person-field-body"><a href="https://researchmap.jp/XXXX/">researchmap</a></p>
+                        <p class="person-field-body"><a href="https://researchmap.jp/XXXX/" target="_blank" rel="noopener">(researchmap)</a></p>
                     </div>
                     -->
                 </div>
@@ -856,7 +876,7 @@
                     <!-- researchmap などがある方は、下の4行のコメントを外してURLを入れてください
                     <div class="person-field">
                         <span class="person-field-label">リンク</span>
-                        <p class="person-field-body"><a href="https://researchmap.jp/XXXX/">researchmap</a></p>
+                        <p class="person-field-body"><a href="https://researchmap.jp/XXXX/" target="_blank" rel="noopener">(researchmap)</a></p>
                     </div>
                     -->
                 </div>
@@ -891,7 +911,7 @@
                     <!-- researchmap などがある方は、下の4行のコメントを外してURLを入れてください
                     <div class="person-field">
                         <span class="person-field-label">リンク</span>
-                        <p class="person-field-body"><a href="https://researchmap.jp/XXXX/">researchmap</a></p>
+                        <p class="person-field-body"><a href="https://researchmap.jp/XXXX/" target="_blank" rel="noopener">(researchmap)</a></p>
                     </div>
                     -->
                 </div>
@@ -926,7 +946,7 @@
                     <!-- researchmap などがある方は、下の4行のコメントを外してURLを入れてください
                     <div class="person-field">
                         <span class="person-field-label">リンク</span>
-                        <p class="person-field-body"><a href="https://researchmap.jp/XXXX/">researchmap</a></p>
+                        <p class="person-field-body"><a href="https://researchmap.jp/XXXX/" target="_blank" rel="noopener">(researchmap)</a></p>
                     </div>
                     -->
                 </div>
@@ -961,7 +981,7 @@
                     <!-- researchmap などがある方は、下の4行のコメントを外してURLを入れてください
                     <div class="person-field">
                         <span class="person-field-label">リンク</span>
-                        <p class="person-field-body"><a href="https://researchmap.jp/XXXX/">researchmap</a></p>
+                        <p class="person-field-body"><a href="https://researchmap.jp/XXXX/" target="_blank" rel="noopener">(researchmap)</a></p>
                     </div>
                     -->
                 </div>
@@ -996,7 +1016,7 @@
                     <!-- researchmap などがある方は、下の4行のコメントを外してURLを入れてください
                     <div class="person-field">
                         <span class="person-field-label">リンク</span>
-                        <p class="person-field-body"><a href="https://researchmap.jp/XXXX/">researchmap</a></p>
+                        <p class="person-field-body"><a href="https://researchmap.jp/XXXX/" target="_blank" rel="noopener">(researchmap)</a></p>
                     </div>
                     -->
                 </div>
@@ -1032,7 +1052,7 @@
                     <!-- researchmap などがある方は、下の4行のコメントを外してURLを入れてください
                     <div class="person-field">
                         <span class="person-field-label">リンク</span>
-                        <p class="person-field-body"><a href="https://researchmap.jp/XXXX/">researchmap</a></p>
+                        <p class="person-field-body"><a href="https://researchmap.jp/XXXX/" target="_blank" rel="noopener">(researchmap)</a></p>
                     </div>
                     -->
                 </div>
@@ -1068,7 +1088,7 @@
                     <!-- researchmap などがある方は、下の4行のコメントを外してURLを入れてください
                     <div class="person-field">
                         <span class="person-field-label">リンク</span>
-                        <p class="person-field-body"><a href="https://researchmap.jp/XXXX/">researchmap</a></p>
+                        <p class="person-field-body"><a href="https://researchmap.jp/XXXX/" target="_blank" rel="noopener">(researchmap)</a></p>
                     </div>
                     -->
                 </div>
